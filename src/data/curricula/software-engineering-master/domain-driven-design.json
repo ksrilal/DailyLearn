@@ -1,0 +1,312 @@
+{
+  "id": "domain-driven-design",
+  "title": "Domain Driven Design",
+  "categories": [
+    {
+      "id": "ddd-fundamentals",
+      "title": "DDD Fundamentals",
+      "topics": [
+        {
+          "id": "introduction-to-ddd",
+          "title": "Introduction to DDD",
+          "learningUnits": [
+            "What is Domain Driven Design?",
+            "Why DDD Exists",
+            "Complex Business Domains",
+            "Core Principles",
+            "Strategic vs Tactical DDD",
+            "Benefits of DDD",
+            "When to Use DDD",
+            "Common Misconceptions"
+          ]
+        },
+        {
+          "id": "domain-modeling",
+          "title": "Domain Modeling",
+          "learningUnits": [
+            "What is a Domain Model?",
+            "Business Concepts",
+            "Model Discovery",
+            "Knowledge Crunching",
+            "Model Refinement",
+            "Model Evolution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubiquitous-language",
+      "title": "Ubiquitous Language",
+      "topics": [
+        {
+          "id": "shared-language",
+          "title": "Shared Language",
+          "learningUnits": [
+            "What is Ubiquitous Language?",
+            "Business Terminology",
+            "Developer Communication",
+            "Naming Strategies",
+            "Language Consistency",
+            "Language Evolution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strategic-design",
+      "title": "Strategic Design",
+      "topics": [
+        {
+          "id": "bounded-context",
+          "title": "Bounded Context",
+          "learningUnits": [
+            "What is a Bounded Context?",
+            "Context Boundaries",
+            "Context Mapping",
+            "Boundary Identification",
+            "Communication Between Contexts",
+            "Real World Examples"
+          ]
+        },
+        {
+          "id": "subdomains",
+          "title": "Subdomains",
+          "learningUnits": [
+            "Core Domain",
+            "Supporting Subdomain",
+            "Generic Subdomain",
+            "Identifying Subdomains",
+            "Prioritization"
+          ]
+        },
+        {
+          "id": "context-mapping",
+          "title": "Context Mapping",
+          "learningUnits": [
+            "Context Relationships",
+            "Partnership",
+            "Shared Kernel",
+            "Customer Supplier",
+            "Conformist",
+            "Anti Corruption Layer",
+            "Open Host Service",
+            "Published Language"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tactical-design",
+      "title": "Tactical Design",
+      "topics": [
+        {
+          "id": "entities",
+          "title": "Entities",
+          "learningUnits": [
+            "What is an Entity?",
+            "Identity",
+            "Entity Lifecycle",
+            "Mutable State",
+            "Business Identity",
+            "Design Guidelines"
+          ]
+        },
+        {
+          "id": "value-objects",
+          "title": "Value Objects",
+          "learningUnits": [
+            "What is a Value Object?",
+            "Immutability",
+            "Equality",
+            "Replacing Primitive Types",
+            "Benefits",
+            "Design Guidelines"
+          ]
+        },
+        {
+          "id": "aggregates",
+          "title": "Aggregates",
+          "learningUnits": [
+            "What is an Aggregate?",
+            "Aggregate Root",
+            "Consistency Boundary",
+            "Transaction Boundary",
+            "Aggregate Design",
+            "Aggregate Size",
+            "Common Mistakes"
+          ]
+        },
+        {
+          "id": "domain-services",
+          "title": "Domain Services",
+          "learningUnits": [
+            "What is a Domain Service?",
+            "Business Logic Placement",
+            "When Not to Use Domain Services",
+            "Examples",
+            "Best Practices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "domain-events",
+      "title": "Domain Events",
+      "topics": [
+        {
+          "id": "events",
+          "title": "Domain Events",
+          "learningUnits": [
+            "What is a Domain Event?",
+            "Event Naming",
+            "Event Publishing",
+            "Event Handling",
+            "Business Significance",
+            "Integration Scenarios"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repositories",
+      "title": "Repositories",
+      "topics": [
+        {
+          "id": "repository-pattern",
+          "title": "Repository Pattern",
+          "learningUnits": [
+            "What is a Repository?",
+            "Repository Responsibilities",
+            "Repository Interfaces",
+            "Persistence Ignorance",
+            "Aggregate Persistence",
+            "Common Mistakes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application-layer",
+      "title": "Application Layer",
+      "topics": [
+        {
+          "id": "application-services",
+          "title": "Application Services",
+          "learningUnits": [
+            "What is an Application Service?",
+            "Orchestration",
+            "Use Cases",
+            "Transactions",
+            "Application vs Domain Services",
+            "Best Practices"
+          ]
+        },
+        {
+          "id": "commands-queries",
+          "title": "Commands & Queries",
+          "learningUnits": [
+            "Commands",
+            "Queries",
+            "Command Handlers",
+            "Query Handlers",
+            "Separation of Concerns"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "factories-specifications",
+      "title": "Factories & Specifications",
+      "topics": [
+        {
+          "id": "factories",
+          "title": "Factories",
+          "learningUnits": [
+            "Why Factories Exist",
+            "Complex Object Creation",
+            "Factory Methods",
+            "Aggregate Creation",
+            "Best Practices"
+          ]
+        },
+        {
+          "id": "specifications",
+          "title": "Specifications",
+          "learningUnits": [
+            "What is a Specification?",
+            "Business Rules",
+            "Reusable Rules",
+            "Validation",
+            "Query Specifications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ddd-integration",
+      "title": "DDD Integration",
+      "topics": [
+        {
+          "id": "ddd-clean-architecture",
+          "title": "DDD & Clean Architecture",
+          "learningUnits": [
+            "DDD Layers",
+            "Dependency Rule",
+            "Domain Layer",
+            "Application Layer",
+            "Infrastructure Layer",
+            "Presentation Layer"
+          ]
+        },
+        {
+          "id": "ddd-microservices",
+          "title": "DDD & Microservices",
+          "learningUnits": [
+            "Bounded Context to Service",
+            "Service Boundaries",
+            "Context Ownership",
+            "Integration Patterns",
+            "Common Challenges"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-storming",
+      "title": "Event Storming",
+      "topics": [
+        {
+          "id": "event-storming-workshop",
+          "title": "Event Storming",
+          "learningUnits": [
+            "What is Event Storming?",
+            "Domain Events",
+            "Commands",
+            "Policies",
+            "Aggregates",
+            "Actors",
+            "Workflow Discovery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ddd-antipatterns",
+      "title": "DDD Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Anemic Domain Model",
+            "God Aggregates",
+            "Leaky Boundaries",
+            "Over Engineering",
+            "CRUD Disguised as DDD",
+            "Premature DDD"
+          ]
+        }
+      ]
+    }
+  ]
+}

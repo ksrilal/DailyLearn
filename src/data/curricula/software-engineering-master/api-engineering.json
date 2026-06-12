@@ -1,0 +1,386 @@
+{
+  "id": "api-engineering",
+  "title": "API Engineering",
+  "categories": [
+    {
+      "id": "api-fundamentals",
+      "title": "API Fundamentals",
+      "topics": [
+        {
+          "id": "api-basics",
+          "title": "API Basics",
+          "learningUnits": [
+            "What is an API?",
+            "Why APIs Exist",
+            "API Consumers",
+            "API Providers",
+            "Request Response Model",
+            "Synchronous Communication",
+            "Asynchronous Communication",
+            "API Lifecycle"
+          ]
+        },
+        {
+          "id": "api-styles",
+          "title": "API Styles",
+          "learningUnits": [
+            "REST",
+            "RPC",
+            "GraphQL",
+            "gRPC",
+            "WebSockets",
+            "Webhook APIs",
+            "Choosing the Right Style"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rest-api-design",
+      "title": "REST API Design",
+      "topics": [
+        {
+          "id": "rest-principles",
+          "title": "REST Principles",
+          "learningUnits": [
+            "Resources",
+            "Representations",
+            "Statelessness",
+            "Client Server Model",
+            "Uniform Interface",
+            "Cacheability",
+            "REST Constraints"
+          ]
+        },
+        {
+          "id": "resource-design",
+          "title": "Resource Design",
+          "learningUnits": [
+            "Resource Naming",
+            "Plural Nouns",
+            "Nested Resources",
+            "Resource Relationships",
+            "URI Design",
+            "Endpoint Consistency"
+          ]
+        },
+        {
+          "id": "http-methods",
+          "title": "HTTP Methods",
+          "learningUnits": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE",
+            "HEAD",
+            "OPTIONS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http-fundamentals",
+      "title": "HTTP Fundamentals",
+      "topics": [
+        {
+          "id": "http-basics",
+          "title": "HTTP Basics",
+          "learningUnits": [
+            "Request Structure",
+            "Response Structure",
+            "Headers",
+            "Body",
+            "Content Types",
+            "Cookies",
+            "Sessions"
+          ]
+        },
+        {
+          "id": "status-codes",
+          "title": "HTTP Status Codes",
+          "learningUnits": [
+            "1xx Informational",
+            "2xx Success",
+            "3xx Redirection",
+            "4xx Client Errors",
+            "5xx Server Errors",
+            "Common Status Codes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "request-response-design",
+      "title": "Request & Response Design",
+      "topics": [
+        {
+          "id": "request-design",
+          "title": "Request Design",
+          "learningUnits": [
+            "Input DTOs",
+            "Validation",
+            "Filtering",
+            "Sorting",
+            "Pagination",
+            "Search Parameters"
+          ]
+        },
+        {
+          "id": "response-design",
+          "title": "Response Design",
+          "learningUnits": [
+            "Response DTOs",
+            "Consistent Responses",
+            "Metadata",
+            "Hypermedia",
+            "Error Responses",
+            "Version Compatibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-security",
+      "title": "API Security",
+      "topics": [
+        {
+          "id": "authentication",
+          "title": "Authentication",
+          "learningUnits": [
+            "Authentication Basics",
+            "API Keys",
+            "Basic Authentication",
+            "Bearer Tokens",
+            "JWT",
+            "Session Authentication"
+          ]
+        },
+        {
+          "id": "authorization",
+          "title": "Authorization",
+          "learningUnits": [
+            "Roles",
+            "Permissions",
+            "Claims",
+            "RBAC",
+            "ABAC",
+            "Policy Based Authorization"
+          ]
+        },
+        {
+          "id": "oauth-openid",
+          "title": "OAuth & OpenID Connect",
+          "learningUnits": [
+            "OAuth Fundamentals",
+            "Authorization Code Flow",
+            "Client Credentials Flow",
+            "Refresh Tokens",
+            "Scopes",
+            "OpenID Connect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-versioning",
+      "title": "API Versioning",
+      "topics": [
+        {
+          "id": "versioning-strategies",
+          "title": "Versioning Strategies",
+          "learningUnits": [
+            "URI Versioning",
+            "Header Versioning",
+            "Query Parameter Versioning",
+            "Media Type Versioning",
+            "Backward Compatibility",
+            "Deprecation Strategies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-documentation",
+      "title": "API Documentation",
+      "topics": [
+        {
+          "id": "openapi-swagger",
+          "title": "OpenAPI & Swagger",
+          "learningUnits": [
+            "OpenAPI Specification",
+            "Swagger UI",
+            "Schema Definitions",
+            "Examples",
+            "API Discovery",
+            "Documentation Best Practices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-testing",
+      "title": "API Testing",
+      "topics": [
+        {
+          "id": "testing-fundamentals",
+          "title": "Testing Fundamentals",
+          "learningUnits": [
+            "Unit Testing APIs",
+            "Integration Testing",
+            "Contract Testing",
+            "End to End Testing",
+            "Mocking Dependencies",
+            "Test Data Management"
+          ]
+        },
+        {
+          "id": "testing-tools",
+          "title": "Testing Tools",
+          "learningUnits": [
+            "Postman",
+            "Bruno",
+            "Swagger Testing",
+            "Automated API Testing",
+            "Load Testing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-performance",
+      "title": "API Performance",
+      "topics": [
+        {
+          "id": "performance-optimization",
+          "title": "Performance Optimization",
+          "learningUnits": [
+            "Response Time",
+            "Database Optimization",
+            "Caching",
+            "Compression",
+            "Connection Pooling",
+            "Performance Monitoring"
+          ]
+        },
+        {
+          "id": "caching",
+          "title": "Caching",
+          "learningUnits": [
+            "Cache Headers",
+            "ETags",
+            "Redis Caching",
+            "Distributed Cache",
+            "Cache Invalidation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-resilience",
+      "title": "API Resilience",
+      "topics": [
+        {
+          "id": "fault-tolerance",
+          "title": "Fault Tolerance",
+          "learningUnits": [
+            "Retries",
+            "Timeouts",
+            "Circuit Breaker",
+            "Bulkhead Pattern",
+            "Fallback Strategies",
+            "Idempotency"
+          ]
+        },
+        {
+          "id": "rate-limiting",
+          "title": "Rate Limiting",
+          "learningUnits": [
+            "Why Rate Limiting Exists",
+            "Fixed Window",
+            "Sliding Window",
+            "Token Bucket",
+            "Quota Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-integration",
+      "title": "API Integration",
+      "topics": [
+        {
+          "id": "third-party-apis",
+          "title": "Third Party APIs",
+          "learningUnits": [
+            "API Consumption",
+            "SDK Usage",
+            "Error Handling",
+            "Authentication Integration",
+            "Webhook Consumption",
+            "Resilience Strategies"
+          ]
+        },
+        {
+          "id": "webhooks",
+          "title": "Webhooks",
+          "learningUnits": [
+            "Webhook Fundamentals",
+            "Webhook Security",
+            "Retry Strategies",
+            "Signature Validation",
+            "Webhook Processing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-api-patterns",
+      "title": "Advanced API Patterns",
+      "topics": [
+        {
+          "id": "graphql",
+          "title": "GraphQL",
+          "learningUnits": [
+            "Schema",
+            "Queries",
+            "Mutations",
+            "Resolvers",
+            "Subscriptions",
+            "GraphQL Tradeoffs"
+          ]
+        },
+        {
+          "id": "grpc",
+          "title": "gRPC",
+          "learningUnits": [
+            "Protocol Buffers",
+            "Service Contracts",
+            "Unary Calls",
+            "Streaming",
+            "Performance Benefits",
+            "gRPC vs REST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-governance",
+      "title": "API Governance",
+      "topics": [
+        {
+          "id": "api-standards",
+          "title": "API Standards",
+          "learningUnits": [
+            "Naming Standards",
+            "Error Standards",
+            "Security Standards",
+            "Versioning Standards",
+            "Documentation Standards",
+            "Review Processes"
+          ]
+        }
+      ]
+    }
+  ]
+}

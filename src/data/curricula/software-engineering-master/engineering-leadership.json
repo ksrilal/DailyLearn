@@ -1,0 +1,307 @@
+{
+  "id": "engineering-leadership",
+  "title": "Engineering Leadership",
+  "categories": [
+    {
+      "id": "leadership-foundations",
+      "title": "Leadership Foundations",
+      "topics": [
+        {
+          "id": "leadership-basics",
+          "title": "Leadership Basics",
+          "learningUnits": [
+            "What is Leadership?",
+            "Leadership vs Management",
+            "Leading Without Authority",
+            "Ownership Mindset",
+            "Trust Building",
+            "Credibility",
+            "Vision Communication",
+            "Influence"
+          ]
+        },
+        {
+          "id": "self-leadership",
+          "title": "Self Leadership",
+          "learningUnits": [
+            "Personal Accountability",
+            "Emotional Control",
+            "Professional Discipline",
+            "Continuous Learning",
+            "Time Management",
+            "Energy Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technical-leadership",
+      "title": "Technical Leadership",
+      "topics": [
+        {
+          "id": "technical-direction",
+          "title": "Technical Direction",
+          "learningUnits": [
+            "Technical Vision",
+            "Architecture Alignment",
+            "Technology Selection",
+            "Engineering Standards",
+            "Long Term Thinking",
+            "Technical Roadmaps"
+          ]
+        },
+        {
+          "id": "decision-making",
+          "title": "Technical Decision Making",
+          "learningUnits": [
+            "Decision Frameworks",
+            "Tradeoff Analysis",
+            "Risk Evaluation",
+            "Decision Documentation",
+            "Consensus Building"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team-leadership",
+      "title": "Team Leadership",
+      "topics": [
+        {
+          "id": "team-building",
+          "title": "Team Building",
+          "learningUnits": [
+            "Psychological Safety",
+            "Team Culture",
+            "Team Norms",
+            "Shared Ownership",
+            "Motivation",
+            "Recognition"
+          ]
+        },
+        {
+          "id": "delegation",
+          "title": "Delegation",
+          "learningUnits": [
+            "Delegation Principles",
+            "Task Assignment",
+            "Empowerment",
+            "Accountability",
+            "Avoiding Micromanagement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Leadership Communication",
+      "topics": [
+        {
+          "id": "effective-communication",
+          "title": "Effective Communication",
+          "learningUnits": [
+            "Clear Communication",
+            "Active Listening",
+            "Stakeholder Communication",
+            "Expectation Management",
+            "Storytelling",
+            "Executive Communication"
+          ]
+        },
+        {
+          "id": "difficult-conversations",
+          "title": "Difficult Conversations",
+          "learningUnits": [
+            "Constructive Feedback",
+            "Conflict Resolution",
+            "Handling Disagreements",
+            "Managing Emotions",
+            "Escalation Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mentoring-coaching",
+      "title": "Mentoring & Coaching",
+      "topics": [
+        {
+          "id": "mentoring",
+          "title": "Mentoring",
+          "learningUnits": [
+            "Knowledge Transfer",
+            "Career Guidance",
+            "Growth Plans",
+            "Technical Mentorship",
+            "Mentorship Styles"
+          ]
+        },
+        {
+          "id": "coaching",
+          "title": "Coaching",
+          "learningUnits": [
+            "Coaching Mindset",
+            "Asking Questions",
+            "Performance Coaching",
+            "Empowering Others",
+            "Growth Mindset"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "Execution Leadership",
+      "topics": [
+        {
+          "id": "delivery-leadership",
+          "title": "Delivery Leadership",
+          "learningUnits": [
+            "Execution Planning",
+            "Milestone Tracking",
+            "Dependency Management",
+            "Risk Management",
+            "Delivery Accountability"
+          ]
+        },
+        {
+          "id": "prioritization",
+          "title": "Prioritization",
+          "learningUnits": [
+            "Business Value",
+            "Urgency vs Importance",
+            "Cost of Delay",
+            "Scope Management",
+            "Strategic Prioritization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "organizational-awareness",
+      "title": "Organizational Awareness",
+      "topics": [
+        {
+          "id": "business-context",
+          "title": "Business Context",
+          "learningUnits": [
+            "Company Goals",
+            "Business Strategy",
+            "Customer Impact",
+            "Revenue Awareness",
+            "Engineering Alignment"
+          ]
+        },
+        {
+          "id": "stakeholder-management",
+          "title": "Stakeholder Management",
+          "learningUnits": [
+            "Stakeholder Mapping",
+            "Expectation Alignment",
+            "Managing Up",
+            "Cross Functional Collaboration",
+            "Negotiation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hiring",
+      "title": "Hiring & Talent Development",
+      "topics": [
+        {
+          "id": "recruitment",
+          "title": "Recruitment",
+          "learningUnits": [
+            "Interviewing",
+            "Candidate Evaluation",
+            "Hiring Decisions",
+            "Cultural Fit",
+            "Technical Assessment"
+          ]
+        },
+        {
+          "id": "talent-growth",
+          "title": "Talent Growth",
+          "learningUnits": [
+            "Career Ladders",
+            "Skill Development",
+            "Succession Planning",
+            "Growth Opportunities",
+            "Retention"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering-culture",
+      "title": "Engineering Culture",
+      "topics": [
+        {
+          "id": "culture-building",
+          "title": "Culture Building",
+          "learningUnits": [
+            "Ownership Culture",
+            "Learning Culture",
+            "Feedback Culture",
+            "Quality Culture",
+            "Continuous Improvement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change-management",
+      "title": "Change Management",
+      "topics": [
+        {
+          "id": "leading-change",
+          "title": "Leading Change",
+          "learningUnits": [
+            "Driving Adoption",
+            "Handling Resistance",
+            "Change Communication",
+            "Incremental Change",
+            "Transformation Leadership"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering-strategy",
+      "title": "Engineering Strategy",
+      "topics": [
+        {
+          "id": "strategic-thinking",
+          "title": "Strategic Thinking",
+          "learningUnits": [
+            "Long Term Planning",
+            "Technology Strategy",
+            "Capability Building",
+            "Investment Decisions",
+            "Strategic Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leadership-antipatterns",
+      "title": "Leadership Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Micromanagement",
+            "Hero Leadership",
+            "Avoiding Difficult Conversations",
+            "Lack of Delegation",
+            "Poor Communication",
+            "Blame Culture",
+            "Short Term Thinking"
+          ]
+        }
+      ]
+    }
+  ]
+}

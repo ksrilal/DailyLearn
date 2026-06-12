@@ -1,0 +1,402 @@
+{
+  "id": "databases",
+  "title": "Databases",
+  "categories": [
+    {
+      "id": "database-fundamentals",
+      "title": "Database Fundamentals",
+      "topics": [
+        {
+          "id": "database-basics",
+          "title": "Database Basics",
+          "learningUnits": [
+            "What is a Database?",
+            "Types of Databases",
+            "Database Management Systems",
+            "Data Persistence",
+            "Structured vs Unstructured Data",
+            "Database Architecture",
+            "Database Lifecycle",
+            "Common Database Terminology"
+          ]
+        },
+        {
+          "id": "data-modeling",
+          "title": "Data Modeling",
+          "learningUnits": [
+            "Entities",
+            "Attributes",
+            "Relationships",
+            "ER Diagrams",
+            "Cardinality",
+            "Optional vs Mandatory Relationships",
+            "Logical Models",
+            "Physical Models"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relational-databases",
+      "title": "Relational Databases",
+      "topics": [
+        {
+          "id": "relational-concepts",
+          "title": "Relational Concepts",
+          "learningUnits": [
+            "Tables",
+            "Rows",
+            "Columns",
+            "Primary Keys",
+            "Foreign Keys",
+            "Constraints",
+            "Relationships",
+            "Referential Integrity"
+          ]
+        },
+        {
+          "id": "normalization",
+          "title": "Normalization",
+          "learningUnits": [
+            "Why Normalization Exists",
+            "First Normal Form",
+            "Second Normal Form",
+            "Third Normal Form",
+            "Boyce Codd Normal Form",
+            "Denormalization",
+            "Normalization Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql",
+      "title": "SQL",
+      "topics": [
+        {
+          "id": "querying-data",
+          "title": "Querying Data",
+          "learningUnits": [
+            "SELECT",
+            "WHERE",
+            "ORDER BY",
+            "GROUP BY",
+            "HAVING",
+            "DISTINCT",
+            "LIMIT / TOP",
+            "Aliases"
+          ]
+        },
+        {
+          "id": "joins",
+          "title": "Joins",
+          "learningUnits": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL JOIN",
+            "CROSS JOIN",
+            "SELF JOIN",
+            "Join Performance"
+          ]
+        },
+        {
+          "id": "advanced-sql",
+          "title": "Advanced SQL",
+          "learningUnits": [
+            "Subqueries",
+            "CTEs",
+            "Window Functions",
+            "Views",
+            "Stored Procedures",
+            "Functions",
+            "Triggers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indexing-performance",
+      "title": "Indexing & Performance",
+      "topics": [
+        {
+          "id": "indexes",
+          "title": "Indexes",
+          "learningUnits": [
+            "What is an Index?",
+            "Clustered Index",
+            "Non Clustered Index",
+            "Composite Index",
+            "Covering Index",
+            "Index Selectivity",
+            "Index Maintenance",
+            "Index Tradeoffs"
+          ]
+        },
+        {
+          "id": "query-performance",
+          "title": "Query Performance",
+          "learningUnits": [
+            "Execution Plans",
+            "Table Scans",
+            "Index Seeks",
+            "Query Optimization",
+            "Parameter Sniffing",
+            "Performance Bottlenecks",
+            "Performance Monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transactions-consistency",
+      "title": "Transactions & Consistency",
+      "topics": [
+        {
+          "id": "transactions",
+          "title": "Transactions",
+          "learningUnits": [
+            "What is a Transaction?",
+            "Commit",
+            "Rollback",
+            "Transaction Boundaries",
+            "Long Running Transactions",
+            "Nested Transactions"
+          ]
+        },
+        {
+          "id": "acid",
+          "title": "ACID",
+          "learningUnits": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability",
+            "ACID Tradeoffs"
+          ]
+        },
+        {
+          "id": "isolation-levels",
+          "title": "Isolation Levels",
+          "learningUnits": [
+            "Read Uncommitted",
+            "Read Committed",
+            "Repeatable Read",
+            "Serializable",
+            "Snapshot Isolation",
+            "Phantom Reads"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nosql",
+      "title": "NoSQL Databases",
+      "topics": [
+        {
+          "id": "nosql-fundamentals",
+          "title": "NoSQL Fundamentals",
+          "learningUnits": [
+            "What is NoSQL?",
+            "When to Use NoSQL",
+            "CAP Theorem Basics",
+            "Eventual Consistency",
+            "Schema Flexibility",
+            "Tradeoffs"
+          ]
+        },
+        {
+          "id": "document-databases",
+          "title": "Document Databases",
+          "learningUnits": [
+            "Documents",
+            "Collections",
+            "Embedded Documents",
+            "MongoDB Concepts",
+            "Document Modeling"
+          ]
+        },
+        {
+          "id": "key-value-databases",
+          "title": "Key Value Databases",
+          "learningUnits": [
+            "Key Value Storage",
+            "Redis Basics",
+            "Caching Patterns",
+            "Expiration",
+            "Use Cases"
+          ]
+        },
+        {
+          "id": "wide-column-databases",
+          "title": "Wide Column Databases",
+          "learningUnits": [
+            "Column Families",
+            "Partition Keys",
+            "Cassandra Basics",
+            "Scaling Concepts"
+          ]
+        },
+        {
+          "id": "graph-databases",
+          "title": "Graph Databases",
+          "learningUnits": [
+            "Nodes",
+            "Edges",
+            "Relationships",
+            "Graph Queries",
+            "Use Cases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database-design",
+      "title": "Database Design",
+      "topics": [
+        {
+          "id": "schema-design",
+          "title": "Schema Design",
+          "learningUnits": [
+            "Naming Conventions",
+            "Table Design",
+            "Column Design",
+            "Data Types",
+            "Auditing Fields",
+            "Soft Deletes"
+          ]
+        },
+        {
+          "id": "database-patterns",
+          "title": "Database Patterns",
+          "learningUnits": [
+            "Repository Pattern",
+            "Unit of Work",
+            "CQRS Read Models",
+            "Outbox Pattern",
+            "Event Store",
+            "Database Per Service"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orm-data-access",
+      "title": "ORM & Data Access",
+      "topics": [
+        {
+          "id": "entity-framework-core",
+          "title": "Entity Framework Core",
+          "learningUnits": [
+            "DbContext",
+            "Entities",
+            "Migrations",
+            "LINQ Queries",
+            "Tracking",
+            "No Tracking",
+            "Eager Loading",
+            "Lazy Loading"
+          ]
+        },
+        {
+          "id": "data-access-patterns",
+          "title": "Data Access Patterns",
+          "learningUnits": [
+            "Repository Pattern",
+            "Specification Pattern",
+            "Unit of Work",
+            "Raw SQL",
+            "Dapper",
+            "Performance Considerations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-data",
+      "title": "Distributed Data",
+      "topics": [
+        {
+          "id": "replication",
+          "title": "Replication",
+          "learningUnits": [
+            "Primary Replica",
+            "Read Replicas",
+            "Replication Lag",
+            "Failover",
+            "High Availability"
+          ]
+        },
+        {
+          "id": "partitioning",
+          "title": "Partitioning & Sharding",
+          "learningUnits": [
+            "Horizontal Partitioning",
+            "Vertical Partitioning",
+            "Sharding",
+            "Shard Keys",
+            "Rebalancing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database-security",
+      "title": "Database Security",
+      "topics": [
+        {
+          "id": "security-fundamentals",
+          "title": "Security Fundamentals",
+          "learningUnits": [
+            "Authentication",
+            "Authorization",
+            "Roles",
+            "Permissions",
+            "Encryption At Rest",
+            "Encryption In Transit",
+            "Secrets Management"
+          ]
+        },
+        {
+          "id": "sql-injection",
+          "title": "SQL Injection",
+          "learningUnits": [
+            "What is SQL Injection?",
+            "Attack Examples",
+            "Parameterized Queries",
+            "ORM Protection",
+            "Security Best Practices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database-operations",
+      "title": "Database Operations",
+      "topics": [
+        {
+          "id": "backup-recovery",
+          "title": "Backup & Recovery",
+          "learningUnits": [
+            "Full Backups",
+            "Incremental Backups",
+            "Point In Time Recovery",
+            "Restore Testing",
+            "Disaster Recovery"
+          ]
+        },
+        {
+          "id": "monitoring",
+          "title": "Monitoring",
+          "learningUnits": [
+            "Database Metrics",
+            "Slow Queries",
+            "Connection Monitoring",
+            "Storage Monitoring",
+            "Capacity Planning"
+          ]
+        }
+      ]
+    }
+  ]
+}

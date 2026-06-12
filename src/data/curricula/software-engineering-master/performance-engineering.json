@@ -1,0 +1,388 @@
+{
+  "id": "performance-engineering",
+  "title": "Performance Engineering",
+  "categories": [
+    {
+      "id": "performance-fundamentals",
+      "title": "Performance Fundamentals",
+      "topics": [
+        {
+          "id": "performance-basics",
+          "title": "Performance Basics",
+          "learningUnits": [
+            "What is Performance Engineering?",
+            "Performance vs Scalability",
+            "Latency",
+            "Throughput",
+            "Response Time",
+            "Resource Utilization",
+            "Performance Mindset",
+            "Performance Tradeoffs"
+          ]
+        },
+        {
+          "id": "performance-metrics",
+          "title": "Performance Metrics",
+          "learningUnits": [
+            "P50 Latency",
+            "P95 Latency",
+            "P99 Latency",
+            "Requests Per Second",
+            "Transactions Per Second",
+            "Error Rate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application-performance",
+      "title": "Application Performance",
+      "topics": [
+        {
+          "id": "code-performance",
+          "title": "Code Performance",
+          "learningUnits": [
+            "Algorithm Complexity",
+            "Big O Analysis",
+            "Memory Allocations",
+            "Object Creation Cost",
+            "Hot Paths",
+            "Micro Optimizations"
+          ]
+        },
+        {
+          "id": "dotnet-performance",
+          "title": ".NET Performance",
+          "learningUnits": [
+            "CLR Basics",
+            "JIT Compilation",
+            "Tiered Compilation",
+            "Garbage Collection",
+            "Span<T>",
+            "Memory Pools",
+            "Value Types vs Reference Types"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "memory-performance",
+      "title": "Memory Performance",
+      "topics": [
+        {
+          "id": "memory-management",
+          "title": "Memory Management",
+          "learningUnits": [
+            "Heap",
+            "Stack",
+            "Generational GC",
+            "Memory Pressure",
+            "Object Lifetime",
+            "Memory Leaks"
+          ]
+        },
+        {
+          "id": "allocation-optimization",
+          "title": "Allocation Optimization",
+          "learningUnits": [
+            "Allocation Reduction",
+            "Object Pooling",
+            "Buffer Reuse",
+            "String Optimization",
+            "Large Object Heap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database-performance",
+      "title": "Database Performance",
+      "topics": [
+        {
+          "id": "query-optimization",
+          "title": "Query Optimization",
+          "learningUnits": [
+            "Execution Plans",
+            "Indexes",
+            "Covering Indexes",
+            "Table Scans",
+            "Query Cost",
+            "Statistics"
+          ]
+        },
+        {
+          "id": "database-scaling",
+          "title": "Database Scaling",
+          "learningUnits": [
+            "Read Replicas",
+            "Connection Pooling",
+            "Partitioning",
+            "Caching",
+            "Batch Processing"
+          ]
+        },
+        {
+          "id": "ef-core-performance",
+          "title": "EF Core Performance",
+          "learningUnits": [
+            "Tracking vs No Tracking",
+            "N+1 Queries",
+            "Compiled Queries",
+            "Lazy Loading",
+            "Projection Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-performance",
+      "title": "API Performance",
+      "topics": [
+        {
+          "id": "api-optimization",
+          "title": "API Optimization",
+          "learningUnits": [
+            "Response Compression",
+            "Pagination",
+            "Filtering",
+            "Caching Headers",
+            "Payload Optimization"
+          ]
+        },
+        {
+          "id": "network-performance",
+          "title": "Network Performance",
+          "learningUnits": [
+            "TCP Overhead",
+            "HTTP/2",
+            "HTTP/3",
+            "Connection Reuse",
+            "Latency Reduction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caching",
+      "title": "Caching",
+      "topics": [
+        {
+          "id": "cache-strategies",
+          "title": "Cache Strategies",
+          "learningUnits": [
+            "Cache Aside",
+            "Read Through Cache",
+            "Write Through Cache",
+            "Write Back Cache",
+            "TTL Management"
+          ]
+        },
+        {
+          "id": "distributed-cache",
+          "title": "Distributed Cache",
+          "learningUnits": [
+            "Redis",
+            "Cache Clustering",
+            "Cache Invalidation",
+            "Cache Warming",
+            "Cache Stampede"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concurrency-performance",
+      "title": "Concurrency Performance",
+      "topics": [
+        {
+          "id": "parallel-performance",
+          "title": "Parallel Performance",
+          "learningUnits": [
+            "Thread Pools",
+            "Task Scheduling",
+            "Parallel Loops",
+            "CPU Utilization",
+            "Work Stealing"
+          ]
+        },
+        {
+          "id": "async-performance",
+          "title": "Async Performance",
+          "learningUnits": [
+            "Async Overhead",
+            "Thread Pool Starvation",
+            "Task Allocation",
+            "I/O Optimization",
+            "Cancellation Performance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-performance",
+      "title": "Distributed Performance",
+      "topics": [
+        {
+          "id": "service-performance",
+          "title": "Service Performance",
+          "learningUnits": [
+            "Service Latency",
+            "Service Chaining",
+            "Network Hops",
+            "Timeout Design",
+            "Bulkhead Pattern"
+          ]
+        },
+        {
+          "id": "message-performance",
+          "title": "Messaging Performance",
+          "learningUnits": [
+            "Consumer Throughput",
+            "Partition Scaling",
+            "Batch Consumption",
+            "Back Pressure",
+            "Queue Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frontend-performance",
+      "title": "Frontend Performance",
+      "topics": [
+        {
+          "id": "web-performance",
+          "title": "Web Performance",
+          "learningUnits": [
+            "Core Web Vitals",
+            "LCP",
+            "CLS",
+            "INP",
+            "Bundle Optimization",
+            "Lazy Loading"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "load-testing",
+      "title": "Load & Stress Testing",
+      "topics": [
+        {
+          "id": "load-testing-basics",
+          "title": "Load Testing",
+          "learningUnits": [
+            "Load Testing",
+            "Concurrent Users",
+            "RPS Testing",
+            "Capacity Testing",
+            "Baseline Metrics"
+          ]
+        },
+        {
+          "id": "stress-testing",
+          "title": "Stress Testing",
+          "learningUnits": [
+            "Breaking Point",
+            "Stress Testing",
+            "Spike Testing",
+            "Soak Testing",
+            "Recovery Testing"
+          ]
+        },
+        {
+          "id": "performance-tools",
+          "title": "Performance Tools",
+          "learningUnits": [
+            "k6",
+            "JMeter",
+            "BenchmarkDotNet",
+            "dotnet-trace",
+            "PerfView"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profiling",
+      "title": "Profiling & Diagnostics",
+      "topics": [
+        {
+          "id": "application-profiling",
+          "title": "Application Profiling",
+          "learningUnits": [
+            "CPU Profiling",
+            "Memory Profiling",
+            "Allocation Profiling",
+            "Hotspot Detection",
+            "Performance Traces"
+          ]
+        },
+        {
+          "id": "production-diagnostics",
+          "title": "Production Diagnostics",
+          "learningUnits": [
+            "Thread Dumps",
+            "Memory Dumps",
+            "Crash Analysis",
+            "Live Diagnostics",
+            "Root Cause Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capacity-engineering",
+      "title": "Capacity Engineering",
+      "topics": [
+        {
+          "id": "capacity-planning",
+          "title": "Capacity Planning",
+          "learningUnits": [
+            "Growth Forecasting",
+            "Traffic Modeling",
+            "Resource Estimation",
+            "Scaling Thresholds",
+            "Cost vs Performance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-observability",
+      "title": "Performance Observability",
+      "topics": [
+        {
+          "id": "performance-monitoring",
+          "title": "Performance Monitoring",
+          "learningUnits": [
+            "APM",
+            "Latency Dashboards",
+            "Performance Alerts",
+            "Distributed Tracing",
+            "SLO Monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-antipatterns",
+      "title": "Performance Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Premature Optimization",
+            "Ignoring Measurements",
+            "N+1 Queries",
+            "Over Caching",
+            "Chatty APIs",
+            "Blocking Async Calls",
+            "Optimization Without Profiling"
+          ]
+        }
+      ]
+    }
+  ]
+}

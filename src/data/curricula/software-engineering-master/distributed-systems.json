@@ -1,0 +1,352 @@
+{
+  "id": "distributed-systems",
+  "title": "Distributed Systems",
+  "categories": [
+    {
+      "id": "distributed-fundamentals",
+      "title": "Distributed Fundamentals",
+      "topics": [
+        {
+          "id": "introduction",
+          "title": "Introduction to Distributed Systems",
+          "learningUnits": [
+            "What is a Distributed System?",
+            "Why Distributed Systems Exist",
+            "Single Node vs Distributed",
+            "Distributed System Characteristics",
+            "Benefits",
+            "Challenges",
+            "Real World Examples",
+            "Common Misconceptions"
+          ]
+        },
+        {
+          "id": "distributed-challenges",
+          "title": "Distributed Challenges",
+          "learningUnits": [
+            "Network Failures",
+            "Partial Failures",
+            "Latency",
+            "Bandwidth Limitations",
+            "Clock Drift",
+            "Data Consistency",
+            "Fault Tolerance",
+            "System Complexity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Communication",
+      "topics": [
+        {
+          "id": "communication-models",
+          "title": "Communication Models",
+          "learningUnits": [
+            "Synchronous Communication",
+            "Asynchronous Communication",
+            "Request Response",
+            "Message Passing",
+            "Event Driven Communication",
+            "Communication Tradeoffs"
+          ]
+        },
+        {
+          "id": "rpc",
+          "title": "RPC & Remote Calls",
+          "learningUnits": [
+            "What is RPC?",
+            "REST Calls",
+            "gRPC",
+            "Serialization",
+            "Network Overhead",
+            "Timeout Handling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consistency",
+      "title": "Consistency",
+      "topics": [
+        {
+          "id": "consistency-models",
+          "title": "Consistency Models",
+          "learningUnits": [
+            "Strong Consistency",
+            "Weak Consistency",
+            "Eventual Consistency",
+            "Read Your Writes",
+            "Monotonic Reads",
+            "Consistency Tradeoffs"
+          ]
+        },
+        {
+          "id": "cap-theorem",
+          "title": "CAP Theorem",
+          "learningUnits": [
+            "Consistency",
+            "Availability",
+            "Partition Tolerance",
+            "CAP Tradeoffs",
+            "CP Systems",
+            "AP Systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-distribution",
+      "title": "Data Distribution",
+      "topics": [
+        {
+          "id": "replication",
+          "title": "Replication",
+          "learningUnits": [
+            "Why Replication Exists",
+            "Leader Follower Replication",
+            "Multi Leader Replication",
+            "Read Replicas",
+            "Replication Lag",
+            "Failover"
+          ]
+        },
+        {
+          "id": "partitioning",
+          "title": "Partitioning",
+          "learningUnits": [
+            "Horizontal Partitioning",
+            "Vertical Partitioning",
+            "Sharding",
+            "Partition Keys",
+            "Rebalancing",
+            "Hot Partitions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fault-tolerance",
+      "title": "Fault Tolerance",
+      "topics": [
+        {
+          "id": "failure-handling",
+          "title": "Failure Handling",
+          "learningUnits": [
+            "Node Failures",
+            "Network Failures",
+            "Retry Pattern",
+            "Timeouts",
+            "Fallback Strategies",
+            "Graceful Degradation"
+          ]
+        },
+        {
+          "id": "resilience-patterns",
+          "title": "Resilience Patterns",
+          "learningUnits": [
+            "Circuit Breaker",
+            "Bulkhead",
+            "Retry Pattern",
+            "Dead Letter Queue",
+            "Idempotency",
+            "Compensation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-transactions",
+      "title": "Distributed Transactions",
+      "topics": [
+        {
+          "id": "transaction-patterns",
+          "title": "Transaction Patterns",
+          "learningUnits": [
+            "Local Transactions",
+            "Distributed Transactions",
+            "Two Phase Commit",
+            "Three Phase Commit",
+            "Transaction Coordinator",
+            "Tradeoffs"
+          ]
+        },
+        {
+          "id": "saga-pattern",
+          "title": "Saga Pattern",
+          "learningUnits": [
+            "What is Saga?",
+            "Choreography",
+            "Orchestration",
+            "Compensating Actions",
+            "Failure Recovery",
+            "Real World Examples"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging-systems",
+      "title": "Messaging Systems",
+      "topics": [
+        {
+          "id": "message-brokers",
+          "title": "Message Brokers",
+          "learningUnits": [
+            "What is a Broker?",
+            "Queues",
+            "Topics",
+            "Publish Subscribe",
+            "RabbitMQ Basics",
+            "Kafka Basics"
+          ]
+        },
+        {
+          "id": "message-delivery",
+          "title": "Message Delivery",
+          "learningUnits": [
+            "At Most Once",
+            "At Least Once",
+            "Exactly Once",
+            "Duplicate Messages",
+            "Ordering Guarantees",
+            "Message Durability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-coordination",
+      "title": "Distributed Coordination",
+      "topics": [
+        {
+          "id": "leader-election",
+          "title": "Leader Election",
+          "learningUnits": [
+            "Why Leader Election Exists",
+            "Election Algorithms",
+            "Leader Responsibilities",
+            "Leader Failure",
+            "Consensus Basics"
+          ]
+        },
+        {
+          "id": "consensus",
+          "title": "Consensus",
+          "learningUnits": [
+            "Consensus Problem",
+            "Raft Overview",
+            "Paxos Overview",
+            "Quorum",
+            "Majority Voting",
+            "Consensus Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scalability",
+      "title": "Scalability",
+      "topics": [
+        {
+          "id": "scaling-strategies",
+          "title": "Scaling Strategies",
+          "learningUnits": [
+            "Vertical Scaling",
+            "Horizontal Scaling",
+            "Load Distribution",
+            "Capacity Planning",
+            "Elastic Scaling",
+            "Scaling Bottlenecks"
+          ]
+        },
+        {
+          "id": "load-balancing",
+          "title": "Load Balancing",
+          "learningUnits": [
+            "Load Balancers",
+            "Round Robin",
+            "Least Connections",
+            "Health Checks",
+            "Sticky Sessions",
+            "Global Load Balancing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "topics": [
+        {
+          "id": "monitoring-distributed-systems",
+          "title": "Monitoring Distributed Systems",
+          "learningUnits": [
+            "Metrics",
+            "Logs",
+            "Tracing",
+            "Correlation IDs",
+            "Distributed Tracing",
+            "Alerting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-security",
+      "title": "Distributed Security",
+      "topics": [
+        {
+          "id": "security-fundamentals",
+          "title": "Security Fundamentals",
+          "learningUnits": [
+            "Service Authentication",
+            "Mutual TLS",
+            "API Security",
+            "Secret Management",
+            "Network Security",
+            "Zero Trust Basics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-system-patterns",
+      "title": "Distributed System Patterns",
+      "topics": [
+        {
+          "id": "common-patterns",
+          "title": "Common Patterns",
+          "learningUnits": [
+            "Outbox Pattern",
+            "Inbox Pattern",
+            "CQRS",
+            "Event Sourcing",
+            "Backend For Frontend",
+            "Strangler Pattern",
+            "Sidecar Pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-antipatterns",
+      "title": "Distributed Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Distributed Monolith",
+            "Chatty Services",
+            "Shared Database",
+            "Ignoring Failures",
+            "Tight Coupling",
+            "Premature Distribution"
+          ]
+        }
+      ]
+    }
+  ]
+}

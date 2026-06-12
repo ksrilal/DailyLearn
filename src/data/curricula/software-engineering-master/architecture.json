@@ -1,0 +1,315 @@
+{
+  "id": "architecture",
+  "title": "Architecture",
+  "categories": [
+    {
+      "id": "architectural-fundamentals",
+      "title": "Architectural Fundamentals",
+      "topics": [
+        {
+          "id": "architecture-basics",
+          "title": "Architecture Basics",
+          "learningUnits": [
+            "What is Software Architecture?",
+            "Architecture vs Design",
+            "Architectural Goals",
+            "Quality Attributes",
+            "Architectural Constraints",
+            "Architectural Drivers",
+            "Architecture Decision Making",
+            "Architecture Documentation"
+          ]
+        },
+        {
+          "id": "quality-attributes",
+          "title": "Quality Attributes",
+          "learningUnits": [
+            "Scalability",
+            "Availability",
+            "Reliability",
+            "Maintainability",
+            "Performance",
+            "Security",
+            "Testability",
+            "Observability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architectural-styles",
+      "title": "Architectural Styles",
+      "topics": [
+        {
+          "id": "layered-architecture",
+          "title": "Layered Architecture",
+          "learningUnits": [
+            "Presentation Layer",
+            "Application Layer",
+            "Domain Layer",
+            "Infrastructure Layer",
+            "Benefits",
+            "Drawbacks"
+          ]
+        },
+        {
+          "id": "n-tier-architecture",
+          "title": "N-Tier Architecture",
+          "learningUnits": [
+            "Physical Tiers",
+            "Logical Layers",
+            "Deployment Separation",
+            "Common Use Cases"
+          ]
+        },
+        {
+          "id": "client-server",
+          "title": "Client Server Architecture",
+          "learningUnits": [
+            "Client Responsibilities",
+            "Server Responsibilities",
+            "Request Response Model",
+            "Advantages & Limitations"
+          ]
+        },
+        {
+          "id": "event-driven-architecture",
+          "title": "Event Driven Architecture",
+          "learningUnits": [
+            "Events",
+            "Producers",
+            "Consumers",
+            "Event Flow",
+            "Benefits",
+            "Challenges"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modern-architectures",
+      "title": "Modern Architectures",
+      "topics": [
+        {
+          "id": "clean-architecture",
+          "title": "Clean Architecture",
+          "learningUnits": [
+            "Dependency Rule",
+            "Entities",
+            "Use Cases",
+            "Interface Adapters",
+            "Frameworks & Drivers",
+            "Benefits",
+            "Common Mistakes"
+          ]
+        },
+        {
+          "id": "hexagonal-architecture",
+          "title": "Hexagonal Architecture",
+          "learningUnits": [
+            "Ports",
+            "Adapters",
+            "Driving Adapters",
+            "Driven Adapters",
+            "Dependency Direction",
+            "Benefits"
+          ]
+        },
+        {
+          "id": "onion-architecture",
+          "title": "Onion Architecture",
+          "learningUnits": [
+            "Core Domain",
+            "Application Services",
+            "Infrastructure",
+            "Dependency Flow",
+            "Benefits"
+          ]
+        },
+        {
+          "id": "vertical-slice-architecture",
+          "title": "Vertical Slice Architecture",
+          "learningUnits": [
+            "Feature Based Design",
+            "Slices",
+            "CQRS Integration",
+            "Benefits",
+            "Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application-architecture",
+      "title": "Application Architecture",
+      "topics": [
+        {
+          "id": "modular-monolith",
+          "title": "Modular Monolith",
+          "learningUnits": [
+            "Modules",
+            "Boundaries",
+            "Internal Communication",
+            "Benefits",
+            "Migration Path"
+          ]
+        },
+        {
+          "id": "microservices",
+          "title": "Microservices",
+          "learningUnits": [
+            "Service Boundaries",
+            "Independent Deployment",
+            "Database Per Service",
+            "Communication Patterns",
+            "Benefits",
+            "Challenges"
+          ]
+        },
+        {
+          "id": "service-oriented-architecture",
+          "title": "Service Oriented Architecture",
+          "learningUnits": [
+            "SOA Principles",
+            "Service Reuse",
+            "Enterprise Services",
+            "SOA vs Microservices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architectural-patterns",
+      "title": "Architectural Patterns",
+      "topics": [
+        {
+          "id": "cqrs",
+          "title": "CQRS",
+          "learningUnits": [
+            "Command Model",
+            "Query Model",
+            "Benefits",
+            "Challenges",
+            "When To Use"
+          ]
+        },
+        {
+          "id": "event-sourcing",
+          "title": "Event Sourcing",
+          "learningUnits": [
+            "Events as Source of Truth",
+            "Event Store",
+            "Replay",
+            "Snapshots",
+            "Benefits",
+            "Tradeoffs"
+          ]
+        },
+        {
+          "id": "backend-for-frontend",
+          "title": "Backend For Frontend",
+          "learningUnits": [
+            "BFF Concept",
+            "Web BFF",
+            "Mobile BFF",
+            "Benefits",
+            "Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integration-architecture",
+      "title": "Integration Architecture",
+      "topics": [
+        {
+          "id": "communication-patterns",
+          "title": "Communication Patterns",
+          "learningUnits": [
+            "Synchronous Communication",
+            "Asynchronous Communication",
+            "Request Response",
+            "Publish Subscribe",
+            "Event Driven Communication"
+          ]
+        },
+        {
+          "id": "api-integration",
+          "title": "API Integration",
+          "learningUnits": [
+            "REST Integration",
+            "gRPC Integration",
+            "Message Based Integration",
+            "Webhook Integration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-architecture",
+      "title": "Distributed Architecture",
+      "topics": [
+        {
+          "id": "distributed-fundamentals",
+          "title": "Distributed Fundamentals",
+          "learningUnits": [
+            "Distributed Systems Basics",
+            "Network Boundaries",
+            "Latency",
+            "Fault Tolerance",
+            "Partial Failure",
+            "Consistency"
+          ]
+        },
+        {
+          "id": "resilience-patterns",
+          "title": "Resilience Patterns",
+          "learningUnits": [
+            "Retry Pattern",
+            "Circuit Breaker",
+            "Bulkhead",
+            "Timeouts",
+            "Fallback",
+            "Idempotency"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture-documentation",
+      "title": "Architecture Documentation",
+      "topics": [
+        {
+          "id": "documentation",
+          "title": "Documentation",
+          "learningUnits": [
+            "C4 Model",
+            "Context Diagram",
+            "Container Diagram",
+            "Component Diagram",
+            "Architecture Decision Records",
+            "System Landscape"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture-tradeoffs",
+      "title": "Architecture Tradeoffs",
+      "topics": [
+        {
+          "id": "tradeoff-analysis",
+          "title": "Tradeoff Analysis",
+          "learningUnits": [
+            "Scalability vs Complexity",
+            "Performance vs Maintainability",
+            "Consistency vs Availability",
+            "Monolith vs Microservices",
+            "Build vs Buy",
+            "Cost vs Value"
+          ]
+        }
+      ]
+    }
+  ]
+}

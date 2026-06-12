@@ -1,0 +1,407 @@
+{
+  "id": "event-driven-systems",
+  "title": "Event Driven Systems",
+  "categories": [
+    {
+      "id": "event-driven-fundamentals",
+      "title": "Event-Driven Fundamentals",
+      "topics": [
+        {
+          "id": "event-driven-basics",
+          "title": "Event-Driven Basics",
+          "learningUnits": [
+            "What is Event-Driven Architecture?",
+            "Why Event-Driven Systems Exist",
+            "Events vs Commands",
+            "Events vs API Calls",
+            "Loose Coupling",
+            "Asynchronous Processing",
+            "Real World Examples",
+            "Benefits & Challenges"
+          ]
+        },
+        {
+          "id": "event-modeling",
+          "title": "Event Modeling",
+          "learningUnits": [
+            "Identifying Events",
+            "Business Events",
+            "Technical Events",
+            "Event Storming Basics",
+            "Event Boundaries",
+            "Event Naming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Events",
+      "topics": [
+        {
+          "id": "event-design",
+          "title": "Event Design",
+          "learningUnits": [
+            "Event Structure",
+            "Event Metadata",
+            "Event Payload Design",
+            "Event Versioning",
+            "Immutable Events",
+            "Event Contracts",
+            "Schema Evolution"
+          ]
+        },
+        {
+          "id": "event-types",
+          "title": "Event Types",
+          "learningUnits": [
+            "Domain Events",
+            "Integration Events",
+            "System Events",
+            "Notification Events",
+            "Business Events"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging-patterns",
+      "title": "Messaging Patterns",
+      "topics": [
+        {
+          "id": "pub-sub",
+          "title": "Publish Subscribe",
+          "learningUnits": [
+            "Publish Subscribe Pattern",
+            "Publishers",
+            "Subscribers",
+            "Topics",
+            "Fan Out Messaging",
+            "Use Cases"
+          ]
+        },
+        {
+          "id": "queues",
+          "title": "Queues",
+          "learningUnits": [
+            "Message Queues",
+            "Producers",
+            "Consumers",
+            "Competing Consumers",
+            "Work Distribution",
+            "Queue Design"
+          ]
+        },
+        {
+          "id": "routing-patterns",
+          "title": "Routing Patterns",
+          "learningUnits": [
+            "Direct Routing",
+            "Topic Routing",
+            "Content Based Routing",
+            "Message Filtering",
+            "Message Transformation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "message-brokers",
+      "title": "Message Brokers",
+      "topics": [
+        {
+          "id": "rabbitmq",
+          "title": "RabbitMQ",
+          "learningUnits": [
+            "RabbitMQ Fundamentals",
+            "Exchanges",
+            "Queues",
+            "Bindings",
+            "Routing Keys",
+            "Dead Letter Queues",
+            "Retry Handling"
+          ]
+        },
+        {
+          "id": "kafka",
+          "title": "Apache Kafka",
+          "learningUnits": [
+            "Kafka Fundamentals",
+            "Topics",
+            "Partitions",
+            "Brokers",
+            "Consumer Groups",
+            "Offsets",
+            "Kafka Scaling"
+          ]
+        },
+        {
+          "id": "cloud-messaging",
+          "title": "Cloud Messaging",
+          "learningUnits": [
+            "AWS SQS",
+            "AWS SNS",
+            "Azure Service Bus",
+            "Azure Event Grid",
+            "Google Pub/Sub"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-processing",
+      "title": "Event Processing",
+      "topics": [
+        {
+          "id": "consumers",
+          "title": "Consumers",
+          "learningUnits": [
+            "Consumer Design",
+            "Consumer Groups",
+            "Scaling Consumers",
+            "Consumer Failures",
+            "Consumer Idempotency"
+          ]
+        },
+        {
+          "id": "event-handlers",
+          "title": "Event Handlers",
+          "learningUnits": [
+            "Handler Responsibilities",
+            "Side Effects",
+            "Business Logic",
+            "Handler Chaining",
+            "Error Handling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery-guarantees",
+      "title": "Delivery Guarantees",
+      "topics": [
+        {
+          "id": "delivery-semantics",
+          "title": "Delivery Semantics",
+          "learningUnits": [
+            "At Most Once",
+            "At Least Once",
+            "Exactly Once",
+            "Duplicate Events",
+            "Message Loss",
+            "Ordering Guarantees"
+          ]
+        },
+        {
+          "id": "idempotency",
+          "title": "Idempotency",
+          "learningUnits": [
+            "Why Idempotency Matters",
+            "Duplicate Detection",
+            "Idempotent Consumers",
+            "Idempotent APIs",
+            "Common Mistakes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-sourcing",
+      "title": "Event Sourcing",
+      "topics": [
+        {
+          "id": "event-sourcing-fundamentals",
+          "title": "Event Sourcing",
+          "learningUnits": [
+            "What is Event Sourcing?",
+            "Events as Source of Truth",
+            "Event Store",
+            "Aggregate Reconstruction",
+            "Snapshots",
+            "Replay Events",
+            "Benefits",
+            "Tradeoffs"
+          ]
+        },
+        {
+          "id": "event-store-design",
+          "title": "Event Store Design",
+          "learningUnits": [
+            "Streams",
+            "Append Only Storage",
+            "Event Versioning",
+            "Optimistic Concurrency",
+            "Retention Policies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cqrs-integration",
+      "title": "CQRS Integration",
+      "topics": [
+        {
+          "id": "cqrs-events",
+          "title": "CQRS & Events",
+          "learningUnits": [
+            "Commands",
+            "Events",
+            "Read Models",
+            "Projection Building",
+            "Eventual Consistency",
+            "CQRS Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sagas-workflows",
+      "title": "Sagas & Workflows",
+      "topics": [
+        {
+          "id": "saga-pattern",
+          "title": "Saga Pattern",
+          "learningUnits": [
+            "What is a Saga?",
+            "Saga Choreography",
+            "Saga Orchestration",
+            "Compensating Actions",
+            "Failure Handling",
+            "Long Running Transactions"
+          ]
+        },
+        {
+          "id": "workflow-coordination",
+          "title": "Workflow Coordination",
+          "learningUnits": [
+            "Process Managers",
+            "State Tracking",
+            "Workflow Events",
+            "Timeout Events",
+            "Business Processes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reliability-patterns",
+      "title": "Reliability Patterns",
+      "topics": [
+        {
+          "id": "outbox-pattern",
+          "title": "Outbox Pattern",
+          "learningUnits": [
+            "Why Outbox Exists",
+            "Atomic Writes",
+            "Message Publishing",
+            "Polling Publisher",
+            "Transactional Outbox"
+          ]
+        },
+        {
+          "id": "inbox-pattern",
+          "title": "Inbox Pattern",
+          "learningUnits": [
+            "Duplicate Detection",
+            "Message Tracking",
+            "Consumer Reliability",
+            "Inbox Storage"
+          ]
+        },
+        {
+          "id": "dead-letter-patterns",
+          "title": "Dead Letter Handling",
+          "learningUnits": [
+            "Dead Letter Queues",
+            "Poison Messages",
+            "Retry Strategies",
+            "Manual Recovery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-streaming",
+      "title": "Event Streaming",
+      "topics": [
+        {
+          "id": "stream-processing",
+          "title": "Stream Processing",
+          "learningUnits": [
+            "Streams",
+            "Real Time Processing",
+            "Windowing",
+            "Aggregations",
+            "Stream Transformations",
+            "Stateful Processing"
+          ]
+        },
+        {
+          "id": "kafka-streams",
+          "title": "Kafka Streams",
+          "learningUnits": [
+            "Kafka Streams Basics",
+            "KTables",
+            "Joins",
+            "Window Operations",
+            "Event Time Processing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-observability",
+      "title": "Event Observability",
+      "topics": [
+        {
+          "id": "monitoring-events",
+          "title": "Monitoring Events",
+          "learningUnits": [
+            "Message Metrics",
+            "Consumer Lag",
+            "Event Tracing",
+            "Correlation IDs",
+            "Distributed Tracing",
+            "Alerting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-security",
+      "title": "Event Security",
+      "topics": [
+        {
+          "id": "messaging-security",
+          "title": "Messaging Security",
+          "learningUnits": [
+            "Broker Authentication",
+            "Authorization",
+            "Encryption",
+            "Message Integrity",
+            "Secrets Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "event-driven-antipatterns",
+      "title": "Event-Driven Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Event Explosion",
+            "Chatty Events",
+            "Poor Event Naming",
+            "Large Event Payloads",
+            "Ignoring Idempotency",
+            "Tight Coupling Through Events",
+            "Misusing Event Sourcing"
+          ]
+        }
+      ]
+    }
+  ]
+}

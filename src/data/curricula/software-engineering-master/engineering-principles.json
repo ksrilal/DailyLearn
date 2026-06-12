@@ -1,0 +1,331 @@
+{
+  "id": "engineering-principles",
+  "title": "Engineering Principles",
+  "categories": [
+    {
+      "id": "engineering-mindset",
+      "title": "Engineering Mindset",
+      "topics": [
+        {
+          "id": "engineering-thinking",
+          "title": "Engineering Thinking",
+          "learningUnits": [
+            "Problem Solving",
+            "Systems Thinking",
+            "First Principles Thinking",
+            "Critical Thinking",
+            "Root Cause Thinking",
+            "Tradeoff Analysis",
+            "Decision Making",
+            "Continuous Improvement"
+          ]
+        },
+        {
+          "id": "engineering-values",
+          "title": "Engineering Values",
+          "learningUnits": [
+            "Ownership",
+            "Accountability",
+            "Professionalism",
+            "Reliability",
+            "Quality Focus",
+            "Customer Focus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "software-craftsmanship",
+      "title": "Software Craftsmanship",
+      "topics": [
+        {
+          "id": "craftsmanship",
+          "title": "Craftsmanship Principles",
+          "learningUnits": [
+            "Code as a Craft",
+            "Boy Scout Rule",
+            "Pride in Work",
+            "Technical Excellence",
+            "Continuous Learning",
+            "Deliberate Practice"
+          ]
+        },
+        {
+          "id": "professional-development",
+          "title": "Professional Development",
+          "learningUnits": [
+            "Learning Systems",
+            "Knowledge Management",
+            "Reading Technical Books",
+            "Building Expertise",
+            "Mentorship",
+            "Career Growth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem-solving",
+      "title": "Problem Solving",
+      "topics": [
+        {
+          "id": "problem-analysis",
+          "title": "Problem Analysis",
+          "learningUnits": [
+            "Problem Definition",
+            "Requirements Clarification",
+            "Constraint Identification",
+            "Hypothesis Formation",
+            "Solution Exploration"
+          ]
+        },
+        {
+          "id": "root-cause-analysis",
+          "title": "Root Cause Analysis",
+          "learningUnits": [
+            "Five Whys",
+            "Fishbone Diagram",
+            "Fault Tree Analysis",
+            "Observation Techniques",
+            "Corrective Actions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-making",
+      "title": "Decision Making",
+      "topics": [
+        {
+          "id": "technical-decisions",
+          "title": "Technical Decisions",
+          "learningUnits": [
+            "Decision Frameworks",
+            "Cost Benefit Analysis",
+            "Risk Assessment",
+            "Tradeoffs",
+            "Decision Records",
+            "Long Term Thinking"
+          ]
+        },
+        {
+          "id": "engineering-judgment",
+          "title": "Engineering Judgment",
+          "learningUnits": [
+            "Experience vs Data",
+            "Avoiding Bias",
+            "Handling Uncertainty",
+            "Pragmatism",
+            "Balancing Perfection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "requirements-engineering",
+      "title": "Requirements Engineering",
+      "topics": [
+        {
+          "id": "requirements",
+          "title": "Requirements",
+          "learningUnits": [
+            "Functional Requirements",
+            "Non Functional Requirements",
+            "Acceptance Criteria",
+            "User Stories",
+            "Business Rules",
+            "Scope Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estimation-planning",
+      "title": "Estimation & Planning",
+      "topics": [
+        {
+          "id": "estimation",
+          "title": "Estimation",
+          "learningUnits": [
+            "Story Points",
+            "Task Breakdown",
+            "Complexity Estimation",
+            "Risk Buffers",
+            "Planning Fallacy"
+          ]
+        },
+        {
+          "id": "execution-planning",
+          "title": "Execution Planning",
+          "learningUnits": [
+            "Milestones",
+            "Roadmaps",
+            "Incremental Delivery",
+            "Prioritization",
+            "Dependency Management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "risk-management",
+      "title": "Risk Management",
+      "topics": [
+        {
+          "id": "engineering-risks",
+          "title": "Engineering Risks",
+          "learningUnits": [
+            "Technical Risks",
+            "Operational Risks",
+            "Security Risks",
+            "Dependency Risks",
+            "Mitigation Strategies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality-principles",
+      "title": "Quality Principles",
+      "topics": [
+        {
+          "id": "quality-mindset",
+          "title": "Quality Mindset",
+          "learningUnits": [
+            "Build Quality In",
+            "Prevention Over Detection",
+            "Definition of Done",
+            "Continuous Quality",
+            "Quality Ownership"
+          ]
+        },
+        {
+          "id": "technical-debt",
+          "title": "Technical Debt",
+          "learningUnits": [
+            "Intentional Debt",
+            "Unintentional Debt",
+            "Debt Repayment",
+            "Debt Tracking",
+            "Long Term Costs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reliability-thinking",
+      "title": "Reliability Thinking",
+      "topics": [
+        {
+          "id": "resilience",
+          "title": "Reliability Principles",
+          "learningUnits": [
+            "Failure is Normal",
+            "Resilience",
+            "Redundancy",
+            "Graceful Degradation",
+            "Fault Isolation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Engineering Communication",
+      "topics": [
+        {
+          "id": "written-communication",
+          "title": "Written Communication",
+          "learningUnits": [
+            "Technical Writing",
+            "Documentation",
+            "RFC Writing",
+            "Architecture Decisions",
+            "Status Reporting"
+          ]
+        },
+        {
+          "id": "collaboration",
+          "title": "Collaboration",
+          "learningUnits": [
+            "Code Reviews",
+            "Knowledge Sharing",
+            "Cross Team Communication",
+            "Conflict Resolution",
+            "Feedback Culture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "title": "Ownership",
+      "topics": [
+        {
+          "id": "product-ownership",
+          "title": "Product Ownership",
+          "learningUnits": [
+            "End to End Ownership",
+            "Customer Impact",
+            "Operational Ownership",
+            "Incident Ownership",
+            "Long Term Maintenance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering-economics",
+      "title": "Engineering Economics",
+      "topics": [
+        {
+          "id": "cost-awareness",
+          "title": "Cost Awareness",
+          "learningUnits": [
+            "Infrastructure Cost",
+            "Build vs Buy",
+            "Opportunity Cost",
+            "ROI",
+            "Cost Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leadership-principles",
+      "title": "Leadership Principles",
+      "topics": [
+        {
+          "id": "technical-leadership",
+          "title": "Technical Leadership",
+          "learningUnits": [
+            "Leading by Example",
+            "Mentoring",
+            "Influence Without Authority",
+            "Decision Facilitation",
+            "Team Enablement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering-antipatterns",
+      "title": "Engineering Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Gold Plating",
+            "Premature Optimization",
+            "Analysis Paralysis",
+            "Hero Culture",
+            "Blame Culture",
+            "Ignoring Feedback",
+            "Local Optimization"
+          ]
+        }
+      ]
+    }
+  ]
+}

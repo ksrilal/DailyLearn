@@ -1,0 +1,306 @@
+{
+  "id": "career-growth",
+  "title": "Career Growth",
+  "categories": [
+    {
+      "id": "career-foundations",
+      "title": "Career Foundations",
+      "topics": [
+        {
+          "id": "career-planning",
+          "title": "Career Planning",
+          "learningUnits": [
+            "Career Vision",
+            "Long Term Goals",
+            "Career Roadmap",
+            "Personal Mission",
+            "Career Milestones",
+            "Success Metrics",
+            "Growth Strategy"
+          ]
+        },
+        {
+          "id": "professional-identity",
+          "title": "Professional Identity",
+          "learningUnits": [
+            "Personal Brand",
+            "Professional Reputation",
+            "Core Strengths",
+            "Unique Value Proposition",
+            "Professional Standards"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self-development",
+      "title": "Self Development",
+      "topics": [
+        {
+          "id": "continuous-learning",
+          "title": "Continuous Learning",
+          "learningUnits": [
+            "Learning Systems",
+            "Micro Learning",
+            "Deliberate Practice",
+            "Knowledge Retention",
+            "Skill Compounding",
+            "Reading Strategy"
+          ]
+        },
+        {
+          "id": "productivity",
+          "title": "Personal Productivity",
+          "learningUnits": [
+            "Time Management",
+            "Deep Work",
+            "Focus Management",
+            "Habit Building",
+            "Energy Management",
+            "Goal Tracking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Professional Communication",
+      "topics": [
+        {
+          "id": "written-communication",
+          "title": "Written Communication",
+          "learningUnits": [
+            "Professional Emails",
+            "Technical Documentation",
+            "Status Updates",
+            "Meeting Notes",
+            "Proposal Writing"
+          ]
+        },
+        {
+          "id": "spoken-communication",
+          "title": "Spoken Communication",
+          "learningUnits": [
+            "Public Speaking",
+            "Presentation Skills",
+            "Meeting Communication",
+            "Storytelling",
+            "Influencing Skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "career-progression",
+      "title": "Career Progression",
+      "topics": [
+        {
+          "id": "engineering-levels",
+          "title": "Engineering Career Ladder",
+          "learningUnits": [
+            "Junior Engineer",
+            "Mid Level Engineer",
+            "Senior Engineer",
+            "Staff Engineer",
+            "Principal Engineer",
+            "Architect"
+          ]
+        },
+        {
+          "id": "leadership-paths",
+          "title": "Leadership Career Path",
+          "learningUnits": [
+            "Team Lead",
+            "Engineering Manager",
+            "Director",
+            "VP Engineering",
+            "CTO"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "job-market",
+      "title": "Job Market Readiness",
+      "topics": [
+        {
+          "id": "resume",
+          "title": "Resume & Portfolio",
+          "learningUnits": [
+            "Resume Writing",
+            "Achievement Statements",
+            "Portfolio Building",
+            "Project Showcase",
+            "LinkedIn Profile"
+          ]
+        },
+        {
+          "id": "interviewing",
+          "title": "Interview Preparation",
+          "learningUnits": [
+            "Behavioral Interviews",
+            "Technical Interviews",
+            "System Design Interviews",
+            "Salary Discussions",
+            "Negotiation Skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "Professional Networking",
+      "topics": [
+        {
+          "id": "relationship-building",
+          "title": "Relationship Building",
+          "learningUnits": [
+            "Networking Fundamentals",
+            "Professional Relationships",
+            "Industry Communities",
+            "Giving Value",
+            "Maintaining Connections"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workplace-effectiveness",
+      "title": "Workplace Effectiveness",
+      "topics": [
+        {
+          "id": "stakeholder-management",
+          "title": "Stakeholder Management",
+          "learningUnits": [
+            "Managing Expectations",
+            "Cross Team Collaboration",
+            "Conflict Resolution",
+            "Influencing Decisions",
+            "Organizational Awareness"
+          ]
+        },
+        {
+          "id": "execution",
+          "title": "Execution Excellence",
+          "learningUnits": [
+            "Delivering Results",
+            "Reliability",
+            "Ownership",
+            "Prioritization",
+            "Follow Through"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "financial-growth",
+      "title": "Financial Growth",
+      "topics": [
+        {
+          "id": "career-finance",
+          "title": "Career Economics",
+          "learningUnits": [
+            "Salary Growth",
+            "Compensation Structures",
+            "Market Value",
+            "Freelancing",
+            "Consulting",
+            "Multiple Income Streams"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "personal-brand",
+      "title": "Personal Brand",
+      "topics": [
+        {
+          "id": "content-creation",
+          "title": "Professional Visibility",
+          "learningUnits": [
+            "Technical Writing",
+            "Blogging",
+            "Open Source Contributions",
+            "Conference Speaking",
+            "Knowledge Sharing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mentorship",
+      "title": "Mentorship",
+      "topics": [
+        {
+          "id": "being-mentored",
+          "title": "Receiving Mentorship",
+          "learningUnits": [
+            "Finding Mentors",
+            "Asking Better Questions",
+            "Learning from Feedback",
+            "Growth Discussions",
+            "Career Guidance"
+          ]
+        },
+        {
+          "id": "becoming-a-mentor",
+          "title": "Becoming a Mentor",
+          "learningUnits": [
+            "Knowledge Transfer",
+            "Coaching Others",
+            "Guiding Juniors",
+            "Teaching Skills",
+            "Leadership Through Mentorship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "career-resilience",
+      "title": "Career Resilience",
+      "topics": [
+        {
+          "id": "adaptability",
+          "title": "Adaptability",
+          "learningUnits": [
+            "Handling Change",
+            "Learning New Technologies",
+            "Career Pivots",
+            "Dealing with Setbacks",
+            "Growth Mindset"
+          ]
+        },
+        {
+          "id": "work-life-sustainability",
+          "title": "Sustainable Growth",
+          "learningUnits": [
+            "Work Life Balance",
+            "Burnout Prevention",
+            "Stress Management",
+            "Long Term Consistency",
+            "Personal Wellbeing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "career-antipatterns",
+      "title": "Career Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Comfort Zone Trap",
+            "Job Hopping Without Growth",
+            "Neglecting Communication",
+            "Ignoring Networking",
+            "Skill Stagnation",
+            "Chasing Titles",
+            "Short Term Thinking"
+          ]
+        }
+      ]
+    }
+  ]
+}

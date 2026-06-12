@@ -1,0 +1,378 @@
+{
+  "id": "observability",
+  "title": "Observability & Reliability Engineering",
+  "categories": [
+    {
+      "id": "observability-fundamentals",
+      "title": "Observability Fundamentals",
+      "topics": [
+        {
+          "id": "observability-basics",
+          "title": "Observability Basics",
+          "learningUnits": [
+            "What is Observability?",
+            "Why Observability Exists",
+            "Monitoring vs Observability",
+            "Observability Pillars",
+            "Production Visibility",
+            "Debugging Distributed Systems",
+            "Telemetry Data",
+            "Observability Maturity"
+          ]
+        },
+        {
+          "id": "telemetry",
+          "title": "Telemetry",
+          "learningUnits": [
+            "Metrics",
+            "Logs",
+            "Traces",
+            "Events",
+            "Telemetry Collection",
+            "Telemetry Pipelines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Metrics",
+      "topics": [
+        {
+          "id": "metrics-fundamentals",
+          "title": "Metrics Fundamentals",
+          "learningUnits": [
+            "Counters",
+            "Gauges",
+            "Histograms",
+            "Summaries",
+            "Metric Labels",
+            "Cardinality",
+            "Metric Design"
+          ]
+        },
+        {
+          "id": "golden-signals",
+          "title": "Golden Signals",
+          "learningUnits": [
+            "Latency",
+            "Traffic",
+            "Errors",
+            "Saturation",
+            "Service Health"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logging",
+      "title": "Logging",
+      "topics": [
+        {
+          "id": "logging-fundamentals",
+          "title": "Logging Fundamentals",
+          "learningUnits": [
+            "Structured Logging",
+            "Log Levels",
+            "Correlation IDs",
+            "Contextual Logging",
+            "Log Retention",
+            "Log Aggregation"
+          ]
+        },
+        {
+          "id": "centralized-logging",
+          "title": "Centralized Logging",
+          "learningUnits": [
+            "Log Collection",
+            "Log Storage",
+            "Log Search",
+            "ELK Stack",
+            "OpenSearch",
+            "Log Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-tracing",
+      "title": "Distributed Tracing",
+      "topics": [
+        {
+          "id": "tracing-fundamentals",
+          "title": "Tracing Fundamentals",
+          "learningUnits": [
+            "Trace",
+            "Span",
+            "Trace Context",
+            "Span Attributes",
+            "Trace Propagation",
+            "Root Cause Analysis"
+          ]
+        },
+        {
+          "id": "trace-analysis",
+          "title": "Trace Analysis",
+          "learningUnits": [
+            "Service Dependencies",
+            "Latency Analysis",
+            "Bottleneck Detection",
+            "Critical Paths",
+            "Performance Investigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opentelemetry",
+      "title": "OpenTelemetry",
+      "topics": [
+        {
+          "id": "otel-fundamentals",
+          "title": "OpenTelemetry",
+          "learningUnits": [
+            "Instrumentation",
+            "Collectors",
+            "Exporters",
+            "Resource Attributes",
+            "Auto Instrumentation",
+            "Manual Instrumentation",
+            "OTLP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "title": "Monitoring",
+      "topics": [
+        {
+          "id": "monitoring-fundamentals",
+          "title": "Monitoring Fundamentals",
+          "learningUnits": [
+            "Health Checks",
+            "Dashboards",
+            "Monitoring Strategy",
+            "Alerting",
+            "Threshold Monitoring",
+            "Trend Analysis"
+          ]
+        },
+        {
+          "id": "application-monitoring",
+          "title": "Application Monitoring",
+          "learningUnits": [
+            "API Monitoring",
+            "Database Monitoring",
+            "Background Jobs",
+            "Queue Monitoring",
+            "Dependency Monitoring"
+          ]
+        },
+        {
+          "id": "infrastructure-monitoring",
+          "title": "Infrastructure Monitoring",
+          "learningUnits": [
+            "CPU Monitoring",
+            "Memory Monitoring",
+            "Disk Monitoring",
+            "Network Monitoring",
+            "Container Monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alerting",
+      "title": "Alerting",
+      "topics": [
+        {
+          "id": "alert-design",
+          "title": "Alert Design",
+          "learningUnits": [
+            "Actionable Alerts",
+            "Alert Fatigue",
+            "False Positives",
+            "False Negatives",
+            "Escalation Policies",
+            "Alert Routing"
+          ]
+        },
+        {
+          "id": "incident-alerting",
+          "title": "Incident Alerting",
+          "learningUnits": [
+            "Severity Levels",
+            "On Call Alerts",
+            "Paging Systems",
+            "Incident Triggers",
+            "Response Workflows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sre",
+      "title": "Site Reliability Engineering",
+      "topics": [
+        {
+          "id": "sre-fundamentals",
+          "title": "SRE Fundamentals",
+          "learningUnits": [
+            "What is SRE?",
+            "Reliability Engineering",
+            "Error Budgets",
+            "Reliability Culture",
+            "Toil Reduction",
+            "Automation"
+          ]
+        },
+        {
+          "id": "service-level-objectives",
+          "title": "SLI, SLO & SLA",
+          "learningUnits": [
+            "Service Level Indicators",
+            "Service Level Objectives",
+            "Service Level Agreements",
+            "Availability Targets",
+            "Reliability Measurement",
+            "Error Budget Policies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incident-management",
+      "title": "Incident Management",
+      "topics": [
+        {
+          "id": "incident-response",
+          "title": "Incident Response",
+          "learningUnits": [
+            "Incident Lifecycle",
+            "Incident Commander",
+            "Communication Channels",
+            "Escalation Process",
+            "Mitigation",
+            "Recovery"
+          ]
+        },
+        {
+          "id": "postmortems",
+          "title": "Postmortems",
+          "learningUnits": [
+            "Blameless Postmortems",
+            "Root Cause Analysis",
+            "Five Whys",
+            "Action Items",
+            "Learning Culture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-engineering",
+      "title": "Performance Engineering",
+      "topics": [
+        {
+          "id": "performance-analysis",
+          "title": "Performance Analysis",
+          "learningUnits": [
+            "Latency Measurement",
+            "Throughput",
+            "Resource Utilization",
+            "Bottleneck Analysis",
+            "Performance Profiling"
+          ]
+        },
+        {
+          "id": "load-testing",
+          "title": "Load Testing",
+          "learningUnits": [
+            "Load Testing",
+            "Stress Testing",
+            "Spike Testing",
+            "Soak Testing",
+            "Capacity Testing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observability-platforms",
+      "title": "Observability Platforms",
+      "topics": [
+        {
+          "id": "prometheus-grafana",
+          "title": "Prometheus & Grafana",
+          "learningUnits": [
+            "Prometheus Architecture",
+            "PromQL",
+            "Scraping",
+            "Grafana Dashboards",
+            "Alert Manager"
+          ]
+        },
+        {
+          "id": "cloud-observability",
+          "title": "Cloud Observability",
+          "learningUnits": [
+            "Azure Monitor",
+            "Application Insights",
+            "CloudWatch",
+            "Google Cloud Operations",
+            "Managed Monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reliability-patterns",
+      "title": "Reliability Patterns",
+      "topics": [
+        {
+          "id": "resilience-patterns",
+          "title": "Resilience Patterns",
+          "learningUnits": [
+            "Retry",
+            "Circuit Breaker",
+            "Timeout",
+            "Bulkhead",
+            "Fallback",
+            "Graceful Degradation"
+          ]
+        },
+        {
+          "id": "availability-patterns",
+          "title": "Availability Patterns",
+          "learningUnits": [
+            "Redundancy",
+            "Failover",
+            "Load Balancing",
+            "Multi Region Deployments",
+            "Disaster Recovery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observability-antipatterns",
+      "title": "Observability Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Monitoring Everything",
+            "Monitoring Nothing Important",
+            "Alert Fatigue",
+            "Missing Correlation IDs",
+            "Poor Dashboard Design",
+            "Ignoring Error Budgets",
+            "No Postmortems"
+          ]
+        }
+      ]
+    }
+  ]
+}

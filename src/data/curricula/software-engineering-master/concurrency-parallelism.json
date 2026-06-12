@@ -1,0 +1,362 @@
+{
+  "id": "concurrency-parallelism",
+  "title": "Concurrency & Parallel Programming",
+  "categories": [
+    {
+      "id": "concurrency-fundamentals",
+      "title": "Concurrency Fundamentals",
+      "topics": [
+        {
+          "id": "concurrency-basics",
+          "title": "Concurrency Basics",
+          "learningUnits": [
+            "What is Concurrency?",
+            "What is Parallelism?",
+            "Concurrency vs Parallelism",
+            "Processes",
+            "Threads",
+            "Execution Context",
+            "CPU Bound Work",
+            "IO Bound Work"
+          ]
+        },
+        {
+          "id": "multitasking",
+          "title": "Multitasking",
+          "learningUnits": [
+            "Cooperative Multitasking",
+            "Preemptive Multitasking",
+            "Context Switching",
+            "Thread Scheduling",
+            "Work Distribution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "threading",
+      "title": "Threading",
+      "topics": [
+        {
+          "id": "thread-fundamentals",
+          "title": "Thread Fundamentals",
+          "learningUnits": [
+            "Thread Lifecycle",
+            "Main Thread",
+            "Background Thread",
+            "Thread States",
+            "Thread Creation",
+            "Thread Termination"
+          ]
+        },
+        {
+          "id": "thread-management",
+          "title": "Thread Management",
+          "learningUnits": [
+            "Thread Pools",
+            "Worker Threads",
+            "Thread Affinity",
+            "Scheduling",
+            "Resource Consumption"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "synchronization",
+      "title": "Synchronization",
+      "topics": [
+        {
+          "id": "critical-sections",
+          "title": "Critical Sections",
+          "learningUnits": [
+            "Shared Resources",
+            "Race Conditions",
+            "Mutual Exclusion",
+            "Critical Sections",
+            "Thread Safety"
+          ]
+        },
+        {
+          "id": "locking",
+          "title": "Locking Mechanisms",
+          "learningUnits": [
+            "Lock",
+            "Monitor",
+            "Mutex",
+            "Semaphore",
+            "Reader Writer Lock",
+            "Spin Lock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concurrency-problems",
+      "title": "Concurrency Problems",
+      "topics": [
+        {
+          "id": "race-conditions",
+          "title": "Race Conditions",
+          "learningUnits": [
+            "Data Races",
+            "Lost Updates",
+            "Timing Issues",
+            "Detection Techniques",
+            "Prevention Techniques"
+          ]
+        },
+        {
+          "id": "deadlocks",
+          "title": "Deadlocks",
+          "learningUnits": [
+            "What is Deadlock?",
+            "Circular Dependency",
+            "Deadlock Conditions",
+            "Deadlock Detection",
+            "Deadlock Prevention",
+            "Deadlock Recovery"
+          ]
+        },
+        {
+          "id": "livelock-starvation",
+          "title": "Livelock & Starvation",
+          "learningUnits": [
+            "Livelock",
+            "Starvation",
+            "Fairness",
+            "Priority Inversion",
+            "Mitigation Strategies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "async-programming",
+      "title": "Asynchronous Programming",
+      "topics": [
+        {
+          "id": "async-await",
+          "title": "Async/Await",
+          "learningUnits": [
+            "What is Async?",
+            "Task",
+            "Await",
+            "Async Methods",
+            "Continuation",
+            "Synchronization Context",
+            "Best Practices"
+          ]
+        },
+        {
+          "id": "task-programming",
+          "title": "Task-Based Programming",
+          "learningUnits": [
+            "Task Lifecycle",
+            "Task.Run",
+            "Task.WhenAll",
+            "Task.WhenAny",
+            "Task Cancellation",
+            "Task Exceptions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parallel-programming",
+      "title": "Parallel Programming",
+      "topics": [
+        {
+          "id": "parallel-processing",
+          "title": "Parallel Processing",
+          "learningUnits": [
+            "Parallel Loops",
+            "Parallel.For",
+            "Parallel.ForEach",
+            "Partitioning",
+            "Work Stealing",
+            "Performance Considerations"
+          ]
+        },
+        {
+          "id": "data-parallelism",
+          "title": "Data Parallelism",
+          "learningUnits": [
+            "Data Partitioning",
+            "Batch Processing",
+            "Parallel Aggregation",
+            "Map Reduce Concepts",
+            "Scalability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "producer-consumer",
+      "title": "Producer Consumer Patterns",
+      "topics": [
+        {
+          "id": "producer-consumer",
+          "title": "Producer Consumer",
+          "learningUnits": [
+            "Producer",
+            "Consumer",
+            "Queues",
+            "Back Pressure",
+            "Work Distribution",
+            "Throughput Optimization"
+          ]
+        },
+        {
+          "id": "channels",
+          "title": "Channels",
+          "learningUnits": [
+            "Channel Basics",
+            "Bounded Channels",
+            "Unbounded Channels",
+            "Message Passing",
+            "Async Pipelines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lock-free-programming",
+      "title": "Lock-Free Programming",
+      "topics": [
+        {
+          "id": "atomic-operations",
+          "title": "Atomic Operations",
+          "learningUnits": [
+            "Atomicity",
+            "Interlocked Operations",
+            "Compare And Swap",
+            "Memory Visibility",
+            "Thread Safety Without Locks"
+          ]
+        },
+        {
+          "id": "immutable-design",
+          "title": "Immutable Design",
+          "learningUnits": [
+            "Immutable Objects",
+            "Immutable Collections",
+            "Functional Approaches",
+            "Benefits of Immutability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "memory-model",
+      "title": "Memory Model",
+      "topics": [
+        {
+          "id": "memory-visibility",
+          "title": "Memory Visibility",
+          "learningUnits": [
+            "CPU Cache",
+            "Memory Reordering",
+            "Volatile",
+            "Memory Barriers",
+            "Visibility Guarantees"
+          ]
+        },
+        {
+          "id": "garbage-collection",
+          "title": "Memory Management",
+          "learningUnits": [
+            "Managed Memory",
+            "Garbage Collection",
+            "Memory Pressure",
+            "Allocation Patterns",
+            "Performance Impacts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-concurrency",
+      "title": "Distributed Concurrency",
+      "topics": [
+        {
+          "id": "distributed-locking",
+          "title": "Distributed Locking",
+          "learningUnits": [
+            "Distributed Locks",
+            "Leader Election",
+            "Lease Mechanisms",
+            "Redis Locks",
+            "Failure Scenarios"
+          ]
+        },
+        {
+          "id": "optimistic-concurrency",
+          "title": "Optimistic Concurrency",
+          "learningUnits": [
+            "Versioning",
+            "Concurrency Tokens",
+            "Conflict Detection",
+            "Conflict Resolution",
+            "Retry Strategies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reactive-programming",
+      "title": "Reactive Programming",
+      "topics": [
+        {
+          "id": "reactive-streams",
+          "title": "Reactive Streams",
+          "learningUnits": [
+            "Observable",
+            "Observer",
+            "Subscriptions",
+            "Event Streams",
+            "Back Pressure",
+            "Reactive Pipelines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-concurrency",
+      "title": "Concurrency Performance",
+      "topics": [
+        {
+          "id": "performance-analysis",
+          "title": "Performance Analysis",
+          "learningUnits": [
+            "Contention",
+            "Thread Pool Starvation",
+            "Lock Contention",
+            "Benchmarking",
+            "Concurrency Profiling",
+            "Performance Tuning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concurrency-antipatterns",
+      "title": "Concurrency Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Overusing Threads",
+            "Blocking Async Code",
+            "Nested Locks",
+            "Shared Mutable State",
+            "Ignoring Cancellation",
+            "Thread Pool Exhaustion",
+            "Premature Parallelization"
+          ]
+        }
+      ]
+    }
+  ]
+}

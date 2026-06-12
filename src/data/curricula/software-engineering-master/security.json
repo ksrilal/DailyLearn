@@ -1,0 +1,362 @@
+{
+  "id": "security",
+  "title": "Security",
+  "categories": [
+    {
+      "id": "security-fundamentals",
+      "title": "Security Fundamentals",
+      "topics": [
+        {
+          "id": "security-basics",
+          "title": "Security Basics",
+          "learningUnits": [
+            "What is Cybersecurity?",
+            "CIA Triad",
+            "Confidentiality",
+            "Integrity",
+            "Availability",
+            "Threats",
+            "Vulnerabilities",
+            "Risk Management"
+          ]
+        },
+        {
+          "id": "security-principles",
+          "title": "Security Principles",
+          "learningUnits": [
+            "Least Privilege",
+            "Defense in Depth",
+            "Zero Trust",
+            "Separation of Duties",
+            "Fail Secure",
+            "Security by Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Identity & Access Management",
+      "topics": [
+        {
+          "id": "authentication",
+          "title": "Authentication",
+          "learningUnits": [
+            "Authentication Basics",
+            "Passwords",
+            "Multi Factor Authentication",
+            "Biometrics",
+            "Passwordless Authentication",
+            "Federated Identity"
+          ]
+        },
+        {
+          "id": "authorization",
+          "title": "Authorization",
+          "learningUnits": [
+            "Roles",
+            "Permissions",
+            "Claims",
+            "RBAC",
+            "ABAC",
+            "Policy Based Authorization"
+          ]
+        },
+        {
+          "id": "identity-providers",
+          "title": "Identity Providers",
+          "learningUnits": [
+            "OAuth 2.0",
+            "OpenID Connect",
+            "SSO",
+            "Identity Federation",
+            "Token Based Authentication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application-security",
+      "title": "Application Security",
+      "topics": [
+        {
+          "id": "secure-coding",
+          "title": "Secure Coding",
+          "learningUnits": [
+            "Input Validation",
+            "Output Encoding",
+            "Secure Defaults",
+            "Error Handling",
+            "Security Reviews",
+            "Threat Modeling"
+          ]
+        },
+        {
+          "id": "owasp-top-10",
+          "title": "OWASP Top 10",
+          "learningUnits": [
+            "Broken Access Control",
+            "Cryptographic Failures",
+            "Injection",
+            "Insecure Design",
+            "Security Misconfiguration",
+            "Vulnerable Components",
+            "Authentication Failures",
+            "Data Integrity Failures",
+            "Logging Failures",
+            "SSRF"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-security",
+      "title": "Web Security",
+      "topics": [
+        {
+          "id": "common-web-attacks",
+          "title": "Common Web Attacks",
+          "learningUnits": [
+            "SQL Injection",
+            "Cross Site Scripting",
+            "Cross Site Request Forgery",
+            "Session Hijacking",
+            "Clickjacking",
+            "Open Redirects"
+          ]
+        },
+        {
+          "id": "browser-security",
+          "title": "Browser Security",
+          "learningUnits": [
+            "Same Origin Policy",
+            "CORS",
+            "Content Security Policy",
+            "Cookies",
+            "Secure Cookies",
+            "HttpOnly Cookies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-security",
+      "title": "API Security",
+      "topics": [
+        {
+          "id": "api-protection",
+          "title": "API Protection",
+          "learningUnits": [
+            "JWT Security",
+            "Token Validation",
+            "API Keys",
+            "Rate Limiting",
+            "Input Validation",
+            "API Gateway Security"
+          ]
+        },
+        {
+          "id": "api-threats",
+          "title": "API Threats",
+          "learningUnits": [
+            "Broken Object Level Authorization",
+            "Mass Assignment",
+            "Excessive Data Exposure",
+            "Broken Authentication",
+            "Resource Exhaustion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cryptography",
+      "title": "Cryptography",
+      "topics": [
+        {
+          "id": "crypto-basics",
+          "title": "Cryptography Basics",
+          "learningUnits": [
+            "Encryption",
+            "Decryption",
+            "Symmetric Encryption",
+            "Asymmetric Encryption",
+            "Hashing",
+            "Digital Signatures"
+          ]
+        },
+        {
+          "id": "key-management",
+          "title": "Key Management",
+          "learningUnits": [
+            "Public Keys",
+            "Private Keys",
+            "Certificates",
+            "Certificate Authorities",
+            "Key Rotation",
+            "Secret Storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network-security",
+      "title": "Network Security",
+      "topics": [
+        {
+          "id": "network-fundamentals",
+          "title": "Network Security Fundamentals",
+          "learningUnits": [
+            "Firewalls",
+            "VPN",
+            "TLS",
+            "HTTPS",
+            "Network Segmentation",
+            "Zero Trust Networking"
+          ]
+        },
+        {
+          "id": "network-attacks",
+          "title": "Network Attacks",
+          "learningUnits": [
+            "Man in the Middle",
+            "DNS Spoofing",
+            "Packet Sniffing",
+            "DDoS",
+            "ARP Spoofing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-security",
+      "title": "Cloud Security",
+      "topics": [
+        {
+          "id": "cloud-protection",
+          "title": "Cloud Protection",
+          "learningUnits": [
+            "Shared Responsibility Model",
+            "IAM",
+            "Secrets Management",
+            "Encryption",
+            "Cloud Security Posture",
+            "Least Privilege"
+          ]
+        },
+        {
+          "id": "container-security",
+          "title": "Container Security",
+          "learningUnits": [
+            "Image Scanning",
+            "Container Isolation",
+            "Runtime Security",
+            "Kubernetes Security",
+            "Admission Controllers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devsecops",
+      "title": "DevSecOps",
+      "topics": [
+        {
+          "id": "security-in-ci-cd",
+          "title": "Security in CI/CD",
+          "learningUnits": [
+            "SAST",
+            "DAST",
+            "Dependency Scanning",
+            "Secret Scanning",
+            "Container Scanning",
+            "Policy Enforcement"
+          ]
+        },
+        {
+          "id": "software-supply-chain",
+          "title": "Software Supply Chain Security",
+          "learningUnits": [
+            "SBOM",
+            "Package Integrity",
+            "Artifact Signing",
+            "Build Provenance",
+            "Trusted Dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Security Monitoring",
+      "topics": [
+        {
+          "id": "logging-monitoring",
+          "title": "Security Monitoring",
+          "learningUnits": [
+            "Audit Logs",
+            "Security Events",
+            "SIEM",
+            "Threat Detection",
+            "Incident Alerts",
+            "Forensics Basics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Response",
+      "topics": [
+        {
+          "id": "incident-management",
+          "title": "Incident Management",
+          "learningUnits": [
+            "Preparation",
+            "Detection",
+            "Containment",
+            "Eradication",
+            "Recovery",
+            "Post Incident Review"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-governance",
+      "title": "Security Governance",
+      "topics": [
+        {
+          "id": "compliance",
+          "title": "Compliance & Governance",
+          "learningUnits": [
+            "Security Policies",
+            "GDPR Basics",
+            "ISO 27001",
+            "SOC 2",
+            "Data Classification",
+            "Risk Assessments"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-antipatterns",
+      "title": "Security Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Hardcoded Secrets",
+            "Over Privileged Accounts",
+            "Unencrypted Data",
+            "Ignoring Vulnerabilities",
+            "Security Through Obscurity",
+            "Missing Monitoring",
+            "Weak Password Policies"
+          ]
+        }
+      ]
+    }
+  ]
+}

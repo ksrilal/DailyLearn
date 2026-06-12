@@ -1,0 +1,353 @@
+{
+  "id": "testing-quality-engineering",
+  "title": "Testing & Quality Engineering",
+  "categories": [
+    {
+      "id": "testing-fundamentals",
+      "title": "Testing Fundamentals",
+      "topics": [
+        {
+          "id": "testing-basics",
+          "title": "Testing Basics",
+          "learningUnits": [
+            "What is Software Testing?",
+            "Why Testing Matters",
+            "Verification vs Validation",
+            "Testing Pyramid",
+            "Testing Quadrants",
+            "Shift Left Testing",
+            "Quality Mindset",
+            "Cost of Defects"
+          ]
+        },
+        {
+          "id": "testing-principles",
+          "title": "Testing Principles",
+          "learningUnits": [
+            "Testing Shows Presence of Defects",
+            "Exhaustive Testing is Impossible",
+            "Early Testing",
+            "Defect Clustering",
+            "Pesticide Paradox",
+            "Context Dependent Testing",
+            "Absence of Errors Fallacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-testing",
+      "title": "Unit Testing",
+      "topics": [
+        {
+          "id": "unit-test-design",
+          "title": "Unit Test Design",
+          "learningUnits": [
+            "Arrange Act Assert",
+            "Test Naming",
+            "Test Isolation",
+            "Test Readability",
+            "One Assertion Rule",
+            "Testing Boundaries"
+          ]
+        },
+        {
+          "id": "mocking",
+          "title": "Mocking & Test Doubles",
+          "learningUnits": [
+            "Mocks",
+            "Stubs",
+            "Fakes",
+            "Spies",
+            "Test Doubles",
+            "When to Mock",
+            "Over Mocking"
+          ]
+        },
+        {
+          "id": "unit-testing-dotnet",
+          "title": ".NET Unit Testing",
+          "learningUnits": [
+            "xUnit",
+            "NUnit",
+            "MSTest",
+            "FluentAssertions",
+            "Moq",
+            "AutoFixture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integration-testing",
+      "title": "Integration Testing",
+      "topics": [
+        {
+          "id": "integration-testing-basics",
+          "title": "Integration Testing",
+          "learningUnits": [
+            "What is Integration Testing?",
+            "Component Integration",
+            "Database Integration",
+            "API Integration",
+            "Service Integration",
+            "Test Environment"
+          ]
+        },
+        {
+          "id": "testcontainers",
+          "title": "Test Containers",
+          "learningUnits": [
+            "Containerized Testing",
+            "Ephemeral Databases",
+            "Docker Test Environments",
+            "Test Isolation",
+            "Infrastructure Testing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-testing",
+      "title": "API Testing",
+      "topics": [
+        {
+          "id": "api-test-design",
+          "title": "API Test Design",
+          "learningUnits": [
+            "Request Validation",
+            "Response Validation",
+            "Status Codes",
+            "Headers",
+            "Error Responses",
+            "Contract Validation"
+          ]
+        },
+        {
+          "id": "api-testing-tools",
+          "title": "API Testing Tools",
+          "learningUnits": [
+            "Postman",
+            "Newman",
+            "Swagger Testing",
+            "REST Assured",
+            "Automated API Tests"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contract-testing",
+      "title": "Contract Testing",
+      "topics": [
+        {
+          "id": "consumer-driven-contracts",
+          "title": "Consumer Driven Contracts",
+          "learningUnits": [
+            "Contract Testing",
+            "Pact",
+            "Provider Contracts",
+            "Consumer Contracts",
+            "Breaking Changes",
+            "Version Compatibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end-to-end-testing",
+      "title": "End-to-End Testing",
+      "topics": [
+        {
+          "id": "e2e-testing",
+          "title": "E2E Testing",
+          "learningUnits": [
+            "User Journeys",
+            "Critical Paths",
+            "Test Scenarios",
+            "Test Data",
+            "Environment Stability",
+            "E2E Tradeoffs"
+          ]
+        },
+        {
+          "id": "ui-automation",
+          "title": "UI Automation",
+          "learningUnits": [
+            "Playwright",
+            "Selenium",
+            "Cypress",
+            "Page Object Pattern",
+            "UI Test Stability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-testing",
+      "title": "Performance Testing",
+      "topics": [
+        {
+          "id": "load-testing",
+          "title": "Load Testing",
+          "learningUnits": [
+            "Concurrent Users",
+            "Requests Per Second",
+            "Latency",
+            "Throughput",
+            "Capacity Planning"
+          ]
+        },
+        {
+          "id": "performance-test-types",
+          "title": "Performance Test Types",
+          "learningUnits": [
+            "Load Testing",
+            "Stress Testing",
+            "Spike Testing",
+            "Soak Testing",
+            "Volume Testing"
+          ]
+        },
+        {
+          "id": "performance-tools",
+          "title": "Performance Tools",
+          "learningUnits": [
+            "k6",
+            "JMeter",
+            "Locust",
+            "BenchmarkDotNet",
+            "Profilers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-testing",
+      "title": "Security Testing",
+      "topics": [
+        {
+          "id": "security-validation",
+          "title": "Security Validation",
+          "learningUnits": [
+            "Authentication Testing",
+            "Authorization Testing",
+            "Input Validation Testing",
+            "OWASP Validation",
+            "Dependency Scanning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-automation",
+      "title": "Test Automation",
+      "topics": [
+        {
+          "id": "automation-strategy",
+          "title": "Automation Strategy",
+          "learningUnits": [
+            "What to Automate",
+            "ROI of Automation",
+            "Automation Pyramid",
+            "Maintenance Cost",
+            "Automation Ownership"
+          ]
+        },
+        {
+          "id": "automation-frameworks",
+          "title": "Automation Framework Design",
+          "learningUnits": [
+            "Reusable Components",
+            "Test Fixtures",
+            "Data Driven Tests",
+            "Keyword Driven Tests",
+            "Framework Architecture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-data-management",
+      "title": "Test Data Management",
+      "topics": [
+        {
+          "id": "test-data",
+          "title": "Test Data",
+          "learningUnits": [
+            "Seed Data",
+            "Synthetic Data",
+            "Data Isolation",
+            "Data Cleanup",
+            "Data Masking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality-engineering",
+      "title": "Quality Engineering",
+      "topics": [
+        {
+          "id": "quality-practices",
+          "title": "Quality Practices",
+          "learningUnits": [
+            "Definition of Done",
+            "Code Reviews",
+            "Static Analysis",
+            "Quality Gates",
+            "Technical Debt",
+            "Continuous Quality"
+          ]
+        },
+        {
+          "id": "root-cause-analysis",
+          "title": "Defect Analysis",
+          "learningUnits": [
+            "Bug Triage",
+            "Root Cause Analysis",
+            "Five Whys",
+            "Defect Prevention",
+            "Quality Metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing-in-ci-cd",
+      "title": "Testing in CI/CD",
+      "topics": [
+        {
+          "id": "pipeline-testing",
+          "title": "Pipeline Testing",
+          "learningUnits": [
+            "Build Validation",
+            "Unit Test Stage",
+            "Integration Test Stage",
+            "Quality Gates",
+            "Deployment Validation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing-antipatterns",
+      "title": "Testing Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Testing Happy Path Only",
+            "Flaky Tests",
+            "Over Mocking",
+            "Slow Test Suites",
+            "Duplicate Tests",
+            "Ignoring Test Maintenance",
+            "Low Value Tests"
+          ]
+        }
+      ]
+    }
+  ]
+}

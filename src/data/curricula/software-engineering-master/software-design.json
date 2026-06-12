@@ -1,0 +1,357 @@
+{
+  "id": "software-design",
+  "title": "Software Design",
+  "categories": [
+    {
+      "id": "oop-foundations",
+      "title": "OOP Foundations",
+      "topics": [
+        {
+          "id": "class-object",
+          "title": "Class & Object",
+          "learningUnits": [
+            "What is a Class?",
+            "What is an Object?",
+            "Class vs Object",
+            "Instance Creation",
+            "Constructors",
+            "Fields & Properties",
+            "Static vs Instance Members",
+            "Real World Examples"
+          ]
+        },
+        {
+          "id": "encapsulation",
+          "title": "Encapsulation",
+          "learningUnits": [
+            "Why Encapsulation Exists",
+            "Data Hiding",
+            "Access Modifiers",
+            "Properties vs Fields",
+            "Encapsulation in C#",
+            "Immutable Objects",
+            "Common Mistakes",
+            "Interview Questions"
+          ]
+        },
+        {
+          "id": "abstraction",
+          "title": "Abstraction",
+          "learningUnits": [
+            "Why Abstraction Exists",
+            "Abstracting Complexity",
+            "Abstract Classes",
+            "Interfaces",
+            "Abstraction in C#",
+            "Real World Examples",
+            "Common Mistakes",
+            "Interview Questions"
+          ]
+        },
+        {
+          "id": "inheritance",
+          "title": "Inheritance",
+          "learningUnits": [
+            "Why Inheritance Exists",
+            "Base Class",
+            "Derived Class",
+            "Virtual Methods",
+            "Method Reuse",
+            "Inheritance Hierarchies",
+            "Composition vs Inheritance",
+            "Common Pitfalls"
+          ]
+        },
+        {
+          "id": "polymorphism",
+          "title": "Polymorphism",
+          "learningUnits": [
+            "What is Polymorphism?",
+            "Compile Time Polymorphism",
+            "Runtime Polymorphism",
+            "Method Overloading",
+            "Method Overriding",
+            "Dynamic Dispatch",
+            "Real World Examples",
+            "Interview Questions"
+          ]
+        },
+        {
+          "id": "relationships",
+          "title": "Relationships",
+          "learningUnits": [
+            "Association",
+            "Aggregation",
+            "Composition",
+            "Dependency",
+            "Relationship Strength",
+            "UML Representation",
+            "Real World Examples"
+          ]
+        },
+        {
+          "id": "interfaces-contracts",
+          "title": "Interfaces & Contracts",
+          "learningUnits": [
+            "What is an Interface?",
+            "Interface Design",
+            "Contracts",
+            "Marker Interfaces",
+            "Default Interface Methods",
+            "Interface Segregation",
+            "Versioning",
+            "Best Practices"
+          ]
+        },
+        {
+          "id": "advanced-oop",
+          "title": "Advanced OOP",
+          "learningUnits": [
+            "Covariance",
+            "Contravariance",
+            "Generic Constraints",
+            "Extension Methods",
+            "Records",
+            "Value Objects",
+            "Object Equality",
+            "Advanced C# Concepts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-principles",
+      "title": "Design Principles",
+      "topics": [
+        {
+          "id": "solid",
+          "title": "SOLID",
+          "learningUnits": [
+            "Single Responsibility Principle",
+            "Open Closed Principle",
+            "Liskov Substitution Principle",
+            "Interface Segregation Principle",
+            "Dependency Inversion Principle"
+          ]
+        },
+        {
+          "id": "general-principles",
+          "title": "General Principles",
+          "learningUnits": [
+            "DRY",
+            "KISS",
+            "YAGNI",
+            "Separation of Concerns",
+            "Law of Demeter",
+            "Information Hiding",
+            "High Cohesion",
+            "Loose Coupling",
+            "Principle of Least Astonishment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dependency-management",
+      "title": "Dependency Management",
+      "topics": [
+        {
+          "id": "dependency-injection",
+          "title": "Dependency Injection",
+          "learningUnits": [
+            "Why Dependency Injection Exists",
+            "Constructor Injection",
+            "Property Injection",
+            "Method Injection",
+            "Benefits of DI",
+            "Common Mistakes"
+          ]
+        },
+        {
+          "id": "ioc",
+          "title": "Inversion of Control",
+          "learningUnits": [
+            "What is IoC?",
+            "IoC Containers",
+            "Service Registration",
+            "Service Resolution"
+          ]
+        },
+        {
+          "id": "service-lifetimes",
+          "title": "Service Lifetimes",
+          "learningUnits": [
+            "Singleton",
+            "Scoped",
+            "Transient",
+            "Choosing the Right Lifetime"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-patterns",
+      "title": "Design Patterns",
+      "topics": [
+        {
+          "id": "creational-patterns",
+          "title": "Creational Patterns",
+          "learningUnits": [
+            "Singleton",
+            "Factory Method",
+            "Abstract Factory",
+            "Builder",
+            "Prototype"
+          ]
+        },
+        {
+          "id": "structural-patterns",
+          "title": "Structural Patterns",
+          "learningUnits": [
+            "Adapter",
+            "Decorator",
+            "Facade",
+            "Composite",
+            "Proxy",
+            "Bridge",
+            "Flyweight"
+          ]
+        },
+        {
+          "id": "behavioral-patterns",
+          "title": "Behavioral Patterns",
+          "learningUnits": [
+            "Strategy",
+            "Observer",
+            "Command",
+            "Mediator",
+            "State",
+            "Chain of Responsibility",
+            "Template Method",
+            "Visitor",
+            "Iterator",
+            "Memento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clean-code",
+      "title": "Clean Code",
+      "topics": [
+        {
+          "id": "clean-coding",
+          "title": "Clean Coding",
+          "learningUnits": [
+            "Meaningful Names",
+            "Small Functions",
+            "Code Readability",
+            "Comments",
+            "Formatting",
+            "Error Handling",
+            "Refactoring",
+            "Code Smells",
+            "Technical Debt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "object-oriented-design",
+      "title": "Object-Oriented Design",
+      "topics": [
+        {
+          "id": "ood-principles",
+          "title": "OOD Principles",
+          "learningUnits": [
+            "Object Responsibilities",
+            "Object Collaboration",
+            "Tell Don't Ask",
+            "Program to Interfaces",
+            "Favor Composition Over Inheritance",
+            "Encapsulate What Changes",
+            "Behavior Rich Objects",
+            "Anemic Domain Model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "code-quality",
+      "title": "Code Quality",
+      "topics": [
+        {
+          "id": "quality-attributes",
+          "title": "Quality Attributes",
+          "learningUnits": [
+            "Maintainability",
+            "Extensibility",
+            "Testability",
+            "Reusability",
+            "Simplicity",
+            "Complexity Management",
+            "Cyclomatic Complexity",
+            "Code Metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "error-exception-design",
+      "title": "Error & Exception Design",
+      "topics": [
+        {
+          "id": "exception-design",
+          "title": "Exception Design",
+          "learningUnits": [
+            "Exception Handling Principles",
+            "Custom Exceptions",
+            "Exception Hierarchies",
+            "Fail Fast",
+            "Result Pattern",
+            "Null Object Pattern",
+            "Defensive Programming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-contract-design",
+      "title": "API & Contract Design",
+      "topics": [
+        {
+          "id": "api-design",
+          "title": "API Design",
+          "learningUnits": [
+            "Public API Design",
+            "Input Validation",
+            "Output Design",
+            "DTO Design",
+            "Contract Design",
+            "Backward Compatibility",
+            "Versioning Fundamentals"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "software-design-tradeoffs",
+      "title": "Software Design Tradeoffs",
+      "topics": [
+        {
+          "id": "design-tradeoffs",
+          "title": "Design Tradeoffs",
+          "learningUnits": [
+            "Flexibility vs Simplicity",
+            "Performance vs Maintainability",
+            "Abstraction Costs",
+            "Over Engineering",
+            "Under Engineering",
+            "Premature Optimization",
+            "Technical Tradeoffs"
+          ]
+        }
+      ]
+    }
+  ]
+}

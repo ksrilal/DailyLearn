@@ -1,0 +1,341 @@
+{
+  "id": "system-design",
+  "title": "System Design",
+  "categories": [
+    {
+      "id": "system-design-fundamentals",
+      "title": "System Design Fundamentals",
+      "topics": [
+        {
+          "id": "system-design-basics",
+          "title": "System Design Basics",
+          "learningUnits": [
+            "What is System Design?",
+            "Functional Requirements",
+            "Non Functional Requirements",
+            "Constraints",
+            "Assumptions",
+            "Tradeoffs",
+            "Architecture Thinking",
+            "Design Process"
+          ]
+        },
+        {
+          "id": "quality-attributes",
+          "title": "Quality Attributes",
+          "learningUnits": [
+            "Scalability",
+            "Availability",
+            "Reliability",
+            "Maintainability",
+            "Performance",
+            "Security",
+            "Extensibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capacity-planning",
+      "title": "Capacity Planning",
+      "topics": [
+        {
+          "id": "estimation",
+          "title": "Estimation",
+          "learningUnits": [
+            "Requests Per Second",
+            "Concurrent Users",
+            "Storage Estimation",
+            "Bandwidth Estimation",
+            "Read Write Ratio",
+            "Growth Forecasting"
+          ]
+        },
+        {
+          "id": "bottleneck-analysis",
+          "title": "Bottleneck Analysis",
+          "learningUnits": [
+            "CPU Bottlenecks",
+            "Memory Bottlenecks",
+            "Disk Bottlenecks",
+            "Network Bottlenecks",
+            "Database Bottlenecks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scalability",
+      "title": "Scalability",
+      "topics": [
+        {
+          "id": "scaling-strategies",
+          "title": "Scaling Strategies",
+          "learningUnits": [
+            "Vertical Scaling",
+            "Horizontal Scaling",
+            "Elastic Scaling",
+            "Stateless Design",
+            "Partitioning",
+            "Sharding"
+          ]
+        },
+        {
+          "id": "load-balancing",
+          "title": "Load Balancing",
+          "learningUnits": [
+            "Load Balancers",
+            "Round Robin",
+            "Least Connections",
+            "Sticky Sessions",
+            "Global Load Balancing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-management",
+      "title": "Data Management",
+      "topics": [
+        {
+          "id": "database-selection",
+          "title": "Database Selection",
+          "learningUnits": [
+            "Relational Databases",
+            "Document Databases",
+            "Key Value Stores",
+            "Graph Databases",
+            "Time Series Databases",
+            "Selection Criteria"
+          ]
+        },
+        {
+          "id": "data-partitioning",
+          "title": "Data Partitioning",
+          "learningUnits": [
+            "Horizontal Partitioning",
+            "Vertical Partitioning",
+            "Shard Keys",
+            "Hot Partitions",
+            "Rebalancing"
+          ]
+        },
+        {
+          "id": "replication",
+          "title": "Replication",
+          "learningUnits": [
+            "Primary Replica",
+            "Multi Primary",
+            "Read Replicas",
+            "Replication Lag",
+            "Failover"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caching",
+      "title": "Caching",
+      "topics": [
+        {
+          "id": "cache-fundamentals",
+          "title": "Caching Fundamentals",
+          "learningUnits": [
+            "Why Caching Exists",
+            "Cache Aside",
+            "Read Through Cache",
+            "Write Through Cache",
+            "Write Back Cache",
+            "TTL"
+          ]
+        },
+        {
+          "id": "distributed-cache",
+          "title": "Distributed Caching",
+          "learningUnits": [
+            "Redis",
+            "Cache Clusters",
+            "Cache Invalidation",
+            "Cache Stampede",
+            "Cache Warming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging & Asynchrony",
+      "topics": [
+        {
+          "id": "message-queues",
+          "title": "Message Queues",
+          "learningUnits": [
+            "Queues",
+            "Topics",
+            "Publish Subscribe",
+            "Dead Letter Queues",
+            "Retry Mechanisms"
+          ]
+        },
+        {
+          "id": "event-driven-design",
+          "title": "Event Driven Design",
+          "learningUnits": [
+            "Domain Events",
+            "Integration Events",
+            "Event Streaming",
+            "Eventual Consistency",
+            "Sagas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "availability",
+      "title": "Availability & Reliability",
+      "topics": [
+        {
+          "id": "high-availability",
+          "title": "High Availability",
+          "learningUnits": [
+            "Redundancy",
+            "Failover",
+            "Multi Region",
+            "Health Checks",
+            "Recovery Strategies"
+          ]
+        },
+        {
+          "id": "fault-tolerance",
+          "title": "Fault Tolerance",
+          "learningUnits": [
+            "Circuit Breaker",
+            "Retry",
+            "Timeout",
+            "Bulkhead",
+            "Graceful Degradation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consistency",
+      "title": "Consistency",
+      "topics": [
+        {
+          "id": "consistency-models",
+          "title": "Consistency Models",
+          "learningUnits": [
+            "Strong Consistency",
+            "Eventual Consistency",
+            "Read Consistency",
+            "Write Consistency",
+            "Consistency Tradeoffs"
+          ]
+        },
+        {
+          "id": "cap-theorem",
+          "title": "CAP Theorem",
+          "learningUnits": [
+            "Consistency",
+            "Availability",
+            "Partition Tolerance",
+            "CP Systems",
+            "AP Systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-design",
+      "title": "Security Design",
+      "topics": [
+        {
+          "id": "security-architecture",
+          "title": "Security Architecture",
+          "learningUnits": [
+            "Authentication",
+            "Authorization",
+            "Encryption",
+            "Secrets Management",
+            "Defense in Depth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability",
+      "topics": [
+        {
+          "id": "monitoring-design",
+          "title": "Monitoring Design",
+          "learningUnits": [
+            "Metrics",
+            "Logs",
+            "Tracing",
+            "Dashboards",
+            "Alerting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distributed-patterns",
+      "title": "Distributed Design Patterns",
+      "topics": [
+        {
+          "id": "core-patterns",
+          "title": "Core Patterns",
+          "learningUnits": [
+            "CQRS",
+            "Event Sourcing",
+            "Saga",
+            "Outbox Pattern",
+            "Inbox Pattern",
+            "Strangler Pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system-design-interviews",
+      "title": "System Design Case Studies",
+      "topics": [
+        {
+          "id": "common-systems",
+          "title": "Common Systems",
+          "learningUnits": [
+            "URL Shortener",
+            "Chat Application",
+            "Notification System",
+            "File Storage System",
+            "Video Streaming Platform",
+            "Ride Sharing Platform",
+            "Social Network Feed",
+            "E-Commerce Platform"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system-design-antipatterns",
+      "title": "System Design Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Premature Scaling",
+            "Single Point of Failure",
+            "Shared Database",
+            "Ignoring Observability",
+            "Ignoring Capacity Planning",
+            "Over Engineering",
+            "Architecture Astronautics"
+          ]
+        }
+      ]
+    }
+  ]
+}

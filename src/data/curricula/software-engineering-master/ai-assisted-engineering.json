@@ -1,0 +1,351 @@
+{
+  "id": "ai-assisted-engineering",
+  "title": "AI Assisted Engineering",
+  "categories": [
+    {
+      "id": "ai-fundamentals",
+      "title": "AI Fundamentals",
+      "topics": [
+        {
+          "id": "ai-overview",
+          "title": "AI Overview",
+          "learningUnits": [
+            "What is AI?",
+            "Machine Learning",
+            "Generative AI",
+            "Large Language Models",
+            "Tokens",
+            "Context Window",
+            "Reasoning Models",
+            "AI Capabilities & Limitations"
+          ]
+        },
+        {
+          "id": "llm-basics",
+          "title": "LLM Fundamentals",
+          "learningUnits": [
+            "Prompt",
+            "Completion",
+            "Temperature",
+            "Hallucinations",
+            "Grounding",
+            "Inference",
+            "Fine Tuning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Prompt Engineering",
+      "topics": [
+        {
+          "id": "prompt-design",
+          "title": "Prompt Design",
+          "learningUnits": [
+            "Role Prompting",
+            "Task Prompting",
+            "Context Injection",
+            "Constraints",
+            "Output Formatting",
+            "Few Shot Prompting",
+            "Prompt Templates"
+          ]
+        },
+        {
+          "id": "advanced-prompting",
+          "title": "Advanced Prompting",
+          "learningUnits": [
+            "Chain of Thought",
+            "Self Critique",
+            "Reflection",
+            "Multi Step Prompting",
+            "Prompt Chaining",
+            "Prompt Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "developer-productivity",
+      "title": "Developer Productivity",
+      "topics": [
+        {
+          "id": "ai-coding-assistants",
+          "title": "Coding Assistants",
+          "learningUnits": [
+            "GitHub Copilot",
+            "ChatGPT",
+            "Claude",
+            "Cursor",
+            "Windsurf",
+            "IDE Integration"
+          ]
+        },
+        {
+          "id": "daily-engineering-workflows",
+          "title": "Daily Workflows",
+          "learningUnits": [
+            "Code Generation",
+            "Code Explanation",
+            "Code Review",
+            "Refactoring",
+            "Documentation Generation",
+            "Test Generation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-for-software-design",
+      "title": "AI for Software Design",
+      "topics": [
+        {
+          "id": "design-assistance",
+          "title": "Design Assistance",
+          "learningUnits": [
+            "Architecture Brainstorming",
+            "Design Reviews",
+            "Tradeoff Analysis",
+            "Pattern Selection",
+            "System Design Assistance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-for-development",
+      "title": "AI for Development",
+      "topics": [
+        {
+          "id": "implementation-support",
+          "title": "Implementation Support",
+          "learningUnits": [
+            "Feature Development",
+            "Boilerplate Generation",
+            "API Development",
+            "Database Design",
+            "Infrastructure Code"
+          ]
+        },
+        {
+          "id": "refactoring-support",
+          "title": "Refactoring Support",
+          "learningUnits": [
+            "Legacy Code Analysis",
+            "Code Simplification",
+            "Technical Debt Reduction",
+            "Architecture Refactoring",
+            "Modernization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-for-testing",
+      "title": "AI for Testing",
+      "topics": [
+        {
+          "id": "test-generation",
+          "title": "Test Generation",
+          "learningUnits": [
+            "Unit Test Generation",
+            "Integration Test Generation",
+            "Test Case Discovery",
+            "Edge Case Discovery",
+            "Mock Generation"
+          ]
+        },
+        {
+          "id": "quality-assistance",
+          "title": "Quality Assistance",
+          "learningUnits": [
+            "Static Analysis",
+            "Bug Detection",
+            "Security Review",
+            "Code Smell Detection",
+            "Quality Improvements"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-for-debugging",
+      "title": "AI for Debugging",
+      "topics": [
+        {
+          "id": "debugging-assistance",
+          "title": "Debugging Assistance",
+          "learningUnits": [
+            "Error Analysis",
+            "Stack Trace Analysis",
+            "Log Analysis",
+            "Root Cause Discovery",
+            "Production Incident Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-automation",
+      "title": "AI Automation",
+      "topics": [
+        {
+          "id": "workflow-automation",
+          "title": "Workflow Automation",
+          "learningUnits": [
+            "Task Automation",
+            "Documentation Automation",
+            "Ticket Generation",
+            "Release Notes Generation",
+            "Knowledge Base Creation"
+          ]
+        },
+        {
+          "id": "agentic-workflows",
+          "title": "Agentic Workflows",
+          "learningUnits": [
+            "AI Agents",
+            "Tool Usage",
+            "Multi Agent Systems",
+            "Autonomous Tasks",
+            "Human in the Loop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "context-engineering",
+      "title": "Context Engineering",
+      "topics": [
+        {
+          "id": "context-management",
+          "title": "Context Management",
+          "learningUnits": [
+            "Context Windows",
+            "Knowledge Injection",
+            "Memory Systems",
+            "Prompt Context Design",
+            "Conversation Management"
+          ]
+        },
+        {
+          "id": "rag",
+          "title": "Retrieval Augmented Generation",
+          "learningUnits": [
+            "Embeddings",
+            "Vector Databases",
+            "Chunking",
+            "Semantic Search",
+            "RAG Architecture",
+            "Grounded Responses"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-engineering",
+      "title": "AI Engineering",
+      "topics": [
+        {
+          "id": "llm-applications",
+          "title": "LLM Applications",
+          "learningUnits": [
+            "Chat Applications",
+            "AI Assistants",
+            "Knowledge Bases",
+            "AI Search",
+            "Document Processing"
+          ]
+        },
+        {
+          "id": "ai-system-design",
+          "title": "AI System Design",
+          "learningUnits": [
+            "Model Selection",
+            "Latency Considerations",
+            "Cost Optimization",
+            "Caching AI Responses",
+            "Evaluation Frameworks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "responsible-ai",
+      "title": "Responsible AI",
+      "topics": [
+        {
+          "id": "ai-risks",
+          "title": "AI Risks",
+          "learningUnits": [
+            "Hallucinations",
+            "Bias",
+            "Privacy Risks",
+            "Security Risks",
+            "Prompt Injection",
+            "Data Leakage"
+          ]
+        },
+        {
+          "id": "ai-governance",
+          "title": "AI Governance",
+          "learningUnits": [
+            "Human Oversight",
+            "Verification",
+            "Transparency",
+            "Compliance",
+            "Responsible Usage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-productivity-systems",
+      "title": "AI Productivity Systems",
+      "topics": [
+        {
+          "id": "personal-knowledge-systems",
+          "title": "Personal Knowledge Systems",
+          "learningUnits": [
+            "Second Brain",
+            "Learning Automation",
+            "Micro Learning Generation",
+            "Knowledge Capture",
+            "Knowledge Retrieval"
+          ]
+        },
+        {
+          "id": "engineering-workflows",
+          "title": "Engineering Workflows",
+          "learningUnits": [
+            "AI First Development",
+            "AI Pair Programming",
+            "AI Assisted Planning",
+            "AI Assisted Learning",
+            "AI Assisted Decision Making"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-antipatterns",
+      "title": "AI Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Blind Trust in AI",
+            "Prompt and Pray",
+            "No Verification",
+            "Over Automation",
+            "Context Starvation",
+            "Tool Misuse",
+            "Copy Paste Engineering"
+          ]
+        }
+      ]
+    }
+  ]
+}

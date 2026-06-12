@@ -1,0 +1,371 @@
+{
+  "id": "networking-fundamentals",
+  "title": "Networking Fundamentals",
+  "categories": [
+    {
+      "id": "networking-basics",
+      "title": "Networking Basics",
+      "topics": [
+        {
+          "id": "network-introduction",
+          "title": "Network Introduction",
+          "learningUnits": [
+            "What is a Network?",
+            "Network Types",
+            "LAN",
+            "WAN",
+            "MAN",
+            "Internet",
+            "Intranet",
+            "Network Topology"
+          ]
+        },
+        {
+          "id": "data-communication",
+          "title": "Data Communication",
+          "learningUnits": [
+            "Sender",
+            "Receiver",
+            "Transmission Medium",
+            "Bandwidth",
+            "Latency",
+            "Packet",
+            "Frame"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osi-model",
+      "title": "OSI Model",
+      "topics": [
+        {
+          "id": "osi-overview",
+          "title": "OSI Layers",
+          "learningUnits": [
+            "OSI Overview",
+            "Physical Layer",
+            "Data Link Layer",
+            "Network Layer",
+            "Transport Layer",
+            "Session Layer",
+            "Presentation Layer",
+            "Application Layer"
+          ]
+        },
+        {
+          "id": "encapsulation",
+          "title": "Network Encapsulation",
+          "learningUnits": [
+            "Encapsulation",
+            "Decapsulation",
+            "Headers",
+            "Payload",
+            "Protocol Data Units"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tcp-ip-model",
+      "title": "TCP/IP Model",
+      "topics": [
+        {
+          "id": "tcp-ip-overview",
+          "title": "TCP/IP Architecture",
+          "learningUnits": [
+            "TCP/IP Overview",
+            "Link Layer",
+            "Internet Layer",
+            "Transport Layer",
+            "Application Layer",
+            "Protocol Stack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ip-addressing",
+      "title": "IP Addressing",
+      "topics": [
+        {
+          "id": "ipv4",
+          "title": "IPv4",
+          "learningUnits": [
+            "IPv4 Structure",
+            "Network Address",
+            "Host Address",
+            "Public IP",
+            "Private IP",
+            "Loopback Address",
+            "Broadcast Address"
+          ]
+        },
+        {
+          "id": "ipv6",
+          "title": "IPv6",
+          "learningUnits": [
+            "IPv6 Basics",
+            "IPv6 Format",
+            "Address Compression",
+            "Global Unicast",
+            "Link Local Address"
+          ]
+        },
+        {
+          "id": "subnetting",
+          "title": "Subnetting",
+          "learningUnits": [
+            "Subnet Mask",
+            "CIDR Notation",
+            "Network Range",
+            "Host Range",
+            "Subnet Calculation",
+            "VLSM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-layer",
+      "title": "Transport Layer",
+      "topics": [
+        {
+          "id": "tcp",
+          "title": "TCP",
+          "learningUnits": [
+            "TCP Basics",
+            "Three Way Handshake",
+            "Sequence Numbers",
+            "Acknowledgements",
+            "Flow Control",
+            "Congestion Control",
+            "Connection Termination"
+          ]
+        },
+        {
+          "id": "udp",
+          "title": "UDP",
+          "learningUnits": [
+            "UDP Basics",
+            "Connectionless Communication",
+            "Datagrams",
+            "UDP Use Cases",
+            "TCP vs UDP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "routing-switching",
+      "title": "Routing & Switching",
+      "topics": [
+        {
+          "id": "switching",
+          "title": "Switching",
+          "learningUnits": [
+            "Switch",
+            "MAC Address",
+            "Switching Table",
+            "Layer 2 Switching",
+            "VLAN Basics"
+          ]
+        },
+        {
+          "id": "routing",
+          "title": "Routing",
+          "learningUnits": [
+            "Router",
+            "Routing Table",
+            "Default Gateway",
+            "Static Routing",
+            "Dynamic Routing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dns",
+      "title": "DNS",
+      "topics": [
+        {
+          "id": "dns-fundamentals",
+          "title": "DNS Fundamentals",
+          "learningUnits": [
+            "What is DNS?",
+            "DNS Resolution",
+            "Recursive Query",
+            "Authoritative Server",
+            "DNS Records",
+            "A Record",
+            "CNAME Record",
+            "MX Record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http-https",
+      "title": "HTTP & HTTPS",
+      "topics": [
+        {
+          "id": "http-basics",
+          "title": "HTTP Fundamentals",
+          "learningUnits": [
+            "HTTP Request",
+            "HTTP Response",
+            "Methods",
+            "Headers",
+            "Status Codes",
+            "Cookies",
+            "Sessions"
+          ]
+        },
+        {
+          "id": "https",
+          "title": "HTTPS",
+          "learningUnits": [
+            "TLS",
+            "SSL",
+            "Certificates",
+            "Certificate Authorities",
+            "HTTPS Handshake",
+            "Encryption in Transit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network-security",
+      "title": "Network Security",
+      "topics": [
+        {
+          "id": "security-basics",
+          "title": "Network Security Basics",
+          "learningUnits": [
+            "Firewall",
+            "NAT",
+            "VPN",
+            "Proxy",
+            "Reverse Proxy",
+            "DMZ"
+          ]
+        },
+        {
+          "id": "network-attacks",
+          "title": "Network Threats",
+          "learningUnits": [
+            "DDoS",
+            "Man in the Middle",
+            "DNS Spoofing",
+            "Packet Sniffing",
+            "Port Scanning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-networking",
+      "title": "Cloud Networking",
+      "topics": [
+        {
+          "id": "cloud-network-basics",
+          "title": "Cloud Networking",
+          "learningUnits": [
+            "Virtual Network",
+            "Subnets",
+            "Network Security Groups",
+            "Private Endpoints",
+            "Load Balancers",
+            "Application Gateways"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microservices-networking",
+      "title": "Microservices Networking",
+      "topics": [
+        {
+          "id": "service-communication",
+          "title": "Service Communication",
+          "learningUnits": [
+            "Service Discovery",
+            "API Gateway",
+            "Ingress",
+            "Egress",
+            "Internal DNS",
+            "Service Mesh"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network-troubleshooting",
+      "title": "Network Troubleshooting",
+      "topics": [
+        {
+          "id": "diagnostic-tools",
+          "title": "Diagnostic Tools",
+          "learningUnits": [
+            "Ping",
+            "Traceroute",
+            "nslookup",
+            "dig",
+            "netstat",
+            "curl",
+            "Wireshark"
+          ]
+        },
+        {
+          "id": "common-issues",
+          "title": "Common Issues",
+          "learningUnits": [
+            "DNS Failure",
+            "Packet Loss",
+            "High Latency",
+            "Connection Timeout",
+            "Port Blocking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network-performance",
+      "title": "Network Performance",
+      "topics": [
+        {
+          "id": "performance-basics",
+          "title": "Performance Fundamentals",
+          "learningUnits": [
+            "Bandwidth",
+            "Throughput",
+            "Latency",
+            "Jitter",
+            "Packet Loss",
+            "Network Bottlenecks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "networking-antipatterns",
+      "title": "Networking Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Ignoring DNS",
+            "Hardcoded IP Addresses",
+            "Flat Networks",
+            "Missing TLS",
+            "Open Ports Everywhere",
+            "No Network Monitoring",
+            "Single Point of Failure"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "id": "cloud-infrastructure",
+  "title": "Cloud & Infrastructure",
+  "categories": [
+    {
+      "id": "cloud-fundamentals",
+      "title": "Cloud Fundamentals",
+      "topics": [
+        {
+          "id": "cloud-basics",
+          "title": "Cloud Basics",
+          "learningUnits": [
+            "What is Cloud Computing?",
+            "Why Cloud Exists",
+            "On-Premise vs Cloud",
+            "Cloud Benefits",
+            "Cloud Challenges",
+            "Shared Responsibility Model",
+            "Cloud Economics",
+            "Cloud Adoption Journey"
+          ]
+        },
+        {
+          "id": "service-models",
+          "title": "Cloud Service Models",
+          "learningUnits": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "FaaS",
+            "Managed Services",
+            "Choosing the Right Model"
+          ]
+        },
+        {
+          "id": "deployment-models",
+          "title": "Cloud Deployment Models",
+          "learningUnits": [
+            "Public Cloud",
+            "Private Cloud",
+            "Hybrid Cloud",
+            "Multi Cloud",
+            "Deployment Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-providers",
+      "title": "Cloud Providers",
+      "topics": [
+        {
+          "id": "aws",
+          "title": "AWS Fundamentals",
+          "learningUnits": [
+            "AWS Regions",
+            "Availability Zones",
+            "EC2",
+            "S3",
+            "RDS",
+            "IAM",
+            "CloudWatch"
+          ]
+        },
+        {
+          "id": "azure",
+          "title": "Azure Fundamentals",
+          "learningUnits": [
+            "Azure Regions",
+            "Resource Groups",
+            "Virtual Machines",
+            "Azure Storage",
+            "Azure SQL",
+            "Azure AD",
+            "Azure Monitor"
+          ]
+        },
+        {
+          "id": "gcp",
+          "title": "Google Cloud Fundamentals",
+          "learningUnits": [
+            "Projects",
+            "Compute Engine",
+            "Cloud Storage",
+            "Cloud SQL",
+            "IAM",
+            "Operations Suite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "Cloud Networking",
+      "topics": [
+        {
+          "id": "networking-basics",
+          "title": "Networking Fundamentals",
+          "learningUnits": [
+            "IP Addresses",
+            "CIDR",
+            "DNS",
+            "Ports",
+            "Protocols",
+            "Public vs Private Networks",
+            "NAT"
+          ]
+        },
+        {
+          "id": "virtual-networking",
+          "title": "Virtual Networking",
+          "learningUnits": [
+            "VPC",
+            "Subnets",
+            "Route Tables",
+            "Internet Gateway",
+            "Network Security Groups",
+            "Private Endpoints"
+          ]
+        },
+        {
+          "id": "load-balancing",
+          "title": "Load Balancing",
+          "learningUnits": [
+            "Layer 4 Load Balancing",
+            "Layer 7 Load Balancing",
+            "Health Checks",
+            "Traffic Distribution",
+            "Global Load Balancing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "title": "Compute Services",
+      "topics": [
+        {
+          "id": "virtual-machines",
+          "title": "Virtual Machines",
+          "learningUnits": [
+            "Virtualization",
+            "VM Provisioning",
+            "Scaling VMs",
+            "VM Images",
+            "VM Maintenance"
+          ]
+        },
+        {
+          "id": "containers",
+          "title": "Containers",
+          "learningUnits": [
+            "Container Basics",
+            "Container Runtime",
+            "Container Registries",
+            "Container Deployment",
+            "Container Lifecycle"
+          ]
+        },
+        {
+          "id": "serverless",
+          "title": "Serverless",
+          "learningUnits": [
+            "Function as a Service",
+            "Cold Starts",
+            "Triggers",
+            "Event Driven Functions",
+            "Serverless Tradeoffs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "title": "Cloud Storage",
+      "topics": [
+        {
+          "id": "object-storage",
+          "title": "Object Storage",
+          "learningUnits": [
+            "Buckets",
+            "Objects",
+            "Versioning",
+            "Lifecycle Policies",
+            "Storage Classes"
+          ]
+        },
+        {
+          "id": "block-storage",
+          "title": "Block Storage",
+          "learningUnits": [
+            "Volumes",
+            "Snapshots",
+            "Performance Tiers",
+            "Persistent Storage"
+          ]
+        },
+        {
+          "id": "file-storage",
+          "title": "File Storage",
+          "learningUnits": [
+            "Shared File Systems",
+            "NFS",
+            "SMB",
+            "Use Cases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-databases",
+      "title": "Managed Databases",
+      "topics": [
+        {
+          "id": "managed-relational",
+          "title": "Managed Relational Databases",
+          "learningUnits": [
+            "Managed SQL Services",
+            "Backups",
+            "Read Replicas",
+            "High Availability",
+            "Scaling"
+          ]
+        },
+        {
+          "id": "managed-nosql",
+          "title": "Managed NoSQL Databases",
+          "learningUnits": [
+            "Document Databases",
+            "Key Value Databases",
+            "Global Distribution",
+            "Scaling Strategies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infrastructure-as-code",
+      "title": "Infrastructure as Code",
+      "topics": [
+        {
+          "id": "iac-fundamentals",
+          "title": "IaC Fundamentals",
+          "learningUnits": [
+            "Why IaC Exists",
+            "Declarative vs Imperative",
+            "Idempotency",
+            "State Management",
+            "Infrastructure Versioning"
+          ]
+        },
+        {
+          "id": "terraform",
+          "title": "Terraform",
+          "learningUnits": [
+            "Providers",
+            "Resources",
+            "Variables",
+            "Modules",
+            "State Files",
+            "Terraform Workflow"
+          ]
+        },
+        {
+          "id": "cloud-native-iac",
+          "title": "Cloud Native IaC",
+          "learningUnits": [
+            "CloudFormation",
+            "ARM Templates",
+            "Bicep",
+            "Deployment Templates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-security",
+      "title": "Cloud Security",
+      "topics": [
+        {
+          "id": "identity-access",
+          "title": "Identity & Access Management",
+          "learningUnits": [
+            "IAM Basics",
+            "Roles",
+            "Policies",
+            "Least Privilege",
+            "Service Accounts",
+            "Federation"
+          ]
+        },
+        {
+          "id": "cloud-security-fundamentals",
+          "title": "Security Fundamentals",
+          "learningUnits": [
+            "Encryption At Rest",
+            "Encryption In Transit",
+            "Secrets Management",
+            "Key Management",
+            "Compliance Basics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "availability-scalability",
+      "title": "Availability & Scalability",
+      "topics": [
+        {
+          "id": "high-availability",
+          "title": "High Availability",
+          "learningUnits": [
+            "Redundancy",
+            "Failover",
+            "Multi AZ Deployments",
+            "Disaster Recovery",
+            "Recovery Objectives"
+          ]
+        },
+        {
+          "id": "auto-scaling",
+          "title": "Auto Scaling",
+          "learningUnits": [
+            "Horizontal Scaling",
+            "Scaling Policies",
+            "Metrics Based Scaling",
+            "Scheduled Scaling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-observability",
+      "title": "Cloud Observability",
+      "topics": [
+        {
+          "id": "monitoring-logging",
+          "title": "Monitoring & Logging",
+          "learningUnits": [
+            "Metrics",
+            "Logs",
+            "Distributed Tracing",
+            "Dashboards",
+            "Alerting",
+            "Health Monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost-optimization",
+      "title": "Cost Optimization",
+      "topics": [
+        {
+          "id": "cloud-cost-management",
+          "title": "Cost Management",
+          "learningUnits": [
+            "Pay As You Go",
+            "Reserved Capacity",
+            "Resource Tagging",
+            "Cost Monitoring",
+            "Waste Identification",
+            "FinOps Basics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-antipatterns",
+      "title": "Cloud Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Lift and Shift Everything",
+            "Ignoring Costs",
+            "Over Provisioning",
+            "Poor Security Practices",
+            "Manual Infrastructure",
+            "Single Region Dependency"
+          ]
+        }
+      ]
+    }
+  ]
+}

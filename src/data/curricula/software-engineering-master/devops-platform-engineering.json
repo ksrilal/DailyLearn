@@ -1,0 +1,403 @@
+{
+  "id": "devops-platform-engineering",
+  "title": "DevOps & Platform Engineering",
+  "categories": [
+    {
+      "id": "devops-fundamentals",
+      "title": "DevOps Fundamentals",
+      "topics": [
+        {
+          "id": "devops-basics",
+          "title": "DevOps Basics",
+          "learningUnits": [
+            "What is DevOps?",
+            "Why DevOps Exists",
+            "DevOps Culture",
+            "Collaboration",
+            "Automation",
+            "Continuous Improvement",
+            "DevOps Lifecycle",
+            "Common Misconceptions"
+          ]
+        },
+        {
+          "id": "platform-engineering-basics",
+          "title": "Platform Engineering",
+          "learningUnits": [
+            "What is Platform Engineering?",
+            "Internal Developer Platforms",
+            "Developer Experience",
+            "Golden Paths",
+            "Self Service Infrastructure",
+            "Platform Teams"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "source-control",
+      "title": "Source Control",
+      "topics": [
+        {
+          "id": "git-fundamentals",
+          "title": "Git Fundamentals",
+          "learningUnits": [
+            "Repositories",
+            "Commits",
+            "Branches",
+            "Merging",
+            "Rebasing",
+            "Tags",
+            "Git History"
+          ]
+        },
+        {
+          "id": "git-workflows",
+          "title": "Git Workflows",
+          "learningUnits": [
+            "Feature Branch Workflow",
+            "Git Flow",
+            "Trunk Based Development",
+            "Pull Requests",
+            "Code Reviews",
+            "Release Branches"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continuous-integration",
+      "title": "Continuous Integration",
+      "topics": [
+        {
+          "id": "ci-fundamentals",
+          "title": "CI Fundamentals",
+          "learningUnits": [
+            "Continuous Integration",
+            "Build Automation",
+            "Automated Testing",
+            "Quality Gates",
+            "Build Pipelines",
+            "CI Best Practices"
+          ]
+        },
+        {
+          "id": "ci-tools",
+          "title": "CI Tools",
+          "learningUnits": [
+            "GitHub Actions",
+            "Azure DevOps Pipelines",
+            "GitLab CI",
+            "Jenkins",
+            "Pipeline Triggers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continuous-delivery",
+      "title": "Continuous Delivery & Deployment",
+      "topics": [
+        {
+          "id": "cd-fundamentals",
+          "title": "CD Fundamentals",
+          "learningUnits": [
+            "Continuous Delivery",
+            "Continuous Deployment",
+            "Release Automation",
+            "Deployment Pipelines",
+            "Environment Promotion",
+            "Rollback Strategies"
+          ]
+        },
+        {
+          "id": "deployment-strategies",
+          "title": "Deployment Strategies",
+          "learningUnits": [
+            "Blue Green Deployment",
+            "Canary Deployment",
+            "Rolling Deployment",
+            "Recreate Deployment",
+            "Feature Flags",
+            "Progressive Delivery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "containers",
+      "title": "Containers",
+      "topics": [
+        {
+          "id": "docker",
+          "title": "Docker",
+          "learningUnits": [
+            "Docker Architecture",
+            "Images",
+            "Containers",
+            "Dockerfile",
+            "Build Process",
+            "Container Lifecycle",
+            "Docker CLI"
+          ]
+        },
+        {
+          "id": "docker-storage-networking",
+          "title": "Docker Storage & Networking",
+          "learningUnits": [
+            "Volumes",
+            "Bind Mounts",
+            "Networks",
+            "Bridge Network",
+            "Host Network",
+            "Container Communication"
+          ]
+        },
+        {
+          "id": "docker-compose",
+          "title": "Docker Compose",
+          "learningUnits": [
+            "Compose Files",
+            "Services",
+            "Environment Variables",
+            "Volumes",
+            "Networking",
+            "Multi Container Applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "container-orchestration",
+      "title": "Container Orchestration",
+      "topics": [
+        {
+          "id": "kubernetes-fundamentals",
+          "title": "Kubernetes Fundamentals",
+          "learningUnits": [
+            "Cluster Architecture",
+            "Control Plane",
+            "Worker Nodes",
+            "Pods",
+            "Deployments",
+            "ReplicaSets",
+            "Namespaces"
+          ]
+        },
+        {
+          "id": "kubernetes-networking",
+          "title": "Kubernetes Networking",
+          "learningUnits": [
+            "Services",
+            "ClusterIP",
+            "NodePort",
+            "LoadBalancer",
+            "Ingress",
+            "Service Discovery"
+          ]
+        },
+        {
+          "id": "kubernetes-storage",
+          "title": "Kubernetes Storage",
+          "learningUnits": [
+            "Persistent Volumes",
+            "Persistent Volume Claims",
+            "Storage Classes",
+            "Volume Mounts",
+            "Stateful Applications"
+          ]
+        },
+        {
+          "id": "kubernetes-workloads",
+          "title": "Kubernetes Workloads",
+          "learningUnits": [
+            "StatefulSets",
+            "DaemonSets",
+            "Jobs",
+            "CronJobs",
+            "Autoscaling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infrastructure-automation",
+      "title": "Infrastructure Automation",
+      "topics": [
+        {
+          "id": "terraform",
+          "title": "Terraform",
+          "learningUnits": [
+            "Providers",
+            "Resources",
+            "Variables",
+            "Outputs",
+            "Modules",
+            "State Files",
+            "Terraform Workflow"
+          ]
+        },
+        {
+          "id": "configuration-management",
+          "title": "Configuration Management",
+          "learningUnits": [
+            "Configuration Drift",
+            "Ansible",
+            "Chef",
+            "Puppet",
+            "Desired State"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "release-management",
+      "title": "Release Management",
+      "topics": [
+        {
+          "id": "release-process",
+          "title": "Release Process",
+          "learningUnits": [
+            "Release Planning",
+            "Release Branching",
+            "Versioning",
+            "Release Validation",
+            "Go Live Checklist",
+            "Post Release Verification"
+          ]
+        },
+        {
+          "id": "environment-management",
+          "title": "Environment Management",
+          "learningUnits": [
+            "Development Environment",
+            "QA Environment",
+            "UAT Environment",
+            "Production Environment",
+            "Configuration Promotion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "platform-observability",
+      "title": "Platform Observability",
+      "topics": [
+        {
+          "id": "monitoring",
+          "title": "Monitoring",
+          "learningUnits": [
+            "Infrastructure Metrics",
+            "Application Metrics",
+            "Prometheus",
+            "Grafana",
+            "Alerting",
+            "SLO Monitoring"
+          ]
+        },
+        {
+          "id": "logging-tracing",
+          "title": "Logging & Tracing",
+          "learningUnits": [
+            "Centralized Logging",
+            "ELK Stack",
+            "OpenTelemetry",
+            "Distributed Tracing",
+            "Correlation IDs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-devsecops",
+      "title": "DevSecOps",
+      "topics": [
+        {
+          "id": "security-automation",
+          "title": "Security Automation",
+          "learningUnits": [
+            "Secrets Management",
+            "Dependency Scanning",
+            "Container Scanning",
+            "Static Analysis",
+            "Policy Enforcement"
+          ]
+        },
+        {
+          "id": "supply-chain-security",
+          "title": "Supply Chain Security",
+          "learningUnits": [
+            "Artifact Signing",
+            "SBOM",
+            "Trusted Registries",
+            "Build Provenance",
+            "Software Supply Chain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "developer-platforms",
+      "title": "Developer Platforms",
+      "topics": [
+        {
+          "id": "internal-developer-platforms",
+          "title": "Internal Developer Platforms",
+          "learningUnits": [
+            "Developer Self Service",
+            "Platform APIs",
+            "Golden Paths",
+            "Platform Templates",
+            "Developer Portals"
+          ]
+        },
+        {
+          "id": "backstage",
+          "title": "Backstage",
+          "learningUnits": [
+            "Software Catalog",
+            "Templates",
+            "Developer Workflows",
+            "Platform Governance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-metrics",
+      "title": "DevOps Metrics",
+      "topics": [
+        {
+          "id": "dora-metrics",
+          "title": "DORA Metrics",
+          "learningUnits": [
+            "Deployment Frequency",
+            "Lead Time for Changes",
+            "Change Failure Rate",
+            "Mean Time to Recovery",
+            "Measuring Team Performance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-antipatterns",
+      "title": "DevOps Anti Patterns",
+      "topics": [
+        {
+          "id": "common-mistakes",
+          "title": "Common Mistakes",
+          "learningUnits": [
+            "Manual Deployments",
+            "Snowflake Servers",
+            "Pipeline Bottlenecks",
+            "Lack of Automation",
+            "Environment Drift",
+            "Ignoring Monitoring",
+            "DevOps Without Culture"
+          ]
+        }
+      ]
+    }
+  ]
+}
