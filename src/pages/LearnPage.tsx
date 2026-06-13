@@ -9,6 +9,8 @@ import { useLesson, toLessonInput } from '@/features/learning/useLesson';
 import { useCurriculumStore } from '@/stores/curriculumStore';
 import { useLearningStore } from '@/stores/learningStore';
 import { useProgressStore } from '@/stores/progressStore';
+import { useAuthStore } from '@/stores/authStore';
+import { supabaseEnabled } from '@/lib/supabase';
 import { toast } from '@/components/ui/toast';
 import { PageLoader } from '@/components/PageLoader';
 
@@ -26,6 +28,8 @@ export default function LearnPage() {
 
   const isCompleted = useProgressStore((s) => s.isCompleted);
   const markComplete = useProgressStore((s) => s.markComplete);
+
+  const profile = useAuthStore((s) => s.profile);
 
   useEffect(() => {
     if (!loaded || activeUnitPath) return;
@@ -81,6 +85,12 @@ export default function LearnPage() {
           {completed && (
             <Badge variant="success">
               <CheckCircle2 className="h-3 w-3" /> Completed
+            </Badge>
+          )}
+          {supabaseEnabled && profile && !profile.ai_enabled_by_admin && (
+            <Badge variant="outline">
+              <Sparkles className="h-3 w-3" />
+              Free trial: {Math.min(profile.trial_calls_used, profile.trial_limit)}/{profile.trial_limit} calls
             </Badge>
           )}
         </div>

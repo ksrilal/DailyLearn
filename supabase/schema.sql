@@ -13,6 +13,14 @@ create table if not exists public.profiles (
 -- default so future inserts (outside the trigger) also default to false.
 alter table public.profiles alter column ai_enabled set default false;
 
+-- Free-trial fields: every new account gets `trial_limit` AI calls for free,
+-- enabled by default (ai_enabled = true) until the limit is reached, at
+-- which point the server auto-disables ai_enabled unless an admin has
+-- granted full access (ai_enabled_by_admin = true).
+alter table public.profiles add column if not exists trial_calls_used integer not null default 0;
+alter table public.profiles add column if not exists trial_limit integer not null default 5;
+alter table public.profiles add column if not exists ai_enabled_by_admin boolean not null default false;
+
 alter table public.profiles enable row level security;
 
 -- RLS policies restrict which rows are visible/editable, but roles still
@@ -54,8 +62,10 @@ create policy "Admins can update any profile"
   using (public.is_admin(auth.uid()));
 
 -- Auto-create a profile row whenever a new auth user registers.
--- New accounts default to role = 'learner' and ai_enabled = false; an
--- admin must explicitly enable AI access from the User Management page.
+-- New accounts default to role = 'learner' with ai_enabled = true so the
+-- user can use their free trial (trial_limit calls); the server disables
+-- ai_enabled automatically once the trial is exhausted unless an admin has
+-- granted full access (ai_enabled_by_admin).
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql
@@ -63,7 +73,7 @@ security definer set search_path = public
 as $$
 begin
   insert into public.profiles (id, email, ai_enabled)
-  values (new.id, new.email, false);
+  values (new.id, new.email, true);
   return new;
 end;
 $$;
@@ -92,6 +102,10 @@ create table if not exists public.ai_usage (
 -- If the table already exists from a previous run, add the token columns.
 alter table public.ai_usage add column if not exists input_tokens integer;
 alter table public.ai_usage add column if not exists output_tokens integer;
+
+-- Marks requests covered by the user's free trial (first `trial_limit`
+-- calls) so they can be excluded from billing/cost totals.
+alter table public.ai_usage add column if not exists is_trial boolean not null default false;
 
 create index if not exists ai_usage_user_id_created_at_idx on public.ai_usage (user_id, created_at desc);
 

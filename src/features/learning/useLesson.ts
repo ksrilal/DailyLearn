@@ -6,6 +6,7 @@ import { lessonCache } from '@/lib/db';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useCurriculumStore } from '@/stores/curriculumStore';
+import { useAuthStore } from '@/stores/authStore';
 import { AIProviderError } from '@/types/ai';
 
 export function toLessonInput(unit: LearningUnit): LessonInput {
@@ -47,6 +48,7 @@ async function fetchOrGenerateLesson(unit: LearningUnit): Promise<Lesson> {
 
   const lesson = await getSystemProvider().generateLesson(input, '', '');
   await lessonCache.put(lesson);
+  void useAuthStore.getState().refreshProfile();
   return lesson;
 }
 

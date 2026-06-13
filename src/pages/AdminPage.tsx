@@ -51,7 +51,7 @@ export default function AdminPage() {
   async function loadUsage() {
     const { data, error } = await supabase
       .from('ai_usage')
-      .select('user_id, created_at, model, input_tokens, output_tokens')
+      .select('user_id, created_at, model, input_tokens, output_tokens, is_trial')
       .order('created_at', { ascending: false })
       .limit(5000);
     if (error || !data) return;
@@ -66,6 +66,7 @@ export default function AdminPage() {
       model: string | null;
       input_tokens: number | null;
       output_tokens: number | null;
+      is_trial: boolean | null;
     }[]) {
       const created = new Date(row.created_at);
       const age = now - created.getTime();
@@ -77,7 +78,9 @@ export default function AdminPage() {
       months.add(key);
       const m = c.byMonth[key] ?? { count: 0, cost: 0 };
       m.count += 1;
-      m.cost += estimateCost(row.model, row.input_tokens ?? 0, row.output_tokens ?? 0);
+      if (!row.is_trial) {
+        m.cost += estimateCost(row.model, row.input_tokens ?? 0, row.output_tokens ?? 0);
+      }
       c.byMonth[key] = m;
       counts[row.user_id] = c;
     }
@@ -88,11 +91,16 @@ export default function AdminPage() {
 
   async function toggleAiEnabled(profile: Profile, enabled: boolean) {
     setUpdatingId(profile.id);
-    const { error } = await supabase.from('profiles').update({ ai_enabled: enabled }).eq('id', profile.id);
+    const { error } = await supabase
+      .from('profiles')
+      .update({ ai_enabled: enabled, ai_enabled_by_admin: enabled })
+      .eq('id', profile.id);
     if (error) {
       toast({ title: 'Update failed', description: error.message, variant: 'error' });
     } else {
-      setProfiles((prev) => prev.map((p) => (p.id === profile.id ? { ...p, ai_enabled: enabled } : p)));
+      setProfiles((prev) =>
+        prev.map((p) => (p.id === profile.id ? { ...p, ai_enabled: enabled, ai_enabled_by_admin: enabled } : p)),
+      );
       toast({
         title: enabled ? 'AI access enabled' : 'AI access disabled',
         description: profile.email,
@@ -156,6 +164,11 @@ export default function AdminPage() {
                             </Badge>
                           )}
                           {profile.id === currentUser?.id && <Badge variant="outline">You</Badge>}
+                          {!profile.ai_enabled_by_admin && (
+                            <Badge variant="outline">
+                              Trial {Math.min(profile.trial_calls_used, profile.trial_limit)}/{profile.trial_limit}
+                            </Badge>
+                          )}
                         </div>
                         <p className="text-xs text-muted-foreground">
                           Joined {new Date(profile.created_at).toLocaleDateString()}

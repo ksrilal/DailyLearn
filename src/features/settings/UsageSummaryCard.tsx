@@ -38,7 +38,7 @@ export function UsageSummaryCard() {
     setLoading(true);
     const { data, error } = await supabase
       .from('ai_usage')
-      .select('created_at, model, input_tokens, output_tokens')
+      .select('created_at, model, input_tokens, output_tokens, is_trial')
       .eq('user_id', userId)
       .order('created_at', { ascending: false })
       .limit(2000);
@@ -52,7 +52,13 @@ export function UsageSummaryCard() {
     const now = Date.now();
     const dayMs = 24 * 60 * 60 * 1000;
     const result: UsageStats = { last24h: 0, last7d: 0, total: 0, byMonth: {} };
-    for (const row of data as { created_at: string; model: string | null; input_tokens: number | null; output_tokens: number | null }[]) {
+    for (const row of data as {
+      created_at: string;
+      model: string | null;
+      input_tokens: number | null;
+      output_tokens: number | null;
+      is_trial: boolean | null;
+    }[]) {
       const created = new Date(row.created_at);
       const age = now - created.getTime();
       result.total += 1;
@@ -62,7 +68,9 @@ export function UsageSummaryCard() {
       const key = monthKey(created);
       const m = result.byMonth[key] ?? { count: 0, cost: 0 };
       m.count += 1;
-      m.cost += estimateCost(row.model, row.input_tokens ?? 0, row.output_tokens ?? 0);
+      if (!row.is_trial) {
+        m.cost += estimateCost(row.model, row.input_tokens ?? 0, row.output_tokens ?? 0);
+      }
       result.byMonth[key] = m;
     }
     setStats(result);

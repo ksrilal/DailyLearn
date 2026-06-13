@@ -44,8 +44,11 @@ export async function checkAiAccess(authHeader: string | undefined): Promise<Aut
   return { allowed: profile.ai_enabled === true, userId };
 }
 
-/** Records one AI request for usage monitoring. Best-effort: failures are
- * swallowed so logging never blocks the actual AI response. */
+/** Records one AI request for usage monitoring, marks whether it was covered
+ * by the user's free trial, and increments/expires the trial counter. Once
+ * `trial_calls_used` reaches `trial_limit`, `ai_enabled` is auto-disabled
+ * unless the admin has granted full access (`ai_enabled_by_admin`).
+ * Best-effort: failures are swallowed so logging never blocks the AI response. */
 export async function logAiUsage(
   userId: string | null,
   kind: string,
@@ -54,6 +57,18 @@ export async function logAiUsage(
   usage?: TokenUsage | null,
 ) {
   if (!supabaseAdmin || !userId) return;
+
+  const { data: profile } = await supabaseAdmin
+    .from('profiles')
+    .select('trial_calls_used, trial_limit, ai_enabled_by_admin')
+    .eq('id', userId)
+    .single();
+
+  const trialCallsUsed = profile?.trial_calls_used ?? 0;
+  const trialLimit = profile?.trial_limit ?? 5;
+  const adminGranted = profile?.ai_enabled_by_admin === true;
+  const isTrial = !adminGranted && trialCallsUsed < trialLimit;
+
   await supabaseAdmin
     .from('ai_usage')
     .insert({
@@ -63,9 +78,24 @@ export async function logAiUsage(
       model,
       input_tokens: usage?.inputTokens ?? null,
       output_tokens: usage?.outputTokens ?? null,
+      is_trial: isTrial,
     })
     .then(
       () => undefined,
       () => undefined,
     );
+
+  if (isTrial && profile) {
+    const newCount = trialCallsUsed + 1;
+    const update: Record<string, unknown> = { trial_calls_used: newCount };
+    if (newCount >= trialLimit) update.ai_enabled = false;
+    await supabaseAdmin
+      .from('profiles')
+      .update(update)
+      .eq('id', userId)
+      .then(
+        () => undefined,
+        () => undefined,
+      );
+  }
 }
