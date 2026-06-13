@@ -1,5 +1,5 @@
-import type { Lesson } from '@/types/lesson';
-import type { LessonInput } from '@/types/ai';
+import type { Lesson } from '../../types/lesson.js';
+import type { LessonInput } from '../../types/ai.js';
 
 export const SYSTEM_PROMPT = `You are a Staff Software Engineer, Technical Mentor, and Learning Designer.
 

@@ -1,4 +1,4 @@
-import type { FlashcardSet, Lesson, Quiz, Summary } from './lesson';
+import type { FlashcardSet, Lesson, Quiz, Summary } from './lesson.js';
 
 export interface LessonInput {
   module: string;

@@ -1,6 +1,6 @@
-import { AIProviderError } from '../../src/types/ai';
-import type { MentorMessage } from '../../src/types/ai';
-import { SYSTEM_PROMPT } from '../../src/features/ai/prompts';
+import { AIProviderError } from '../../src/types/ai.js';
+import type { MentorMessage } from '../../src/types/ai.js';
+import { SYSTEM_PROMPT } from '../../src/features/ai/prompts.js';
 
 export type ServerProviderId = 'openai' | 'anthropic' | 'gemini';
 

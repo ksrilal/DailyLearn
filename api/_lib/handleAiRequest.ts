@@ -1,10 +1,10 @@
-import { chat, chatMentor } from './chat';
-import { getAvailableProviders, getSystemProviderConfig } from './config';
-import { parseJsonResponse } from '../../src/features/ai/parse';
-import { flashcardsPrompt, lessonPrompt, mentorSystemPrompt, quizPrompt, summaryPrompt } from '../../src/features/ai/prompts';
-import type { LessonInput, MentorMessage } from '../../src/types/ai';
-import { AIProviderError } from '../../src/types/ai';
-import type { FlashcardSet, Lesson, Quiz, Summary } from '../../src/types/lesson';
+import { chat, chatMentor } from './chat.js';
+import { getAvailableProviders, getSystemProviderConfig } from './config.js';
+import { parseJsonResponse } from '../../src/features/ai/parse.js';
+import { flashcardsPrompt, lessonPrompt, mentorSystemPrompt, quizPrompt, summaryPrompt } from '../../src/features/ai/prompts.js';
+import type { LessonInput, MentorMessage } from '../../src/types/ai.js';
+import { AIProviderError } from '../../src/types/ai.js';
+import type { FlashcardSet, Lesson, Quiz, Summary } from '../../src/types/lesson.js';
 
 export interface GenerateBody {
   kind: 'lesson' | 'quiz' | 'flashcards' | 'summary' | 'test' | 'mentor';

@@ -1,4 +1,4 @@
-import type { ServerProviderId } from './chat';
+import type { ServerProviderId } from './chat.js';
 
 const PROVIDER_IDS: ServerProviderId[] = ['openai', 'anthropic', 'gemini'];
 
