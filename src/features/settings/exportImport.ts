@@ -1,6 +1,7 @@
 import type { AppSettings } from '@/types/settings';
 import type { CompletionRecord, StreakData } from '@/types/progress';
-import { lessonCache, quizCache, flashcardCache, summaryCache } from '@/lib/db';
+import { clearAllCaches, lessonCache, quizCache, flashcardCache, summaryCache } from '@/lib/db';
+import { STORAGE_KEYS } from '@/lib/storage';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { useLearningStore } from '@/stores/learningStore';
@@ -89,4 +90,13 @@ export function applyImport(data: DailyLearnExport): void {
   useSettingsStore.getState().importSettings(data.settings);
   useProgressStore.getState().importProgress(data.progress);
   useLearningStore.getState().importLearning(data.learning);
+}
+
+/** Clears all locally saved data: settings, progress, streaks, mentor chats, flashcard
+ * ratings, and cached lessons/quizzes/flashcards/summaries in IndexedDB. */
+export async function resetAllAppData(): Promise<void> {
+  await clearAllCaches();
+  for (const key of Object.values(STORAGE_KEYS)) {
+    localStorage.removeItem(key);
+  }
 }

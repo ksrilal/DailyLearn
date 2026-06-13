@@ -7,12 +7,12 @@ export function ChallengeQuestionCard({ challenge }: { challenge: ChallengeQuest
   return (
     <Card>
       <CardHeader className="pb-2">
-        <CardTitle className="flex items-center gap-2 text-base">
-          <HelpCircle className="h-4 w-4 text-primary" />
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <HelpCircle className="h-5 w-5 text-primary" />
           Challenge Question
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3 text-sm leading-relaxed text-foreground/90">
+      <CardContent className="space-y-3 text-base leading-relaxed text-foreground/90">
         <p>{challenge.question}</p>
         <RevealAnswerPanel answer={challenge.answer} />
       </CardContent>

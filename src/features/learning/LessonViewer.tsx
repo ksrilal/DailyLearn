@@ -43,12 +43,12 @@ function Section({
     >
       <Card className={highlight ? 'border-primary/40 bg-primary/5' : undefined}>
         <CardHeader className="pb-2">
-          <CardTitle className="flex items-center gap-2 text-base">
-            <Icon className="h-4 w-4 text-primary" />
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Icon className="h-5 w-5 text-primary" />
             {title}
           </CardTitle>
         </CardHeader>
-        <CardContent className="text-sm leading-relaxed text-foreground/90">{children}</CardContent>
+        <CardContent className="text-base leading-relaxed text-foreground/90">{children}</CardContent>
       </Card>
     </motion.div>
   );

@@ -30,7 +30,7 @@ export function RevealAnswerPanel({ answer, revealLabel = 'Reveal Answer', hideL
           >
             <div className="rounded-md border border-primary/30 bg-primary/5 p-3">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-primary">Answer</p>
-              <p className="text-sm leading-relaxed text-foreground/90">{answer}</p>
+              <p className="text-base leading-relaxed text-foreground/90">{answer}</p>
             </div>
           </motion.div>
         )}
