@@ -2,6 +2,8 @@ import type { AppSettings } from '@/types/settings';
 import type { CompletionRecord, StreakData } from '@/types/progress';
 import { clearAllCaches, lessonCache, quizCache, flashcardCache, summaryCache } from '@/lib/db';
 import { STORAGE_KEYS } from '@/lib/storage';
+import { supabase, supabaseEnabled } from '@/lib/supabase';
+import { useAuthStore } from '@/stores/authStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useProgressStore } from '@/stores/progressStore';
 import { useLearningStore } from '@/stores/learningStore';
@@ -98,5 +100,10 @@ export async function resetAllAppData(): Promise<void> {
   await clearAllCaches();
   for (const key of Object.values(STORAGE_KEYS)) {
     localStorage.removeItem(key);
+  }
+
+  const userId = useAuthStore.getState().user?.id;
+  if (supabaseEnabled && userId) {
+    await supabase.from('user_progress').delete().eq('user_id', userId);
   }
 }

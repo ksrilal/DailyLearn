@@ -3,6 +3,7 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuthStore } from '@/stores/authStore';
 import { supabaseEnabled } from '@/lib/supabase';
 import { PageLoader } from '@/components/PageLoader';
+import { syncProgressOnLogin } from '@/lib/progressSync';
 
 /** Requires a signed-in user before rendering child routes; redirects to /login otherwise. */
 export function AuthGate() {
@@ -15,6 +16,10 @@ export function AuthGate() {
   useEffect(() => {
     init();
   }, [init]);
+
+  useEffect(() => {
+    if (session?.user.id) void syncProgressOnLogin(session.user.id);
+  }, [session?.user.id]);
 
   if (!supabaseEnabled) return <Outlet />;
 

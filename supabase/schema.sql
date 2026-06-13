@@ -111,3 +111,38 @@ drop policy if exists "Admins can view all AI usage" on public.ai_usage;
 create policy "Admins can view all AI usage"
   on public.ai_usage for select
   using (public.is_admin(auth.uid()));
+
+-- Per-user learning progress: completed units, streak, and the
+-- date-keyed daily-unit picks. AI-generated lesson content is NOT
+-- stored here (it stays in the browser's IndexedDB) to avoid DB cost.
+create table if not exists public.user_progress (
+  user_id uuid primary key references auth.users (id) on delete cascade,
+  completions jsonb not null default '[]'::jsonb,
+  streak jsonb not null default '{"current":0,"longest":0,"lastCompletedDate":null}'::jsonb,
+  daily_unit_by_date jsonb not null default '{}'::jsonb,
+  updated_at timestamptz not null default now()
+);
+
+alter table public.user_progress enable row level security;
+
+grant select, insert, update, delete on public.user_progress to authenticated;
+
+drop policy if exists "Users can view their own progress" on public.user_progress;
+create policy "Users can view their own progress"
+  on public.user_progress for select
+  using (auth.uid() = user_id);
+
+drop policy if exists "Users can upsert their own progress" on public.user_progress;
+create policy "Users can upsert their own progress"
+  on public.user_progress for insert
+  with check (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own progress" on public.user_progress;
+create policy "Users can update their own progress"
+  on public.user_progress for update
+  using (auth.uid() = user_id);
+
+drop policy if exists "Users can delete their own progress" on public.user_progress;
+create policy "Users can delete their own progress"
+  on public.user_progress for delete
+  using (auth.uid() = user_id);

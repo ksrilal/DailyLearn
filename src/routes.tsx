@@ -13,6 +13,7 @@ const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 const AdminPage = lazy(() => import('@/pages/AdminPage'));
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/pages/RegisterPage'));
+const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage'));
 
 function withSuspense(element: React.ReactNode) {
   return <Suspense fallback={<PageLoader />}>{element}</Suspense>;
@@ -21,6 +22,7 @@ function withSuspense(element: React.ReactNode) {
 export const router = createBrowserRouter([
   { path: '/login', element: withSuspense(<LoginPage />) },
   { path: '/register', element: withSuspense(<RegisterPage />) },
+  { path: '/reset-password', element: withSuspense(<ResetPasswordPage />) },
   {
     element: <AuthGate />,
     children: [

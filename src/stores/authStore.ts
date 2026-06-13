@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import type { Session, User } from '@supabase/supabase-js';
 import { supabase, supabaseEnabled } from '@/lib/supabase';
+import { stopProgressSync } from '@/lib/progressSync';
 import type { Profile } from '@/types/auth';
 
 interface AuthStore {
@@ -14,6 +15,8 @@ interface AuthStore {
   signUp: (email: string, password: string) => Promise<{ error: string | null }>;
   signIn: (email: string, password: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
+  resetPasswordForEmail: (email: string) => Promise<{ error: string | null }>;
+  updatePassword: (password: string) => Promise<{ error: string | null }>;
 }
 
 async function fetchProfile(userId: string): Promise<Profile | null> {
@@ -62,7 +65,20 @@ export const useAuthStore = create<AuthStore>()((set, get) => ({
   },
 
   signOut: async () => {
+    stopProgressSync();
     await supabase.auth.signOut();
     set({ session: null, user: null, profile: null });
+  },
+
+  resetPasswordForEmail: async (email) => {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    return { error: error?.message ?? null };
+  },
+
+  updatePassword: async (password) => {
+    const { error } = await supabase.auth.updateUser({ password });
+    return { error: error?.message ?? null };
   },
 }));
