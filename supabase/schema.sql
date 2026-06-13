@@ -15,9 +15,11 @@ alter table public.profiles alter column ai_enabled set default false;
 
 alter table public.profiles enable row level security;
 
--- RLS policies restrict which rows are visible/editable, but the
--- `authenticated` role still needs base table privileges to query at all.
+-- RLS policies restrict which rows are visible/editable, but roles still
+-- need base table privileges to query at all. service_role is used by the
+-- server-side AI proxy (api/_lib/auth.ts) to check ai_enabled and bypasses RLS.
 grant select, update on public.profiles to authenticated;
+grant select, update, insert on public.profiles to service_role;
 
 -- Returns true if the given user id belongs to an admin. Marked `security
 -- definer` so it bypasses RLS internally, avoiding infinite recursion when
@@ -73,3 +75,39 @@ create trigger on_auth_user_created
 
 -- After registering your first account, promote it to admin by running:
 -- update public.profiles set role = 'admin' where email = 'you@example.com';
+
+-- AI usage log: one row per AI generation request, for per-user monitoring.
+-- Inserted only by the server (service-role key), which bypasses RLS.
+create table if not exists public.ai_usage (
+  id bigint generated always as identity primary key,
+  user_id uuid not null references auth.users (id) on delete cascade,
+  kind text not null,
+  provider text,
+  model text,
+  input_tokens integer,
+  output_tokens integer,
+  created_at timestamptz not null default now()
+);
+
+-- If the table already exists from a previous run, add the token columns.
+alter table public.ai_usage add column if not exists input_tokens integer;
+alter table public.ai_usage add column if not exists output_tokens integer;
+
+create index if not exists ai_usage_user_id_created_at_idx on public.ai_usage (user_id, created_at desc);
+
+alter table public.ai_usage enable row level security;
+
+grant select on public.ai_usage to authenticated;
+grant select, insert on public.ai_usage to service_role;
+
+-- Learners can see their own usage history.
+drop policy if exists "Users can view their own AI usage" on public.ai_usage;
+create policy "Users can view their own AI usage"
+  on public.ai_usage for select
+  using (auth.uid() = user_id);
+
+-- Admins can see everyone's usage.
+drop policy if exists "Admins can view all AI usage" on public.ai_usage;
+create policy "Admins can view all AI usage"
+  on public.ai_usage for select
+  using (public.is_admin(auth.uid()));

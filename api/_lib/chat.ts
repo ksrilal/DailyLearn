@@ -4,7 +4,17 @@ import { SYSTEM_PROMPT } from '../../src/features/ai/prompts.js';
 
 export type ServerProviderId = 'openai' | 'anthropic' | 'gemini';
 
-async function chatOpenAI(apiKey: string, model: string, prompt: string): Promise<string> {
+export interface TokenUsage {
+  inputTokens: number;
+  outputTokens: number;
+}
+
+export interface ChatResult {
+  content: string;
+  usage: TokenUsage | null;
+}
+
+async function chatOpenAI(apiKey: string, model: string, prompt: string): Promise<ChatResult> {
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -32,10 +42,13 @@ async function chatOpenAI(apiKey: string, model: string, prompt: string): Promis
   if (typeof content !== 'string') {
     throw new AIProviderError('OpenAI response missing message content');
   }
-  return content;
+  const usage = data?.usage
+    ? { inputTokens: data.usage.prompt_tokens ?? 0, outputTokens: data.usage.completion_tokens ?? 0 }
+    : null;
+  return { content, usage };
 }
 
-async function chatAnthropic(apiKey: string, model: string, prompt: string): Promise<string> {
+async function chatAnthropic(apiKey: string, model: string, prompt: string): Promise<ChatResult> {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -61,10 +74,13 @@ async function chatAnthropic(apiKey: string, model: string, prompt: string): Pro
   if (typeof content !== 'string') {
     throw new AIProviderError('Anthropic response missing content');
   }
-  return content;
+  const usage = data?.usage
+    ? { inputTokens: data.usage.input_tokens ?? 0, outputTokens: data.usage.output_tokens ?? 0 }
+    : null;
+  return { content, usage };
 }
 
-async function chatGemini(apiKey: string, model: string, prompt: string): Promise<string> {
+async function chatGemini(apiKey: string, model: string, prompt: string): Promise<ChatResult> {
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
     {
@@ -88,11 +104,17 @@ async function chatGemini(apiKey: string, model: string, prompt: string): Promis
   if (typeof content !== 'string') {
     throw new AIProviderError('Gemini response missing content');
   }
-  return content;
+  const usage = data?.usageMetadata
+    ? {
+        inputTokens: data.usageMetadata.promptTokenCount ?? 0,
+        outputTokens: data.usageMetadata.candidatesTokenCount ?? 0,
+      }
+    : null;
+  return { content, usage };
 }
 
-/** Calls the given provider's chat completion API server-side and returns the raw text response. */
-export function chat(provider: ServerProviderId, apiKey: string, model: string, prompt: string): Promise<string> {
+/** Calls the given provider's chat completion API server-side and returns the response text and token usage. */
+export function chat(provider: ServerProviderId, apiKey: string, model: string, prompt: string): Promise<ChatResult> {
   switch (provider) {
     case 'openai':
       return chatOpenAI(apiKey, model, prompt);
@@ -103,7 +125,7 @@ export function chat(provider: ServerProviderId, apiKey: string, model: string, 
   }
 }
 
-async function chatMentorOpenAI(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<string> {
+async function chatMentorOpenAI(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<ChatResult> {
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -126,10 +148,13 @@ async function chatMentorOpenAI(apiKey: string, model: string, systemPrompt: str
   if (typeof content !== 'string') {
     throw new AIProviderError('OpenAI response missing message content');
   }
-  return content;
+  const usage = data?.usage
+    ? { inputTokens: data.usage.prompt_tokens ?? 0, outputTokens: data.usage.completion_tokens ?? 0 }
+    : null;
+  return { content, usage };
 }
 
-async function chatMentorAnthropic(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<string> {
+async function chatMentorAnthropic(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<ChatResult> {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -155,10 +180,13 @@ async function chatMentorAnthropic(apiKey: string, model: string, systemPrompt: 
   if (typeof content !== 'string') {
     throw new AIProviderError('Anthropic response missing content');
   }
-  return content;
+  const usage = data?.usage
+    ? { inputTokens: data.usage.input_tokens ?? 0, outputTokens: data.usage.output_tokens ?? 0 }
+    : null;
+  return { content, usage };
 }
 
-async function chatMentorGemini(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<string> {
+async function chatMentorGemini(apiKey: string, model: string, systemPrompt: string, messages: MentorMessage[]): Promise<ChatResult> {
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
     {
@@ -184,7 +212,13 @@ async function chatMentorGemini(apiKey: string, model: string, systemPrompt: str
   if (typeof content !== 'string') {
     throw new AIProviderError('Gemini response missing content');
   }
-  return content;
+  const usage = data?.usageMetadata
+    ? {
+        inputTokens: data.usageMetadata.promptTokenCount ?? 0,
+        outputTokens: data.usageMetadata.candidatesTokenCount ?? 0,
+      }
+    : null;
+  return { content, usage };
 }
 
 /** Calls the given provider's chat API with a multi-turn conversation (used by the AI Mentor). */
@@ -194,7 +228,7 @@ export function chatMentor(
   model: string,
   systemPrompt: string,
   messages: MentorMessage[],
-): Promise<string> {
+): Promise<ChatResult> {
   switch (provider) {
     case 'openai':
       return chatMentorOpenAI(apiKey, model, systemPrompt, messages);

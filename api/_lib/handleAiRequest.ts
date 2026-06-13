@@ -1,4 +1,4 @@
-import { isAiAccessAllowed } from './auth.js';
+import { checkAiAccess, logAiUsage } from './auth.js';
 import { chat, chatMentor } from './chat.js';
 import { getAvailableProviders, getSystemProviderConfig } from './config.js';
 import { parseJsonResponse } from '../../src/features/ai/parse.js';
@@ -47,7 +47,8 @@ export async function handleAiRequest(
 
   const data = body ?? ({} as GenerateBody);
 
-  if (data.kind !== 'test' && !(await isAiAccessAllowed(authHeader))) {
+  const { allowed, userId } = await checkAiAccess(authHeader);
+  if (data.kind !== 'test' && !allowed) {
     return { status: 403, body: { error: 'AI access has been disabled for this account.' } };
   }
 
@@ -60,12 +61,13 @@ export async function handleAiRequest(
   try {
     switch (data.kind) {
       case 'test': {
-        const content = await chat(config.provider, config.apiKey, config.model, 'Reply with the single word: ok');
+        const { content } = await chat(config.provider, config.apiKey, config.model, 'Reply with the single word: ok');
         return { status: 200, body: { ok: true, message: 'Connected successfully.', content } };
       }
       case 'lesson': {
         if (!data.input) throw new AIProviderError('Missing input');
-        const content = await chat(config.provider, config.apiKey, config.model, lessonPrompt(data.input));
+        const { content, usage } = await chat(config.provider, config.apiKey, config.model, lessonPrompt(data.input));
+        void logAiUsage(userId, data.kind, config.provider, config.model, usage);
         const parsed = parseJsonResponse<Omit<Lesson, 'unitPath' | 'title' | 'generatedAt' | 'model' | 'provider'>>(
           content,
         );
@@ -81,7 +83,8 @@ export async function handleAiRequest(
       }
       case 'quiz': {
         if (!data.input || !data.lesson) throw new AIProviderError('Missing input or lesson');
-        const content = await chat(config.provider, config.apiKey, config.model, quizPrompt(data.input, data.lesson));
+        const { content, usage } = await chat(config.provider, config.apiKey, config.model, quizPrompt(data.input, data.lesson));
+        void logAiUsage(userId, data.kind, config.provider, config.model, usage);
         const parsed = parseJsonResponse<Pick<Quiz, 'questions'>>(content);
         const quiz: Quiz = {
           unitPath: data.input.unitPath,
@@ -94,12 +97,13 @@ export async function handleAiRequest(
       }
       case 'flashcards': {
         if (!data.input || !data.lesson) throw new AIProviderError('Missing input or lesson');
-        const content = await chat(
+        const { content, usage } = await chat(
           config.provider,
           config.apiKey,
           config.model,
           flashcardsPrompt(data.input, data.lesson),
         );
+        void logAiUsage(userId, data.kind, config.provider, config.model, usage);
         const parsed = parseJsonResponse<Pick<FlashcardSet, 'cards'>>(content);
         const set: FlashcardSet = {
           unitPath: data.input.unitPath,
@@ -112,12 +116,13 @@ export async function handleAiRequest(
       }
       case 'summary': {
         if (!data.input || !data.lesson) throw new AIProviderError('Missing input or lesson');
-        const content = await chat(
+        const { content, usage } = await chat(
           config.provider,
           config.apiKey,
           config.model,
           summaryPrompt(data.input, data.lesson),
         );
+        void logAiUsage(userId, data.kind, config.provider, config.model, usage);
         const parsed = parseJsonResponse<Pick<Summary, 'summary'>>(content);
         const summary: Summary = {
           unitPath: data.input.unitPath,
@@ -132,13 +137,14 @@ export async function handleAiRequest(
         if (!data.input || !data.lesson || !data.messages) {
           throw new AIProviderError('Missing input, lesson, or messages');
         }
-        const reply = await chatMentor(
+        const { content: reply, usage } = await chatMentor(
           config.provider,
           config.apiKey,
           config.model,
           mentorSystemPrompt(data.input, data.lesson),
           data.messages,
         );
+        void logAiUsage(userId, data.kind, config.provider, config.model, usage);
         return { status: 200, body: { reply } };
       }
       default:

@@ -9,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ProviderSelector } from '@/features/settings/ProviderSelector';
 import { ModelSelector } from '@/features/settings/ModelSelector';
 import { ImportExportPanel } from '@/features/settings/ImportExportPanel';
+import { UsageSummaryCard } from '@/features/settings/UsageSummaryCard';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { checkSystemAvailability } from '@/providers/system';
@@ -179,6 +180,8 @@ export default function SettingsPage() {
           </Tabs>
         </CardContent>
       </Card>
+
+      <UsageSummaryCard />
 
       <ImportExportPanel />
     </div>
