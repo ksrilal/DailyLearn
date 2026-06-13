@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { LearningUnit } from '@/types/curriculum';
 import { STORAGE_KEYS } from '@/lib/storage';
-import { dateKey, hashString } from '@/lib/date';
+import { dateKey } from '@/lib/date';
 import { useProgressStore } from '@/stores/progressStore';
 
 export type LearningMode = 'daily' | 'guided' | 'random' | 'review';
@@ -19,6 +19,15 @@ interface LearningStore {
   clearActiveUnit: () => void;
 
   importLearning: (state: { dailyUnitByDate: Record<string, string> }) => void;
+}
+
+/** Returns the first unit (in curriculum order) that hasn't been completed
+ * yet, so learners progress sequentially through fundamentals before later
+ * topics. Falls back to the first unit overall once everything is complete. */
+function pickNextInOrder(units: LearningUnit[]): LearningUnit | null {
+  if (units.length === 0) return null;
+  const completed = new Set(useProgressStore.getState().completions.map((c) => c.unitPath));
+  return units.find((u) => !completed.has(u.path)) ?? units[0];
 }
 
 function pickFromPool(units: LearningUnit[], seed: number): LearningUnit | null {
@@ -43,11 +52,10 @@ export const useLearningStore = create<LearningStore>()(
         const existingPath = get().dailyUnitByDate[today];
         if (existingPath) {
           const existing = units.find((u) => u.path === existingPath);
-          if (existing) return existing;
+          if (existing && !useProgressStore.getState().isCompleted(existing.path)) return existing;
         }
 
-        const seed = hashString(today);
-        const unit = pickFromPool(units, seed);
+        const unit = pickNextInOrder(units);
         if (unit) {
           set((state) => ({ dailyUnitByDate: { ...state.dailyUnitByDate, [today]: unit.path } }));
         }
