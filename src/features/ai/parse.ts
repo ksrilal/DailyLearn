@@ -1,4 +1,4 @@
-import { AIProviderError } from '@/types/ai';
+import { AIProviderError } from '../../types/ai';
 
 /** Extracts and parses a JSON object from an LLM response, tolerating markdown fences. */
 export function parseJsonResponse<T>(text: string): T {
