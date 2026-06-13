@@ -1,3 +1,4 @@
+import { isAiAccessAllowed } from './auth.js';
 import { chat, chatMentor } from './chat.js';
 import { getAvailableProviders, getSystemProviderConfig } from './config.js';
 import { parseJsonResponse } from '../../src/features/ai/parse.js';
@@ -21,7 +22,11 @@ export interface AiResponse {
 
 /** Framework-agnostic handler for the AI proxy endpoint, shared between the
  * Vercel serverless function and the local Vite dev-server middleware. */
-export async function handleAiRequest(method: string, body: GenerateBody | undefined): Promise<AiResponse> {
+export async function handleAiRequest(
+  method: string,
+  body: GenerateBody | undefined,
+  authHeader?: string,
+): Promise<AiResponse> {
   if (method === 'GET') {
     const providers = getAvailableProviders();
     const defaultConfig = getSystemProviderConfig();
@@ -41,6 +46,11 @@ export async function handleAiRequest(method: string, body: GenerateBody | undef
   }
 
   const data = body ?? ({} as GenerateBody);
+
+  if (data.kind !== 'test' && !(await isAiAccessAllowed(authHeader))) {
+    return { status: 403, body: { error: 'AI access has been disabled for this account.' } };
+  }
+
   const config = getSystemProviderConfig(data.provider);
 
   if (!config) {

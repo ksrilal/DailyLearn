@@ -23,7 +23,11 @@ function apiDevMiddleware(): Plugin {
           }
         }
 
-        const { status, body: responseBody } = await handleAiRequest(req.method ?? 'GET', body);
+        const { status, body: responseBody } = await handleAiRequest(
+          req.method ?? 'GET',
+          body,
+          req.headers.authorization,
+        );
         res.statusCode = status;
         res.setHeader('Content-Type', 'application/json');
         res.end(JSON.stringify(responseBody));

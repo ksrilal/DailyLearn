@@ -1,13 +1,22 @@
 import type { AIProvider, ConnectionTestResult } from '@/types/ai';
 import { AIProviderError } from '@/types/ai';
 import type { FlashcardSet, Lesson, Quiz, Summary } from '@/types/lesson';
+import { supabase, supabaseEnabled } from '@/lib/supabase';
 
 const API_URL = '/api/ai';
 
 async function callApi<T>(body: Record<string, unknown>): Promise<T> {
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+
+  if (supabaseEnabled) {
+    const { data } = await supabase.auth.getSession();
+    const token = data.session?.access_token;
+    if (token) headers.Authorization = `Bearer ${token}`;
+  }
+
   const res = await fetch(API_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     body: JSON.stringify(body),
   });
 
