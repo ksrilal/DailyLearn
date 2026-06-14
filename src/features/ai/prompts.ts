@@ -120,8 +120,8 @@ Return ONLY valid JSON in exactly this shape:
     "diagram": ""
   },
   "codeExample": {
-    "language": "",
-    "code": "",
+    "language": "<plain string, e.g. \"csharp\">",
+    "code": "<plain string of source code, NOT a { english, sinhala } object>",
     "explanation": { "english": "", "sinhala": "" }
   },
   "realWorldExample": {
@@ -129,7 +129,7 @@ Return ONLY valid JSON in exactly this shape:
   },
   "commonMistake": {
     "title": { "english": "", "sinhala": "" },
-    "code": "",
+    "code": "<plain string of source code, NOT a { english, sinhala } object>",
     "explanation": { "english": "", "sinhala": "" }
   },
   "interviewQuestion": {
@@ -159,13 +159,17 @@ Return ONLY valid JSON in exactly this shape:
     }
   ],
   "sandbox": {
-    "language": "",
-    "code": "",
-    "expectedOutput": ""
+    "language": "<plain string, e.g. \"csharp\">",
+    "code": "<plain string of source code, NOT a { english, sinhala } object>",
+    "expectedOutput": "<plain string, NOT a { english, sinhala } object>"
   }
 }
 
 ====================================================
+
+IMPORTANT: The fields "codeExample.language", "codeExample.code", "commonMistake.code",
+"sandbox.language", "sandbox.code", and "sandbox.expectedOutput" are PLAIN STRINGS.
+Do NOT wrap them in a { "english": "", "sinhala": "" } object, even in Bilingual mode.
 
 Rules
 

@@ -1,7 +1,7 @@
 import { checkAiAccess, logAiUsage } from './auth.js';
 import { chat, chatMentor } from './chat.js';
 import { getAvailableProviders, getSystemProviderConfig } from './config.js';
-import { parseJsonResponse } from '../../src/features/ai/parse.js';
+import { normalizeLesson, parseJsonResponse } from '../../src/features/ai/parse.js';
 import { flashcardsPrompt, lessonPrompt, mentorSystemPrompt, quizPrompt, summaryPrompt } from '../../src/features/ai/prompts.js';
 import type { LessonInput, MentorMessage } from '../../src/types/ai.js';
 import { AIProviderError } from '../../src/types/ai.js';
@@ -74,14 +74,14 @@ export async function handleAiRequest(
         const parsed = parseJsonResponse<Omit<Lesson, 'unitPath' | 'title' | 'generatedAt' | 'model' | 'provider'>>(
           content,
         );
-        const lesson: Lesson = {
+        const lesson: Lesson = normalizeLesson({
           unitPath: data.input.unitPath,
           title: data.input.learningUnit,
           generatedAt: new Date().toISOString(),
           model: config.model,
           provider: config.provider,
           ...parsed,
-        };
+        });
         return { status: 200, body: lesson };
       }
       case 'quiz': {

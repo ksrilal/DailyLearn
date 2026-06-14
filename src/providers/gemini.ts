@@ -2,7 +2,7 @@ import type { AIProvider, ConnectionTestResult, MentorMessage } from '@/types/ai
 import { AIProviderError } from '@/types/ai';
 import type { FlashcardSet, Lesson, Quiz, Summary } from '@/types/lesson';
 import { SYSTEM_PROMPT, flashcardsPrompt, lessonPrompt, mentorSystemPrompt, quizPrompt, summaryPrompt } from '@/features/ai/prompts';
-import { parseJsonResponse } from '@/features/ai/parse';
+import { normalizeLesson, parseJsonResponse } from '@/features/ai/parse';
 
 function endpointFor(model: string, apiKey: string): string {
   return `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
@@ -69,14 +69,14 @@ export const geminiProvider: AIProvider = {
   async generateLesson(input, apiKey, model) {
     const content = await chat(apiKey, model, lessonPrompt(input));
     const parsed = parseJsonResponse<Omit<Lesson, 'unitPath' | 'title' | 'generatedAt' | 'model' | 'provider'>>(content);
-    return {
+    return normalizeLesson({
       unitPath: input.unitPath,
       title: input.learningUnit,
       generatedAt: new Date().toISOString(),
       model,
       provider: 'gemini',
       ...parsed,
-    };
+    });
   },
 
   async generateQuiz(input, lesson, apiKey, model) {
