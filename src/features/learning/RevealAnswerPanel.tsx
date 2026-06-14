@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Eye } from 'lucide-react';
+import type { Localized as LocalizedText } from '@/types/lesson';
+import { Localized } from '@/components/Localized';
 import { Button } from '@/components/ui/button';
 
 interface RevealAnswerPanelProps {
-  answer: string;
+  answer: LocalizedText;
   revealLabel?: string;
   hideLabel?: string;
 }
@@ -30,7 +32,7 @@ export function RevealAnswerPanel({ answer, revealLabel = 'Reveal Answer', hideL
           >
             <div className="rounded-md border border-primary/30 bg-primary/5 p-3">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-primary">Answer</p>
-              <p className="text-base leading-relaxed text-foreground/90">{answer}</p>
+              <Localized value={answer} className="text-base leading-relaxed text-foreground/90" />
             </div>
           </motion.div>
         )}

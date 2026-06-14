@@ -1,10 +1,18 @@
+/** A piece of AI-generated text in both English and Sinhala. Either field may be
+ * empty depending on the learner's selected language mode (English-only mode leaves
+ * `sinhala` empty, Sinhala+Terms mode leaves `english` empty, Bilingual fills both). */
+export interface Localized {
+  english: string;
+  sinhala: string;
+}
+
 export interface ChallengeQuestion {
-  question: string;
-  answer: string;
+  question: Localized;
+  answer: Localized;
 }
 
 export interface CoreIdea {
-  summary: string;
+  summary: Localized;
 }
 
 export interface VisualExplanation {
@@ -15,41 +23,41 @@ export interface VisualExplanation {
 export interface CodeExample {
   language: string;
   code: string;
-  explanation: string;
+  explanation: Localized;
 }
 
 export interface RealWorldExample {
-  example: string;
+  example: Localized;
 }
 
 export interface CommonMistake {
-  title: string;
+  title: Localized;
   code: string;
-  explanation: string;
+  explanation: Localized;
 }
 
 export interface InterviewQuestion {
-  question: string;
-  answer: string;
+  question: Localized;
+  answer: Localized;
 }
 
 export interface KeyTakeaway {
-  summary: string;
+  summary: Localized;
 }
 
 /** A single multiple-choice question generated alongside a lesson. */
 export interface LessonQuizQuestion {
-  question: string;
-  options: string[];
-  /** Exact text of the correct option (must match one entry in `options`). */
-  correctAnswer: string;
-  explanation: string;
+  question: Localized;
+  options: Localized[];
+  /** 0-based index into `options` of the correct choice. */
+  correctIndex: number;
+  explanation: Localized;
 }
 
 /** A single front/back flashcard generated alongside a lesson. */
 export interface LessonFlashcard {
-  front: string;
-  back: string;
+  front: Localized;
+  back: Localized;
 }
 
 /** A non-executable, "predict the output" code sandbox for programming lessons. */
@@ -83,10 +91,10 @@ export interface Lesson {
 }
 
 export interface QuizQuestion {
-  question: string;
-  options: string[];
+  question: Localized;
+  options: Localized[];
   correctIndex: number;
-  explanation: string;
+  explanation: Localized;
 }
 
 export interface Quiz {
@@ -98,8 +106,8 @@ export interface Quiz {
 }
 
 export interface Flashcard {
-  front: string;
-  back: string;
+  front: Localized;
+  back: Localized;
 }
 
 export interface FlashcardSet {
@@ -112,7 +120,7 @@ export interface FlashcardSet {
 
 export interface Summary {
   unitPath: string;
-  summary: string;
+  summary: Localized;
   generatedAt: string;
   model: string;
   provider: string;

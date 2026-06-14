@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { AIProviderId, AppSettings, ThemeMode } from '@/types/settings';
+import type { AIProviderId, AppSettings, LearningLanguage, ThemeMode } from '@/types/settings';
 import { DEFAULT_MODELS, DEFAULT_SETTINGS } from '@/types/settings';
 import { STORAGE_KEYS } from '@/lib/storage';
 
@@ -10,6 +10,7 @@ interface SettingsStore extends AppSettings {
   setModel: (provider: AIProviderId, model: string) => void;
   setUseSystemKey: (provider: AIProviderId, useSystemKey: boolean) => void;
   setTheme: (theme: ThemeMode) => void;
+  setLearningLanguage: (learningLanguage: LearningLanguage) => void;
   reset: () => void;
   importSettings: (settings: AppSettings) => void;
 }
@@ -32,6 +33,8 @@ export const useSettingsStore = create<SettingsStore>()(
 
       setTheme: (theme) => set({ theme }),
 
+      setLearningLanguage: (learningLanguage) => set({ learningLanguage }),
+
       reset: () =>
         set({
           ...DEFAULT_SETTINGS,
@@ -44,6 +47,7 @@ export const useSettingsStore = create<SettingsStore>()(
         set({
           ...settings,
           useSystemKey: { ...DEFAULT_SETTINGS.useSystemKey, ...settings.useSystemKey },
+          learningLanguage: settings.learningLanguage ?? DEFAULT_SETTINGS.learningLanguage,
         }),
     }),
     {

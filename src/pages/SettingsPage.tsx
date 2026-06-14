@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CheckCircle2, Eye, EyeOff, Loader2, Moon, Sun, XCircle, Monitor } from 'lucide-react';
+import { CheckCircle2, Eye, EyeOff, Languages, Loader2, Moon, Sun, XCircle, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -14,7 +14,8 @@ import { useSettingsStore } from '@/stores/settingsStore';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { checkSystemAvailability } from '@/providers/system';
 import { cn } from '@/lib/cn';
-import type { ThemeMode } from '@/types/settings';
+import type { LearningLanguage, ThemeMode } from '@/types/settings';
+import { LEARNING_LANGUAGE_LABELS } from '@/types/settings';
 
 export default function SettingsPage() {
   const provider = useSettingsStore((s) => s.provider);
@@ -22,11 +23,13 @@ export default function SettingsPage() {
   const models = useSettingsStore((s) => s.models);
   const useSystemKey = useSettingsStore((s) => s.useSystemKey);
   const theme = useSettingsStore((s) => s.theme);
+  const learningLanguage = useSettingsStore((s) => s.learningLanguage);
   const setProvider = useSettingsStore((s) => s.setProvider);
   const setApiKey = useSettingsStore((s) => s.setApiKey);
   const setModel = useSettingsStore((s) => s.setModel);
   const setUseSystemKey = useSettingsStore((s) => s.setUseSystemKey);
   const setTheme = useSettingsStore((s) => s.setTheme);
+  const setLearningLanguage = useSettingsStore((s) => s.setLearningLanguage);
 
   const [showKey, setShowKey] = useState(false);
   const [testing, setTesting] = useState(false);
@@ -176,6 +179,30 @@ export default function SettingsPage() {
                 <Monitor className="h-4 w-4" />
                 System
               </TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Languages className="h-5 w-5" />
+            Learning Language
+          </CardTitle>
+          <CardDescription>
+            Choose how AI-generated lessons explain concepts. Technical terms, code, and
+            framework names always stay in English.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Tabs value={learningLanguage} onValueChange={(v) => setLearningLanguage(v as LearningLanguage)}>
+            <TabsList>
+              {Object.entries(LEARNING_LANGUAGE_LABELS).map(([value, label]) => (
+                <TabsTrigger key={value} value={value}>
+                  {label}
+                </TabsTrigger>
+              ))}
             </TabsList>
           </Tabs>
         </CardContent>

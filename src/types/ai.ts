@@ -1,4 +1,5 @@
 import type { FlashcardSet, Lesson, Quiz, Summary } from './lesson.js';
+import type { LearningLanguage } from './settings.js';
 
 export interface LessonInput {
   module: string;
@@ -7,6 +8,7 @@ export interface LessonInput {
   topic: string;
   learningUnit: string;
   unitPath: string;
+  learningLanguage: LearningLanguage;
 }
 
 export interface ConnectionTestResult {

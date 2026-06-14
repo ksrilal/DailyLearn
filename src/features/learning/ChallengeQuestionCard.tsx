@@ -1,5 +1,6 @@
 import { HelpCircle } from 'lucide-react';
 import type { ChallengeQuestion } from '@/types/lesson';
+import { Localized } from '@/components/Localized';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { RevealAnswerPanel } from '@/features/learning/RevealAnswerPanel';
 
@@ -13,7 +14,7 @@ export function ChallengeQuestionCard({ challenge }: { challenge: ChallengeQuest
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-base leading-relaxed text-foreground/90">
-        <p>{challenge.question}</p>
+        <Localized value={challenge.question} />
         <RevealAnswerPanel answer={challenge.answer} />
       </CardContent>
     </Card>

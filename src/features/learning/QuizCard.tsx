@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CheckCircle2, ListChecks, XCircle } from 'lucide-react';
 import type { LessonQuizQuestion } from '@/types/lesson';
+import { Localized } from '@/components/Localized';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
@@ -8,7 +9,7 @@ import { QuizResultCard } from '@/features/learning/QuizResultCard';
 
 export function QuizCard({ questions }: { questions: LessonQuizQuestion[] }) {
   const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
 
@@ -21,10 +22,10 @@ export function QuizCard({ questions }: { questions: LessonQuizQuestion[] }) {
     setDone(false);
   }
 
-  function selectOption(option: string) {
-    if (selected) return;
-    setSelected(option);
-    if (option === question.correctAnswer) {
+  function selectOption(optionIndex: number) {
+    if (selected !== null) return;
+    setSelected(optionIndex);
+    if (optionIndex === question.correctIndex) {
       setCorrectCount((c) => c + 1);
     }
   }
@@ -56,18 +57,18 @@ export function QuizCard({ questions }: { questions: LessonQuizQuestion[] }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-sm">
-        <p className="font-medium leading-relaxed">{question.question}</p>
+        <Localized value={question.question} className="font-medium leading-relaxed" />
 
         <div className="space-y-2">
-          {question.options.map((option) => {
-            const isCorrect = option === question.correctAnswer;
-            const isSelected = option === selected;
+          {question.options.map((option, optionIndex) => {
+            const isCorrect = optionIndex === question.correctIndex;
+            const isSelected = optionIndex === selected;
             const showFeedback = selected !== null;
 
             return (
               <button
-                key={option}
-                onClick={() => selectOption(option)}
+                key={optionIndex}
+                onClick={() => selectOption(optionIndex)}
                 disabled={showFeedback}
                 className={cn(
                   'flex w-full items-center justify-between gap-2 rounded-md border px-3 py-2 text-left transition-colors',
@@ -77,7 +78,7 @@ export function QuizCard({ questions }: { questions: LessonQuizQuestion[] }) {
                   showFeedback && !isSelected && !isCorrect && 'opacity-60',
                 )}
               >
-                <span>{option}</span>
+                <Localized value={option} />
                 {showFeedback && isCorrect && <CheckCircle2 className="h-4 w-4 shrink-0 text-success" />}
                 {showFeedback && isSelected && !isCorrect && <XCircle className="h-4 w-4 shrink-0 text-destructive" />}
               </button>
@@ -85,14 +86,14 @@ export function QuizCard({ questions }: { questions: LessonQuizQuestion[] }) {
           })}
         </div>
 
-        {selected && (
+        {selected !== null && (
           <div className="rounded-md bg-muted p-3 text-sm">
-            <p className="mb-1 font-semibold">{selected === question.correctAnswer ? 'Correct!' : 'Not quite.'}</p>
-            <p className="text-muted-foreground">{question.explanation}</p>
+            <p className="mb-1 font-semibold">{selected === question.correctIndex ? 'Correct!' : 'Not quite.'}</p>
+            <Localized value={question.explanation} className="text-muted-foreground" />
           </div>
         )}
 
-        {selected && (
+        {selected !== null && (
           <Button size="sm" onClick={next}>
             {index + 1 >= questions.length ? 'See Results' : 'Next Question'}
           </Button>

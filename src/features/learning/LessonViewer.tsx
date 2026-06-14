@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import type { Lesson } from '@/types/lesson';
 import type { LessonInput } from '@/types/ai';
+import { Localized } from '@/components/Localized';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -83,7 +84,7 @@ export function LessonViewer({ lesson, lessonInput }: LessonViewerProps) {
       </motion.div>
 
       <Section title="Core Idea" icon={Lightbulb} delay={0.05}>
-        {lesson.coreIdea.summary}
+        <Localized value={lesson.coreIdea.summary} />
       </Section>
 
       <Section title="Visual Explanation" icon={Workflow} delay={0.1}>
@@ -93,7 +94,7 @@ export function LessonViewer({ lesson, lessonInput }: LessonViewerProps) {
       <Section title="Code Example" icon={Code2} delay={0.15}>
         <div className="space-y-2">
           <CodeBlock code={lesson.codeExample.code} language={lesson.codeExample.language} />
-          <p>{lesson.codeExample.explanation}</p>
+          <Localized value={lesson.codeExample.explanation} />
         </div>
       </Section>
 
@@ -104,26 +105,26 @@ export function LessonViewer({ lesson, lessonInput }: LessonViewerProps) {
       )}
 
       <Section title="Real World Example" icon={Briefcase} delay={0.2}>
-        {lesson.realWorldExample.example}
+        <Localized value={lesson.realWorldExample.example} />
       </Section>
 
       <Section title="Common Mistake" icon={AlertTriangle} delay={0.25}>
         <div className="space-y-2">
-          <p className="font-medium">{lesson.commonMistake.title}</p>
+          <Localized value={lesson.commonMistake.title} className="font-medium" />
           <CodeBlock code={lesson.commonMistake.code} />
-          <p>{lesson.commonMistake.explanation}</p>
+          <Localized value={lesson.commonMistake.explanation} />
         </div>
       </Section>
 
       <Section title="Interview Question" icon={MessageCircleQuestion} delay={0.3}>
         <div className="space-y-2">
-          <p className="font-medium">{lesson.interviewQuestion.question}</p>
-          <p>{lesson.interviewQuestion.answer}</p>
+          <Localized value={lesson.interviewQuestion.question} className="font-medium" />
+          <Localized value={lesson.interviewQuestion.answer} />
         </div>
       </Section>
 
       <Section title="Key Takeaway" icon={Sparkles} delay={0.35} highlight>
-        {lesson.keyTakeaway.summary}
+        <Localized value={lesson.keyTakeaway.summary} />
       </Section>
 
       {lesson.quiz && lesson.quiz.length > 0 && (

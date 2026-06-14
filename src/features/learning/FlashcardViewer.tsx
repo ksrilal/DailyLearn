@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import type { LessonFlashcard } from '@/types/lesson';
+import { Localized } from '@/components/Localized';
 import { cn } from '@/lib/cn';
 
 interface FlashcardViewerProps {
@@ -29,13 +30,13 @@ export function FlashcardViewer({ card, flipped, onFlip }: FlashcardViewerProps)
           )}
         >
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Front</p>
-          <p className="text-base font-medium leading-relaxed">{card.front}</p>
+          <Localized value={card.front} className="text-base font-medium leading-relaxed" />
         </div>
         <div
           className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/5 p-4 text-center [backface-visibility:hidden] [transform:rotateY(180deg)]"
         >
           <p className="text-xs font-semibold uppercase tracking-wide text-primary">Back</p>
-          <p className="text-base font-medium leading-relaxed">{card.back}</p>
+          <Localized value={card.back} className="text-base font-medium leading-relaxed" />
         </div>
       </motion.div>
       <p className="mt-2 text-center text-xs text-muted-foreground">Tap card to flip</p>

@@ -2,13 +2,22 @@ export type AIProviderId = 'openai' | 'anthropic' | 'gemini';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
 
+export type LearningLanguage = 'english' | 'sinhala_terms' | 'bilingual';
+
 export interface AppSettings {
   provider: AIProviderId;
   apiKeys: Record<AIProviderId, string>;
   models: Record<AIProviderId, string>;
   useSystemKey: Record<AIProviderId, boolean>;
   theme: ThemeMode;
+  learningLanguage: LearningLanguage;
 }
+
+export const LEARNING_LANGUAGE_LABELS: Record<LearningLanguage, string> = {
+  english: 'English',
+  sinhala_terms: 'Sinhala + English Terms',
+  bilingual: 'Bilingual',
+};
 
 export const DEFAULT_MODELS: Record<AIProviderId, string> = {
   openai: 'gpt-5-mini',
@@ -54,4 +63,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
     gemini: true,
   },
   theme: 'system',
+  learningLanguage: 'english',
 };

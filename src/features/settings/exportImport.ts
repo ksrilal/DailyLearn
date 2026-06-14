@@ -50,6 +50,7 @@ export async function buildExport(): Promise<DailyLearnExport> {
       models: settingsState.models,
       useSystemKey: settingsState.useSystemKey,
       theme: settingsState.theme,
+      learningLanguage: settingsState.learningLanguage,
     },
     progress: {
       completions: progressState.completions,

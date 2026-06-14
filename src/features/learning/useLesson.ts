@@ -2,6 +2,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { LearningUnit } from '@/types/curriculum';
 import type { LessonInput } from '@/types/ai';
 import type { Lesson } from '@/types/lesson';
+import type { LearningLanguage } from '@/types/settings';
 import { lessonCache } from '@/lib/db';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -22,11 +23,12 @@ export function toLessonInput(unit: LearningUnit): LessonInput {
     topic: topic?.title ?? unit.topicId,
     learningUnit: unit.title,
     unitPath: unit.path,
+    learningLanguage: useSettingsStore.getState().learningLanguage,
   };
 }
 
-async function fetchOrGenerateLesson(unit: LearningUnit): Promise<Lesson> {
-  const cached = await lessonCache.get(unit.path);
+async function fetchOrGenerateLesson(unit: LearningUnit, learningLanguage: LearningLanguage): Promise<Lesson> {
+  const cached = await lessonCache.get(unit.path, learningLanguage);
   if (cached) return cached;
 
   const settings = useSettingsStore.getState();
@@ -42,20 +44,21 @@ async function fetchOrGenerateLesson(unit: LearningUnit): Promise<Lesson> {
     const provider = getProvider(settings.provider);
     const model = settings.models[settings.provider];
     const lesson = await provider.generateLesson(input, apiKey, model);
-    await lessonCache.put(lesson);
+    await lessonCache.put(lesson, learningLanguage);
     return lesson;
   }
 
   const lesson = await getSystemProvider().generateLesson(input, '', '');
-  await lessonCache.put(lesson);
+  await lessonCache.put(lesson, learningLanguage);
   void useAuthStore.getState().refreshProfile();
   return lesson;
 }
 
 export function useLesson(unit: LearningUnit | null | undefined) {
+  const learningLanguage = useSettingsStore((s) => s.learningLanguage);
   return useQuery({
-    queryKey: ['lesson', unit?.path],
-    queryFn: () => fetchOrGenerateLesson(unit!),
+    queryKey: ['lesson', unit?.path, learningLanguage],
+    queryFn: () => fetchOrGenerateLesson(unit!, learningLanguage),
     enabled: !!unit,
     retry: false,
   });
@@ -63,5 +66,6 @@ export function useLesson(unit: LearningUnit | null | undefined) {
 
 export function useInvalidateLesson() {
   const queryClient = useQueryClient();
-  return (unitPath: string) => queryClient.invalidateQueries({ queryKey: ['lesson', unitPath] });
+  return (unitPath: string) =>
+    queryClient.invalidateQueries({ queryKey: ['lesson', unitPath], exact: false });
 }
