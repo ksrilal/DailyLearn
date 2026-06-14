@@ -5,7 +5,7 @@ let initialized = false;
 
 function ensureInitialized() {
   if (initialized) return;
-  mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'strict' });
+  mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'strict', suppressErrorRendering: true });
   initialized = true;
 }
 
