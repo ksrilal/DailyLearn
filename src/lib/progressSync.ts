@@ -17,7 +17,8 @@ let unsubscribeLearning: (() => void) | null = null;
 function mergeCompletions(local: CompletionRecord[], remote: CompletionRecord[]): CompletionRecord[] {
   const byPath = new Map<string, CompletionRecord>();
   for (const c of [...remote, ...local]) {
-    if (!byPath.has(c.unitPath)) byPath.set(c.unitPath, c);
+    const existing = byPath.get(c.unitPath);
+    if (!existing || c.completedAt > existing.completedAt) byPath.set(c.unitPath, c);
   }
   return Array.from(byPath.values());
 }
@@ -91,8 +92,7 @@ function pushProgress(userId: string): void {
       daily_unit_by_date: dailyUnitByDate,
       updated_at: new Date().toISOString(),
     })
-    .then(
-      () => undefined,
-      () => undefined,
-    );
+    .then(({ error }) => {
+      if (error) console.error('pushProgress: failed to sync progress:', error);
+    });
 }

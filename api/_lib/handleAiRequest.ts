@@ -154,7 +154,8 @@ export async function handleAiRequest(
         return { status: 400, body: { error: 'Invalid kind' } };
     }
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Unknown error';
+    console.error('AI request failed:', err);
+    const message = err instanceof AIProviderError ? err.message : 'The AI provider request failed. Please try again.';
     return { status: 502, body: { error: message } };
   }
 }

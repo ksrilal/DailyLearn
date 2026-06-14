@@ -18,7 +18,7 @@ const supabaseAdmin =
  * Cron, which sends `CRON_SECRET` as a bearer token. */
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const cronSecret = process.env.CRON_SECRET;
-  if (cronSecret && req.headers.authorization !== `Bearer ${cronSecret}`) {
+  if (!cronSecret || req.headers.authorization !== `Bearer ${cronSecret}`) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }

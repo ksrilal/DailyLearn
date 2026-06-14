@@ -126,6 +126,7 @@ export const geminiProvider: AIProvider = {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: 'Reply with the single word: ok' }] }],
+          generationConfig: { maxOutputTokens: 5 },
         }),
       });
 

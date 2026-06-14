@@ -71,33 +71,22 @@ export async function logAiUsage(
   const adminGranted = profile?.ai_enabled_by_admin === true;
   const isTrial = !adminGranted && trialCallsUsed < trialLimit;
 
-  await supabaseAdmin
-    .from('ai_usage')
-    .insert({
-      user_id: userId,
-      kind,
-      provider,
-      model,
-      input_tokens: usage?.inputTokens ?? null,
-      output_tokens: usage?.outputTokens ?? null,
-      is_trial: isTrial,
-    })
-    .then(
-      () => undefined,
-      () => undefined,
-    );
+  const { error: insertError } = await supabaseAdmin.from('ai_usage').insert({
+    user_id: userId,
+    kind,
+    provider,
+    model,
+    input_tokens: usage?.inputTokens ?? null,
+    output_tokens: usage?.outputTokens ?? null,
+    is_trial: isTrial,
+  });
+  if (insertError) console.error('logAiUsage: failed to insert ai_usage row:', insertError);
 
   if (isTrial && profile) {
     const newCount = trialCallsUsed + 1;
     const update: Record<string, unknown> = { trial_calls_used: newCount };
     if (newCount >= trialLimit) update.ai_enabled = false;
-    await supabaseAdmin
-      .from('profiles')
-      .update(update)
-      .eq('id', userId)
-      .then(
-        () => undefined,
-        () => undefined,
-      );
+    const { error: updateError } = await supabaseAdmin.from('profiles').update(update).eq('id', userId);
+    if (updateError) console.error('logAiUsage: failed to update profile trial counters:', updateError);
   }
 }
