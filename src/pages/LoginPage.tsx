@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Loader2, LogIn } from 'lucide-react';
+import { Eye, EyeOff, Loader2, LogIn, UserRound } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuthStore } from '@/stores/authStore';
 
+const GUEST_TRIAL_LIMIT = 5;
+
 export default function LoginPage() {
   const navigate = useNavigate();
   const signIn = useAuthStore((s) => s.signIn);
   const resetPasswordForEmail = useAuthStore((s) => s.resetPasswordForEmail);
+  const signInAnonymously = useAuthStore((s) => s.signInAnonymously);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [info, setInfo] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [guestLoading, setGuestLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [resetMode, setResetMode] = useState(false);
   const [resetLoading, setResetLoading] = useState(false);
@@ -26,6 +30,18 @@ export default function LoginPage() {
     setError(null);
     const { error: err } = await signIn(email, password);
     setLoading(false);
+    if (err) {
+      setError(err);
+      return;
+    }
+    navigate('/');
+  }
+
+  async function handleContinueAsGuest() {
+    setGuestLoading(true);
+    setError(null);
+    const { error: err } = await signInAnonymously();
+    setGuestLoading(false);
     if (err) {
       setError(err);
       return;
@@ -140,6 +156,24 @@ export default function LoginPage() {
                 <Link to="/register" className="font-medium text-primary hover:underline">
                   Register
                 </Link>
+              </p>
+
+              <div className="relative my-4">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-card px-2 text-muted-foreground">or</span>
+                </div>
+              </div>
+
+              <Button type="button" variant="outline" className="w-full" onClick={() => void handleContinueAsGuest()} disabled={guestLoading}>
+                {guestLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+                <UserRound className="h-4 w-4" />
+                Continue as Guest
+              </Button>
+              <p className="mt-2 text-center text-xs text-muted-foreground">
+                Get {GUEST_TRIAL_LIMIT} free AI lessons. Progress won't be saved to an account.
               </p>
             </>
           )}

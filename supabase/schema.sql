@@ -72,8 +72,11 @@ language plpgsql
 security definer set search_path = public
 as $$
 begin
+  -- Anonymous Supabase users (guests, via signInAnonymously) have a null
+  -- email; coalesce to '' so the not-null constraint on profiles.email
+  -- doesn't reject their profile row.
   insert into public.profiles (id, email, ai_enabled)
-  values (new.id, new.email, true);
+  values (new.id, coalesce(new.email, ''), true);
   return new;
 end;
 $$;
@@ -160,3 +163,28 @@ drop policy if exists "Users can delete their own progress" on public.user_progr
 create policy "Users can delete their own progress"
   on public.user_progress for delete
   using (auth.uid() = user_id);
+
+-- Deletes anonymous guest accounts (and their cascading profiles, progress,
+-- and usage rows) older than 7 days, to keep the project within Supabase
+-- free-tier MAU/DB limits. Called by api/cron/cleanup-anonymous-users.ts via
+-- a daily Vercel cron job using the service-role key.
+create or replace function public.cleanup_anonymous_users()
+returns integer
+language plpgsql
+security definer set search_path = public
+as $$
+declare
+  deleted_count integer;
+begin
+  with deleted as (
+    delete from auth.users
+    where is_anonymous = true
+      and created_at < now() - interval '7 days'
+    returning id
+  )
+  select count(*) into deleted_count from deleted;
+  return deleted_count;
+end;
+$$;
+
+grant execute on function public.cleanup_anonymous_users() to service_role;

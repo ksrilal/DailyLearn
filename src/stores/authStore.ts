@@ -14,6 +14,7 @@ interface AuthStore {
   refreshProfile: () => Promise<void>;
   signUp: (email: string, password: string) => Promise<{ error: string | null }>;
   signIn: (email: string, password: string) => Promise<{ error: string | null }>;
+  signInAnonymously: () => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
   resetPasswordForEmail: (email: string) => Promise<{ error: string | null }>;
   updatePassword: (password: string) => Promise<{ error: string | null }>;
@@ -61,6 +62,11 @@ export const useAuthStore = create<AuthStore>()((set, get) => ({
 
   signIn: async (email, password) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
+    return { error: error?.message ?? null };
+  },
+
+  signInAnonymously: async () => {
+    const { error } = await supabase.auth.signInAnonymously();
     return { error: error?.message ?? null };
   },
 

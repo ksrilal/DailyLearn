@@ -5,7 +5,8 @@ import { supabaseEnabled } from '@/lib/supabase';
 import { PageLoader } from '@/components/PageLoader';
 import { syncProgressOnLogin } from '@/lib/progressSync';
 
-/** Requires a signed-in user before rendering child routes; redirects to /login otherwise. */
+/** Requires a signed-in user (including anonymous guest sessions) before
+ * rendering child routes; redirects to /login otherwise. */
 export function AuthGate() {
   const location = useLocation();
   const init = useAuthStore((s) => s.init);

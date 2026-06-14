@@ -49,7 +49,10 @@ export async function handleAiRequest(
 
   const { allowed, userId } = await checkAiAccess(authHeader);
   if (data.kind !== 'test' && !allowed) {
-    return { status: 403, body: { error: 'AI access has been disabled for this account.' } };
+    return {
+      status: 403,
+      body: { error: "You've used up your free AI trial. Add your own API key in Settings to continue." },
+    };
   }
 
   const config = getSystemProviderConfig(data.provider);

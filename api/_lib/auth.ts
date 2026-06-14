@@ -22,7 +22,9 @@ export interface AuthCheckResult {
 
 /** Resolves the bearer token in the Authorization header and checks whether
  * that user's `profiles.ai_enabled` flag is true. If Supabase isn't
- * configured, auth is not enforced and access is always allowed. */
+ * configured, auth is not enforced and access is always allowed. Guests
+ * authenticate via Supabase anonymous sign-in and always carry a token, so
+ * a missing token is rejected. */
 export async function checkAiAccess(authHeader: string | undefined): Promise<AuthCheckResult> {
   if (!supabaseAdmin) return { allowed: true, userId: null };
 

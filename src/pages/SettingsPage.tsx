@@ -11,6 +11,7 @@ import { ModelSelector } from '@/features/settings/ModelSelector';
 import { ImportExportPanel } from '@/features/settings/ImportExportPanel';
 import { UsageSummaryCard } from '@/features/settings/UsageSummaryCard';
 import { useSettingsStore } from '@/stores/settingsStore';
+import { useAuthStore } from '@/stores/authStore';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { checkSystemAvailability } from '@/providers/system';
 import { cn } from '@/lib/cn';
@@ -37,6 +38,9 @@ export default function SettingsPage() {
   const [systemAvailable, setSystemAvailable] = useState(false);
   const [systemInfo, setSystemInfo] = useState<{ provider?: string; model?: string }>({});
 
+  const profile = useAuthStore((s) => s.profile);
+  const trialExhausted = !!profile && !profile.ai_enabled_by_admin && !profile.ai_enabled;
+
   useEffect(() => {
     checkSystemAvailability().then((result) => {
       setSystemAvailable(result.available);
@@ -45,7 +49,7 @@ export default function SettingsPage() {
   }, []);
 
   const model = models[provider];
-  const usingSystemKey = systemAvailable && useSystemKey[provider];
+  const usingSystemKey = systemAvailable && useSystemKey[provider] && !trialExhausted;
   const apiKey = apiKeys[provider];
 
   async function handleTestConnection() {
@@ -85,14 +89,17 @@ export default function SettingsPage() {
               <div className="space-y-0.5">
                 <Label htmlFor="use-own-key">Use my own API key</Label>
                 <p className="text-xs text-muted-foreground">
-                  {usingSystemKey
-                    ? "Currently using DailyLearn's built-in AI access. No setup required."
-                    : 'Currently using your own API key, entered below.'}
+                  {trialExhausted
+                    ? "You've used up your free AI trial. Add your own API key below to continue."
+                    : usingSystemKey
+                      ? "Currently using DailyLearn's built-in AI access. No setup required."
+                      : 'Currently using your own API key, entered below.'}
                 </p>
               </div>
               <Switch
                 id="use-own-key"
                 checked={!usingSystemKey}
+                disabled={trialExhausted}
                 onCheckedChange={(checked) => {
                   setUseSystemKey(provider, !checked);
                   setTestResult(null);

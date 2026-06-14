@@ -4,6 +4,7 @@ import { AIProviderError } from '@/types/ai';
 import type { Lesson } from '@/types/lesson';
 import { getProvider, getSystemProvider } from '@/providers/factory';
 import { useSettingsStore } from '@/stores/settingsStore';
+import { useAuthStore } from '@/stores/authStore';
 import { getMentorChat, setMentorChat } from '@/features/learning/interactionStorage';
 
 export function useMentorChat(input: LessonInput, lesson: Lesson) {
@@ -39,6 +40,7 @@ export function useMentorChat(input: LessonInput, lesson: Lesson) {
         reply = await getProvider(settings.provider).chatMentor(input, lesson, next, apiKey, model);
       } else {
         reply = await getSystemProvider().chatMentor(input, lesson, next, '', '');
+        void useAuthStore.getState().refreshProfile();
       }
 
       const withReply = [...next, { role: 'assistant', content: reply } as MentorMessage];
