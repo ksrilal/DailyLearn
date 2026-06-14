@@ -4,5 +4,11 @@
       "path": "/api/cron/cleanup-anonymous-users",
       "schedule": "0 3 * * *"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
